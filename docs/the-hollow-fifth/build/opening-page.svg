@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2400" role="img" aria-label="The Hollow Fifth opening page">
+  <rect width="1600" height="2400" rx="88" fill="#f7f0e3"/>
+  <rect x="78" y="78" width="1444" height="2244" rx="56" fill="none" stroke="#d4c5ae" stroke-width="4"/>
+  <rect x="124" y="124" width="1352" height="2152" rx="34" fill="none" stroke="#d4c5ae" stroke-opacity="0.52" stroke-width="2"/>
+  <rect x="180" y="1164" width="1230" height="846" rx="42" fill="#ffffff" fill-opacity="0.32" stroke="#d4c5ae" stroke-opacity="0.42"/>
+  <circle cx="1130" cy="540" r="224" fill="#d9f2e8" fill-opacity="0.18"/>
+  <ellipse cx="1080" cy="566" rx="244" ry="168" fill="none" stroke="#76c0b1" stroke-width="7" stroke-opacity="0.52"/>
+  <ellipse cx="1080" cy="566" rx="152" ry="96" fill="none" stroke="#f6e7c9" stroke-width="5" stroke-opacity="0.72"/>
+  <path d="M868 564 C940 430, 1226 438, 1294 568" fill="none" stroke="#f6e7c9" stroke-width="4" stroke-opacity="0.7"/>
+  <text x="214" y="226" font-family="'Segoe UI', Arial, sans-serif" font-size="30" letter-spacing="6" fill="#76c0b1">OPENING PAGE</text>
+  <text x="214" y="292" font-family="'Segoe UI', Arial, sans-serif" font-size="24" letter-spacing="4" fill="#625648">SPEC-DRIVEN EDITION</text>
+  <text x="210" y="730" font-family="Georgia, 'Times New Roman', serif" font-size="104" fill="#1b1512">The Hollow Fifth</text>
+  <text x="214" y="1020" font-family="'Segoe UI', Arial, sans-serif" font-size="34" fill="#625648"><tspan x="214" dy="0">A philosophical science-fantasy novella</tspan></text>
+  <line x1="214" y1="1146" x2="1324" y2="1146" stroke="#d4c5ae" stroke-width="2"/>
+  <text x="214" y="1260" font-family="Georgia, 'Times New Roman', serif" font-size="36" fill="#1b1512"><tspan x="214" dy="0">In machine learning, the emptiness of</tspan><tspan x="214" dy="46">high-dimensional spheres confuses our</tspan><tspan x="214" dy="46">algorithms. In physics, that same emptiness</tspan><tspan x="214" dy="46">helps stabilize conservation laws and helps</tspan><tspan x="214" dy="46">explain why life needs a universe close to</tspan><tspan x="214" dy="46">three spatial dimensions.</tspan></text>
+  <line x1="214" y1="1596" x2="704" y2="1596" stroke="#d4c5ae" stroke-opacity="0.84" stroke-width="2"/>
+  <text x="214" y="1654" font-family="'Segoe UI', Arial, sans-serif" font-size="28" fill="#625648"><tspan x="214" dy="0">Adrian enters a realm where nearness lies, continuity</tspan><tspan x="214" dy="36">becomes currency, and finitude reveals itself as a</tspan><tspan x="214" dy="36">form of mercy.</tspan></text>
+  <text x="214" y="2140" font-family="'Segoe UI', Arial, sans-serif" font-size="30" fill="#76c0b1">Codex Collaborative Draft</text>
+</svg>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Workflow Help</title>
+  <style>
+    :root {
+      --bg: #f4efe6;
+      --bg-soft: #fbf7f0;
+      --ink: #1d1b18;
+      --muted: #60574d;
+      --line: rgba(29, 27, 24, 0.14);
+      --panel: rgba(255, 252, 246, 0.82);
+      --accent: #0e6b61;
+      --accent-strong: #8e3b12;
+      --accent-soft: #dceee9;
+      --shadow: 0 18px 54px rgba(40, 28, 12, 0.12);
+      --radius: 24px;
+      --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      --display: "Georgia", "Times New Roman", serif;
+      --sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(142, 59, 18, 0.16), transparent 32%),
+        radial-gradient(circle at 85% 12%, rgba(14, 107, 97, 0.18), transparent 28%),
+        linear-gradient(180deg, #fcf7ef 0%, #f4efe6 52%, #ede4d7 100%);
+      min-height: 100vh;
+      line-height: 1.55;
+    }
+
+    .frame {
+      width: min(1140px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 60px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 52px;
+      border-radius: 32px;
+      background:
+        linear-gradient(135deg, rgba(255, 252, 246, 0.96), rgba(247, 240, 230, 0.9)),
+        var(--bg-soft);
+      border: 1px solid rgba(29, 27, 24, 0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -40px -90px auto;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(14, 107, 97, 0.16), transparent 70%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(14, 107, 97, 0.1);
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--display);
+      line-height: 1.05;
+      margin: 0;
+    }
+
+    h1 {
+      margin-top: 18px;
+      font-size: clamp(2.7rem, 6vw, 5rem);
+      max-width: 10ch;
+    }
+
+    .hero p {
+      max-width: 66ch;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .quick-card,
+    .panel,
+    .skill-card,
+    .flow-card,
+    .warning {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--panel);
+      backdrop-filter: blur(8px);
+      box-shadow: var(--shadow);
+    }
+
+    .quick-card {
+      padding: 18px;
+    }
+
+    .quick-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.98rem;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 18px;
+    }
+
+    .panel {
+      padding: 28px;
+    }
+
+    .panel h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 14px;
+    }
+
+    .panel h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .lede {
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+
+    .tree,
+    pre {
+      overflow-x: auto;
+      background: #191714;
+      color: #f6efe4;
+      border-radius: 18px;
+      padding: 18px 20px;
+      font-family: var(--mono);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    code {
+      font-family: var(--mono);
+      font-size: 0.95em;
+      background: rgba(29, 27, 24, 0.08);
+      padding: 0.12em 0.34em;
+      border-radius: 0.42em;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .flow-card {
+      padding: 18px;
+      position: relative;
+    }
+
+    .flow-card span {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(142, 59, 18, 0.14);
+      color: var(--accent-strong);
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    li + li {
+      margin-top: 10px;
+    }
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .skill-card {
+      padding: 24px;
+    }
+
+    .skill-card h3 {
+      font-size: 1.55rem;
+      margin-bottom: 8px;
+    }
+
+    .skill-card .tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(14, 107, 97, 0.1);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.84rem;
+    }
+
+    .warning {
+      padding: 22px 24px;
+      margin-top: 18px;
+      border-left: 6px solid var(--accent-strong);
+    }
+
+    .footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.96rem;
+      text-align: center;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    @media (max-width: 980px) {
+      .quick-grid,
+      .grid-two,
+      .flow,
+      .skill-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .panel,
+      .skill-card {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="frame">
+    <section class="hero">
+      <span class="eyebrow">Specification Driven Book System</span>
+      <h1>How this project is meant to work</h1>
+      <p>
+        This repository is a reusable workspace for managing multiple books through structured specifications,
+        incremental chapter generation, and a shared HTML viewer. Every book lives under <code>docs/BOOKNAME</code>,
+        and the specification layer remains the source of truth.
+      </p>
+      <div class="quick-grid">
+        <article class="quick-card">
+          <strong>Source of truth</strong>
+          <div><code>docs/BOOKNAME/specs</code> stores plans, entities, themes, concepts, and all governing specifications.</div>
+        </article>
+        <article class="quick-card">
+          <strong>Working outputs</strong>
+          <div><code>docs/BOOKNAME/chapters</code> holds intermediate chapter material derived from the specifications.</div>
+        </article>
+        <article class="quick-card">
+          <strong>Final artifact</strong>
+          <div><code>docs/BOOKNAME/book.html</code> loads a reusable viewer from <code>docs/preview/preview.js</code>.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section grid-two">
+      <article class="panel">
+        <h2>Directory model</h2>
+        <p class="lede">
+          Each book should have its own isolated specification tree. The manuscript is not treated as a single file.
+          Plans and supporting structures are split into focused Markdown documents so that generation and regeneration
+          can happen with precision.
+        </p>
+        <pre class="tree">docs/
+  help.html
+  preview/
+    preview.js
+  BOOKNAME/
+    specs/
+      book-design.md
+      book-plan.md
+      chapter-plans/
+        01-introduction.md
+        02-methods.md
+      characters/
+      locations/
+      themes/
+      concepts/
+      metadata.md
+    build/
+      cover-art.svg
+      cover-page.svg
+      opening-page.svg
+      manifest.json
+    chapters/
+      01-introduction.md
+      02-methods.md
+    book.html</pre>
+        <div class="chips">
+          <span class="chip">Markdown for specs</span>
+          <span class="chip">Markdown for chapter drafts</span>
+          <span class="chip">Shared viewer logic</span>
+          <span class="chip">Multi-book reuse</span>
+        </div>
+      </article>
+
+      <article class="panel">
+        <h2>Core rules</h2>
+        <ol>
+          <li>The specification layer defines the intended book structure and constraints.</li>
+          <li><code>specs/book-design.md</code> defines the display-facing metadata for the cover and opening pages.</li>
+          <li>Chapter materials are generated from the specs and remain intermediate assets, not the master source.</li>
+          <li>The final HTML should assemble content through the viewer library instead of embedding the full book inline.</li>
+          <li>The build pipeline should be incremental and touch only the outputs affected by a change.</li>
+          <li>The same workflow must support both literary books and scientific or technical books.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="section panel">
+      <h2>Workflow</h2>
+      <p class="lede">
+        The intended lifecycle is controlled, layered, and regenerable. The system should move from idea to plan,
+        from plan to chapter materials, and from chapter materials to a final assembled view.
+      </p>
+      <div class="flow">
+        <article class="flow-card">
+          <span>1</span>
+          <h3>Initialize</h3>
+          <p>Start a new book from a high-level idea and broad instructions. This creates the first specification structure.</p>
+        </article>
+        <article class="flow-card">
+          <span>2</span>
+          <h3>Refine</h3>
+          <p>Expand the book plan into chapter plans and supporting spec files for entities, themes, concepts, or references.</p>
+        </article>
+        <article class="flow-card">
+          <span>3</span>
+          <h3>Build</h3>
+          <p>Generate or update the affected chapter Markdown files, refresh the abstract SVG page assets, and rebuild only the sections impacted by recent edits.</p>
+        </article>
+        <article class="flow-card">
+          <span>4</span>
+          <h3>Assemble</h3>
+          <p>Produce <code>book.html</code> as a thin host page that delegates parsing and presentation to <code>preview.js</code>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section grid-two">
+      <article class="panel">
+        <h2>Incremental build behavior</h2>
+        <ul>
+          <li>If a book-level plan changes, the build skill may need to update multiple chapter plans or metadata outputs.</li>
+          <li>If one chapter specification changes, only the corresponding chapter material and related assembled sections should be regenerated.</li>
+          <li>If an entity file such as a character, location, or concept changes, only the chapters depending on that entity should be rebuilt.</li>
+          <li>If only the viewer changes, chapter Markdown does not need regeneration; only the rendered experience changes.</li>
+          <li>The build logic should track dependencies explicitly so that regeneration is targeted rather than global.</li>
+        </ul>
+      </article>
+
+      <article class="panel">
+        <h2>Viewer responsibilities</h2>
+        <ul>
+          <li>Load the book metadata and chapter Markdown sources.</li>
+          <li>Use the generated cover and opening-page SVG assets as book-facing page art.</li>
+          <li>Parse the Markdown consistently across books.</li>
+          <li>Assemble the final reading order for display.</li>
+          <li>Keep presentation logic reusable and separate from the book content.</li>
+          <li>Allow <code>book.html</code> to stay small, generic, and maintainable.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section panel">
+      <h2>Skills to use</h2>
+      <p class="lede">
+        Two dedicated skills are expected to drive this repository. The names below are the recommended public interface
+        for those skills so that usage stays predictable across books.
+      </p>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <div class="tag">Initialization skill</div>
+          <h3><code>$book-init</code></h3>
+          <p>Create the first full specification structure for a new book from a concept and broad requirements.</p>
+          <ul>
+            <li>Create <code>docs/BOOKNAME/specs</code> and the initial Markdown files.</li>
+            <li>Write a large-scale book plan and an initial chapter breakdown.</li>
+            <li>Create <code>specs/book-design.md</code> with display metadata, abstract visual direction, and cover/opening copy.</li>
+            <li>Add support files for narrative or scientific structures as needed.</li>
+            <li>Prepare the repository so later builds can work incrementally.</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <div class="tag">Build skill</div>
+          <h3><code>$book-build</code></h3>
+          <p>Transform specs into intermediate chapter outputs and assemble the final book view without rebuilding unrelated work.</p>
+          <ul>
+            <li>Read the dependency graph for the selected book.</li>
+            <li>Regenerate only the affected chapter files in <code>docs/BOOKNAME/chapters</code>.</li>
+            <li>Generate separate <code>cover-art.svg</code>, <code>cover-page.svg</code>, and <code>opening-page.svg</code> files from <code>specs/book-design.md</code>.</li>
+            <li>Refresh metadata and the final <code>book.html</code> when required.</li>
+            <li>Leave untouched books and unaffected chapters unchanged.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="warning">
+        The help page documents the expected contract of these skills. If the repository later introduces different names,
+        keep the behavior equivalent and update this page so the public workflow remains clear.
+      </div>
+    </section>
+
+    <section class="section grid-two">
+      <article class="panel">
+        <h2>How to call the skills</h2>
+        <p class="lede">
+          Invoke the skills by name and give a precise target book plus the intended scope of work.
+          Keep the request explicit about whether you want initialization, partial regeneration, or a full assembly refresh.
+        </p>
+        <pre>Use $book-init for a new project.
+
+Example:
+Use $book-init to create docs/the-origin-of-patterns.
+The book is a scientific work about how recurring structures
+emerge in biology, mathematics, and language.
+Create a book plan, chapter plans, concept files, and metadata.
+Also create book-design metadata for the cover and opening pages.
+All specifications must be in Markdown.</pre>
+      </article>
+
+      <article class="panel">
+        <h2>Build examples</h2>
+        <pre>Use $book-build for incremental generation.
+
+Example:
+Use $book-build for docs/the-origin-of-patterns.
+Only rebuild outputs affected by changes in:
+- specs/chapter-plans/03-self-organization.md
+- specs/concepts/feedback-loops.md
+Update the necessary chapter files and refresh book.html.</pre>
+      </article>
+    </section>
+
+    <section class="section grid-two">
+      <article class="panel">
+        <h2>Recommended request pattern</h2>
+        <ul>
+          <li>Name the book path explicitly, for example <code>docs/my-book</code>.</li>
+          <li>State whether the book is literary, scientific, or hybrid.</li>
+          <li>Provide scope: initialize, rebuild one chapter, rebuild all changed chapters, or refresh the final assembled view.</li>
+          <li>Mention any special structures that must exist, such as characters, locations, experiments, terminology, or reference concepts.</li>
+          <li>Ask for incremental work unless you truly need a full regeneration.</li>
+        </ul>
+      </article>
+
+      <article class="panel">
+        <h2>What not to do</h2>
+        <ul>
+          <li>Do not treat <code>book.html</code> as the place where the full manuscript is manually maintained.</li>
+          <li>Do not bypass the specification layer by editing generated chapter outputs as if they were the master definition.</li>
+          <li>Do not rebuild every book after every edit.</li>
+          <li>Do not couple viewer logic to one specific title if the same viewer can remain reusable.</li>
+        </ul>
+      </article>
+    </section>
+
+    <p class="footer">
+      This page is the human-facing overview of the project contract. When the repository grows, keep this document aligned
+      with the actual skill names, folder conventions, and build behavior.
+    </p>
+  </main>
+</body>
+</html>

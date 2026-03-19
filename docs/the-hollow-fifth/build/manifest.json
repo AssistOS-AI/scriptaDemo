@@ -1,0 +1,394 @@
+{
+  "title": "The Hollow Fifth",
+  "subtitle": "A philosophical science-fantasy novella",
+  "author": "Codex Collaborative Draft",
+  "genre": "Philosophical Science Fantasy",
+  "tone": "Lyrical, lucid, unnerving, wonder-struck",
+  "logline": "Displaced into a five-dimensional realm, Adrian Vale accepts the guidance of an elegant intelligence before learning it wants to harvest the one human constant that can stabilize its world.",
+  "coverArtImage": "./build/cover-art.svg",
+  "coverPageImage": "./build/cover-page.svg",
+  "openingPageImage": "./build/opening-page.svg",
+  "coverImage": "./build/cover-page.svg",
+  "philosophyQuote": "In machine learning, the emptiness of high-dimensional spheres confuses our algorithms. In physics, that same emptiness helps stabilize conservation laws and helps explain why life needs a universe close to three spatial dimensions.",
+  "atlas": {
+    "characters": [
+      {
+        "id": "characters/adrian-vale",
+        "title": "Adrian Vale",
+        "summary": "Adrian Vale is the protagonist, a machine learning researcher with enough mathematical intuition to notice when a world is lying by being too elegant. His greatest strength is that he can convert bewilderment into questions. His greatest weakness is that explanation feels like safety to him, which makes him vulnerable to a deceptive guide."
+      },
+      {
+        "id": "characters/keepers-of-three",
+        "title": "Keepers of Three",
+        "summary": "The Keepers of Three are a collective intelligence that tends the boundaries between stable worlds and extravagant ones. They are not benevolent in the sentimental sense, but they are guardians of the harsh arithmetic that allows matter, memory, and life to persist."
+      },
+      {
+        "id": "characters/mira-vale",
+        "title": "Mira Vale",
+        "summary": "Mira Vale is Adrian's sister, present mostly through memory, voice, and the habits of thought she helped form in him. She is not a passive sentimental anchor. She represents a disciplined affection for the physical world: weather, weight, recurring seasons, and the human scale of promise."
+      },
+      {
+        "id": "characters/syl",
+        "title": "Syl",
+        "summary": "Syl presents himself as a guide through the fifth-dimensional domain: calm, articulate, amused, and almost tender in the way he introduces Adrian to impossible space. In truth, Syl is conducting a long confidence scheme. He wants access to the witness constant carried by a mind evolved inside a stable three-dimensional world."
+      }
+    ],
+    "places": [
+      {
+        "id": "places/annular-library",
+        "title": "Annular Library",
+        "summary": "The Annular Library is a ringed archive whose shelves curve through causal neighborhoods instead of physical aisles. Books seem close and unreachable at once because proximity no longer guarantees retrieval. The location embodies the machine learning problem of sparse neighborhoods in high dimension."
+      },
+      {
+        "id": "places/basin-of-kept-motions",
+        "title": "Basin of Kept Motions",
+        "summary": "The Basin of Kept Motions is a vast depression where trajectories glow without dispersing, as if conservation laws have been gathered there and held under watch. It is the most overtly cosmological place in the book. Here the stakes expand from one person to the architecture of viable universes."
+      },
+      {
+        "id": "places/folded-shore",
+        "title": "Folded Shore",
+        "summary": "The Folded Shore looks like a coast made of repeated edges of the same sea. Waves arrive from neighboring histories and collapse into one another before touching land. It is the ideal final place because it feels like a border, a return path, and a meditation on choosing one life out of many."
+      },
+      {
+        "id": "places/prism-threshold",
+        "title": "Prism Threshold",
+        "summary": "The Prism Threshold is the first place Adrian consciously occupies after his displacement. It feels like a corridor made of overlapping decisions, where every surface contains the faint angle of another possible approach. The place should communicate wonder before it communicates danger."
+      },
+      {
+        "id": "places/vacant-orchard",
+        "title": "Vacant Orchard",
+        "summary": "The Vacant Orchard is filled with fruit-shaped hollows wrapped in translucent skins. Each fruit contains information arranged around an empty center, as if meaning survives by orbiting absence. The orchard should feel beautiful, mournful, and quietly predatory."
+      }
+    ],
+    "concepts": [
+      {
+        "id": "concepts/five-dimensional-perception",
+        "title": "Five-Dimensional Perception",
+        "summary": "Five-dimensional perception in this book is not presented as omniscience. It is a condition of overwhelming adjacency. Things are not merely farther away or closer than expected; they are connected through hidden directions that make ordinary intuition unreliable."
+      },
+      {
+        "id": "concepts/sparse-spheres-and-ml",
+        "title": "Sparse Spheres And Machine Learning",
+        "summary": "In high-dimensional geometry, most of the volume of a sphere concentrates in unintuitive regions and neighborhoods become effectively empty for many algorithms. In machine learning this sparsity undermines distance-based intuition, weakens local similarity, and makes generalization more difficult. The book treats this as the cognitive template Adrian already knows before entering the fifth-dimensional realm."
+      },
+      {
+        "id": "concepts/stable-matter-in-three-dimensions",
+        "title": "Stable Matter In Three Dimensions",
+        "summary": "The novella proposes that a life-bearing universe needs more than abundance; it needs disciplined dimensionality. In too many spatial dimensions, inverse-square style stability breaks down, orbits fail to stay gracefully bounded, and matter loses the reliable patterns from which chemistry and memory emerge."
+      },
+      {
+        "id": "concepts/witness-constant",
+        "title": "Witness Constant",
+        "summary": "The witness constant is the book's fictional term for the continuity carried by a consciousness shaped inside a stable low-dimensional universe. It is not raw intelligence. It is the capacity to keep identity through recurrence, to recognize the same law after time has passed, and to remain oneself across changing conditions."
+      }
+    ],
+    "themes": [
+      {
+        "id": "themes/constraint-is-mercy",
+        "title": "Constraint Is Mercy",
+        "summary": "One of the book's central claims is that limitation is not merely what reality suffers; it is what allows reality to become livable. Boundaries create repetition, repetition creates trust, and trust permits both science and love."
+      },
+      {
+        "id": "themes/deception-through-clarity",
+        "title": "Deception Through Clarity",
+        "summary": "Syl does not manipulate Adrian through nonsense. He manipulates him through elegant partial truth. The theme insists that explanation itself can become an instrument of capture when the frame is selectively withheld."
+      },
+      {
+        "id": "themes/recurrence-and-identity",
+        "title": "Recurrence And Identity",
+        "summary": "The witness constant is not a supernatural gem hidden in the hero. It is the identity forged by repeated life inside a stable world. Recurrence is how a person becomes legible to themselves across time, and the book should treat that as both scientifically suggestive and emotionally sacred."
+      }
+    ],
+    "mechanics": [
+      {
+        "id": "mechanics/conservation-basins",
+        "title": "Conservation Basins",
+        "summary": "Conservation basins are pockets where law, recurrence, and bounded trajectories can hold long enough to support lasting structure. They are rare and politically charged in the higher-dimensional domain because they determine where memory-like persistence can exist at all."
+      },
+      {
+        "id": "mechanics/five-dimensional-regimes",
+        "title": "Five-Dimensional Regimes",
+        "summary": "The five-dimensional environment should feel rule-governed even when it is impossible. Paths are chosen by persistence rather than by simple distance, adjacency can exist without reachability, and stable navigation depends on identifying structures that remain themselves while surrounding possibilities shear past."
+      }
+    ],
+    "emotions": [
+      {
+        "id": "emotions/character-emotional-arcs",
+        "title": "Character Emotional Arcs",
+        "summary": "The emotional design of the novella should make the philosophical movement feel lived rather than appended. Each character carries a distinct emotional curve that interacts with the geometry of the places."
+      }
+    ]
+  },
+  "sources": {
+    "specs": {
+      "core": [
+        {
+          "id": "metadata",
+          "title": "The Hollow Fifth",
+          "summary": "This book is designed as a compact philosophical novella. Its dramatic engine is trust under altered perception, and its intellectual engine is the analogy between sparse high-dimensional geometry in machine learning and the stability constraints of physical law.",
+          "file": "./specs/metadata.md"
+        },
+        {
+          "id": "book-plan",
+          "title": "The Hollow Fifth Book Plan",
+          "summary": "This novella follows Adrian Vale, a machine learning researcher who wakes into a five-dimensional environment where perception no longer behaves like a stack of surfaces but like a field of adjacent possibilities. He is received by Syl, a poised and deeply persuasive guide who frames the new world as a gift of understanding. Syl is lying. What Adrian calls insight is, to Syl, a resource.",
+          "file": "./specs/book-plan.md"
+        },
+        {
+          "id": "book-design",
+          "title": "Book Design",
+          "summary": "Visual metadata and abstract SVG directions for the book cover, cover page, and opening page.",
+          "file": "./specs/book-design.md"
+        }
+      ],
+      "chapterPlans": [
+        {
+          "id": "chapter-plans/01-the-misplaced-morning",
+          "title": "The Misplaced Morning",
+          "summary": "Adrian wakes into impossible adjacency, meets Syl at the Prism Threshold, and mistakes explanation for rescue.",
+          "file": "./specs/chapter-plans/01-the-misplaced-morning.md"
+        },
+        {
+          "id": "chapter-plans/02-the-annular-library",
+          "title": "The Annular Library",
+          "summary": "Syl teaches Adrian how higher-dimensional neighborhoods fail, and the first fractures appear in the guide's elegant narrative.",
+          "file": "./specs/chapter-plans/02-the-annular-library.md"
+        },
+        {
+          "id": "chapter-plans/03-the-vacant-orchard",
+          "title": "The Vacant Orchard",
+          "summary": "In a garden built around hollow fruit, Adrian discovers that the lesson was always a lure and that Syl wants the continuity hidden in human memory.",
+          "file": "./specs/chapter-plans/03-the-vacant-orchard.md"
+        },
+        {
+          "id": "chapter-plans/04-the-basin-of-kept-motions",
+          "title": "The Basin of Kept Motions",
+          "summary": "At the guarded basin of conservation, Syl's scheme is exposed and Adrian learns why sparse high-dimensional emptiness can both frustrate learning and protect reality.",
+          "file": "./specs/chapter-plans/04-the-basin-of-kept-motions.md"
+        },
+        {
+          "id": "chapter-plans/05-the-folded-shore",
+          "title": "The Folded Shore",
+          "summary": "Adrian reaches the border of return, refuses Syl's final appeal, and chooses a finite life while carrying back the knowledge that limitation is part of what makes intelligence and matter possible.",
+          "file": "./specs/chapter-plans/05-the-folded-shore.md"
+        }
+      ],
+      "characters": [
+        {
+          "id": "characters/adrian-vale",
+          "title": "Adrian Vale",
+          "summary": "Adrian Vale is the protagonist, a machine learning researcher with enough mathematical intuition to notice when a world is lying by being too elegant. His greatest strength is that he can convert bewilderment into questions. His greatest weakness is that explanation feels like safety to him, which makes him vulnerable to a deceptive guide.",
+          "file": "./specs/characters/adrian-vale.md"
+        },
+        {
+          "id": "characters/keepers-of-three",
+          "title": "Keepers of Three",
+          "summary": "The Keepers of Three are a collective intelligence that tends the boundaries between stable worlds and extravagant ones. They are not benevolent in the sentimental sense, but they are guardians of the harsh arithmetic that allows matter, memory, and life to persist.",
+          "file": "./specs/characters/keepers-of-three.md"
+        },
+        {
+          "id": "characters/mira-vale",
+          "title": "Mira Vale",
+          "summary": "Mira Vale is Adrian's sister, present mostly through memory, voice, and the habits of thought she helped form in him. She is not a passive sentimental anchor. She represents a disciplined affection for the physical world: weather, weight, recurring seasons, and the human scale of promise.",
+          "file": "./specs/characters/mira-vale.md"
+        },
+        {
+          "id": "characters/syl",
+          "title": "Syl",
+          "summary": "Syl presents himself as a guide through the fifth-dimensional domain: calm, articulate, amused, and almost tender in the way he introduces Adrian to impossible space. In truth, Syl is conducting a long confidence scheme. He wants access to the witness constant carried by a mind evolved inside a stable three-dimensional world.",
+          "file": "./specs/characters/syl.md"
+        }
+      ],
+      "places": [
+        {
+          "id": "places/annular-library",
+          "title": "Annular Library",
+          "summary": "The Annular Library is a ringed archive whose shelves curve through causal neighborhoods instead of physical aisles. Books seem close and unreachable at once because proximity no longer guarantees retrieval. The location embodies the machine learning problem of sparse neighborhoods in high dimension.",
+          "file": "./specs/places/annular-library.md"
+        },
+        {
+          "id": "places/basin-of-kept-motions",
+          "title": "Basin of Kept Motions",
+          "summary": "The Basin of Kept Motions is a vast depression where trajectories glow without dispersing, as if conservation laws have been gathered there and held under watch. It is the most overtly cosmological place in the book. Here the stakes expand from one person to the architecture of viable universes.",
+          "file": "./specs/places/basin-of-kept-motions.md"
+        },
+        {
+          "id": "places/folded-shore",
+          "title": "Folded Shore",
+          "summary": "The Folded Shore looks like a coast made of repeated edges of the same sea. Waves arrive from neighboring histories and collapse into one another before touching land. It is the ideal final place because it feels like a border, a return path, and a meditation on choosing one life out of many.",
+          "file": "./specs/places/folded-shore.md"
+        },
+        {
+          "id": "places/prism-threshold",
+          "title": "Prism Threshold",
+          "summary": "The Prism Threshold is the first place Adrian consciously occupies after his displacement. It feels like a corridor made of overlapping decisions, where every surface contains the faint angle of another possible approach. The place should communicate wonder before it communicates danger.",
+          "file": "./specs/places/prism-threshold.md"
+        },
+        {
+          "id": "places/vacant-orchard",
+          "title": "Vacant Orchard",
+          "summary": "The Vacant Orchard is filled with fruit-shaped hollows wrapped in translucent skins. Each fruit contains information arranged around an empty center, as if meaning survives by orbiting absence. The orchard should feel beautiful, mournful, and quietly predatory.",
+          "file": "./specs/places/vacant-orchard.md"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "concepts/five-dimensional-perception",
+          "title": "Five-Dimensional Perception",
+          "summary": "Five-dimensional perception in this book is not presented as omniscience. It is a condition of overwhelming adjacency. Things are not merely farther away or closer than expected; they are connected through hidden directions that make ordinary intuition unreliable.",
+          "file": "./specs/concepts/five-dimensional-perception.md"
+        },
+        {
+          "id": "concepts/sparse-spheres-and-ml",
+          "title": "Sparse Spheres And Machine Learning",
+          "summary": "In high-dimensional geometry, most of the volume of a sphere concentrates in unintuitive regions and neighborhoods become effectively empty for many algorithms. In machine learning this sparsity undermines distance-based intuition, weakens local similarity, and makes generalization more difficult. The book treats this as the cognitive template Adrian already knows before entering the fifth-dimensional realm.",
+          "file": "./specs/concepts/sparse-spheres-and-ml.md"
+        },
+        {
+          "id": "concepts/stable-matter-in-three-dimensions",
+          "title": "Stable Matter In Three Dimensions",
+          "summary": "The novella proposes that a life-bearing universe needs more than abundance; it needs disciplined dimensionality. In too many spatial dimensions, inverse-square style stability breaks down, orbits fail to stay gracefully bounded, and matter loses the reliable patterns from which chemistry and memory emerge.",
+          "file": "./specs/concepts/stable-matter-in-three-dimensions.md"
+        },
+        {
+          "id": "concepts/witness-constant",
+          "title": "Witness Constant",
+          "summary": "The witness constant is the book's fictional term for the continuity carried by a consciousness shaped inside a stable low-dimensional universe. It is not raw intelligence. It is the capacity to keep identity through recurrence, to recognize the same law after time has passed, and to remain oneself across changing conditions.",
+          "file": "./specs/concepts/witness-constant.md"
+        }
+      ],
+      "themes": [
+        {
+          "id": "themes/constraint-is-mercy",
+          "title": "Constraint Is Mercy",
+          "summary": "One of the book's central claims is that limitation is not merely what reality suffers; it is what allows reality to become livable. Boundaries create repetition, repetition creates trust, and trust permits both science and love.",
+          "file": "./specs/themes/constraint-is-mercy.md"
+        },
+        {
+          "id": "themes/deception-through-clarity",
+          "title": "Deception Through Clarity",
+          "summary": "Syl does not manipulate Adrian through nonsense. He manipulates him through elegant partial truth. The theme insists that explanation itself can become an instrument of capture when the frame is selectively withheld.",
+          "file": "./specs/themes/deception-through-clarity.md"
+        },
+        {
+          "id": "themes/recurrence-and-identity",
+          "title": "Recurrence And Identity",
+          "summary": "The witness constant is not a supernatural gem hidden in the hero. It is the identity forged by repeated life inside a stable world. Recurrence is how a person becomes legible to themselves across time, and the book should treat that as both scientifically suggestive and emotionally sacred.",
+          "file": "./specs/themes/recurrence-and-identity.md"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "mechanics/conservation-basins",
+          "title": "Conservation Basins",
+          "summary": "Conservation basins are pockets where law, recurrence, and bounded trajectories can hold long enough to support lasting structure. They are rare and politically charged in the higher-dimensional domain because they determine where memory-like persistence can exist at all.",
+          "file": "./specs/mechanics/conservation-basins.md"
+        },
+        {
+          "id": "mechanics/five-dimensional-regimes",
+          "title": "Five-Dimensional Regimes",
+          "summary": "The five-dimensional environment should feel rule-governed even when it is impossible. Paths are chosen by persistence rather than by simple distance, adjacency can exist without reachability, and stable navigation depends on identifying structures that remain themselves while surrounding possibilities shear past.",
+          "file": "./specs/mechanics/five-dimensional-regimes.md"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "relationships/adrian-and-mira",
+          "title": "Adrian And Mira",
+          "summary": "Mira stabilizes Adrian not because she symbolizes home in a vague way, but because her relationship with him was built through repeated ordinary acts. Shared meals, arguments, jokes, and grief rituals become the emotional analogue of conservation law.",
+          "file": "./specs/relationships/adrian-and-mira.md"
+        },
+        {
+          "id": "relationships/adrian-and-syl",
+          "title": "Adrian And Syl",
+          "summary": "This relationship is the core engine of the book. It must move through awe, dependence, intellectual companionship, suspicion, betrayal, and a final form of pity that does not become surrender.",
+          "file": "./specs/relationships/adrian-and-syl.md"
+        }
+      ],
+      "emotions": [
+        {
+          "id": "emotions/character-emotional-arcs",
+          "title": "Character Emotional Arcs",
+          "summary": "The emotional design of the novella should make the philosophical movement feel lived rather than appended. Each character carries a distinct emotional curve that interacts with the geometry of the places.",
+          "file": "./specs/emotions/character-emotional-arcs.md"
+        }
+      ]
+    },
+    "generated": {
+      "chapters": [
+        {
+          "id": "01-the-misplaced-morning",
+          "title": "The Misplaced Morning",
+          "summary": "Adrian wakes into impossible adjacency, meets Syl at the Prism Threshold, and mistakes explanation for rescue.",
+          "file": "./chapters/01-the-misplaced-morning.md",
+          "sourcePlanFile": "./specs/chapter-plans/01-the-misplaced-morning.md"
+        },
+        {
+          "id": "02-the-annular-library",
+          "title": "The Annular Library",
+          "summary": "Syl teaches Adrian how higher-dimensional neighborhoods fail, and the first fractures appear in the guide's elegant narrative.",
+          "file": "./chapters/02-the-annular-library.md",
+          "sourcePlanFile": "./specs/chapter-plans/02-the-annular-library.md"
+        },
+        {
+          "id": "03-the-vacant-orchard",
+          "title": "The Vacant Orchard",
+          "summary": "In a garden built around hollow fruit, Adrian discovers that the lesson was always a lure and that Syl wants the continuity hidden in human memory.",
+          "file": "./chapters/03-the-vacant-orchard.md",
+          "sourcePlanFile": "./specs/chapter-plans/03-the-vacant-orchard.md"
+        },
+        {
+          "id": "04-the-basin-of-kept-motions",
+          "title": "The Basin of Kept Motions",
+          "summary": "At the guarded basin of conservation, Syl's scheme is exposed and Adrian learns why sparse high-dimensional emptiness can both frustrate learning and protect reality.",
+          "file": "./chapters/04-the-basin-of-kept-motions.md",
+          "sourcePlanFile": "./specs/chapter-plans/04-the-basin-of-kept-motions.md"
+        },
+        {
+          "id": "05-the-folded-shore",
+          "title": "The Folded Shore",
+          "summary": "Adrian reaches the border of return, refuses Syl's final appeal, and chooses a finite life while carrying back the knowledge that limitation is part of what makes intelligence and matter possible.",
+          "file": "./chapters/05-the-folded-shore.md",
+          "sourcePlanFile": "./specs/chapter-plans/05-the-folded-shore.md"
+        }
+      ]
+    }
+  },
+  "chapters": [
+    {
+      "id": "01-the-misplaced-morning",
+      "title": "The Misplaced Morning",
+      "summary": "Adrian wakes into impossible adjacency, meets Syl at the Prism Threshold, and mistakes explanation for rescue.",
+      "chapterFile": "./chapters/01-the-misplaced-morning.md",
+      "sourcePlanFile": "./specs/chapter-plans/01-the-misplaced-morning.md"
+    },
+    {
+      "id": "02-the-annular-library",
+      "title": "The Annular Library",
+      "summary": "Syl teaches Adrian how higher-dimensional neighborhoods fail, and the first fractures appear in the guide's elegant narrative.",
+      "chapterFile": "./chapters/02-the-annular-library.md",
+      "sourcePlanFile": "./specs/chapter-plans/02-the-annular-library.md"
+    },
+    {
+      "id": "03-the-vacant-orchard",
+      "title": "The Vacant Orchard",
+      "summary": "In a garden built around hollow fruit, Adrian discovers that the lesson was always a lure and that Syl wants the continuity hidden in human memory.",
+      "chapterFile": "./chapters/03-the-vacant-orchard.md",
+      "sourcePlanFile": "./specs/chapter-plans/03-the-vacant-orchard.md"
+    },
+    {
+      "id": "04-the-basin-of-kept-motions",
+      "title": "The Basin of Kept Motions",
+      "summary": "At the guarded basin of conservation, Syl's scheme is exposed and Adrian learns why sparse high-dimensional emptiness can both frustrate learning and protect reality.",
+      "chapterFile": "./chapters/04-the-basin-of-kept-motions.md",
+      "sourcePlanFile": "./specs/chapter-plans/04-the-basin-of-kept-motions.md"
+    },
+    {
+      "id": "05-the-folded-shore",
+      "title": "The Folded Shore",
+      "summary": "Adrian reaches the border of return, refuses Syl's final appeal, and chooses a finite life while carrying back the knowledge that limitation is part of what makes intelligence and matter possible.",
+      "chapterFile": "./chapters/05-the-folded-shore.md",
+      "sourcePlanFile": "./specs/chapter-plans/05-the-folded-shore.md"
+    }
+  ]
+}
