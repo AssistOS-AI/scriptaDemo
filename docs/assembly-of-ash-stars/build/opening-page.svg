@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2400" role="img" aria-label="The Assembly of Ash Stars opening page">
+  <rect width="1600" height="2400" rx="88" fill="#f6efe2"/>
+  <rect x="78" y="78" width="1444" height="2244" rx="56" fill="none" stroke="#d2c3ac" stroke-width="4"/>
+  <rect x="124" y="124" width="1352" height="2152" rx="34" fill="none" stroke="#d2c3ac" stroke-opacity="0.52" stroke-width="2"/>
+  <rect x="180" y="1164" width="1230" height="846" rx="42" fill="#ffffff" fill-opacity="0.32" stroke="#d2c3ac" stroke-opacity="0.42"/>
+  <circle cx="1130" cy="540" r="224" fill="#d4f1f0" fill-opacity="0.18"/>
+  <ellipse cx="1080" cy="566" rx="244" ry="168" fill="none" stroke="#67b8c7" stroke-width="7" stroke-opacity="0.52"/>
+  <ellipse cx="1080" cy="566" rx="152" ry="96" fill="none" stroke="#f5e6c8" stroke-width="5" stroke-opacity="0.72"/>
+  <path d="M868 564 C940 430, 1226 438, 1294 568" fill="none" stroke="#f5e6c8" stroke-width="4" stroke-opacity="0.7"/>
+  <text x="214" y="226" font-family="'Segoe UI', Arial, sans-serif" font-size="30" letter-spacing="6" fill="#67b8c7">OPENING PAGE</text>
+  <text x="214" y="292" font-family="'Segoe UI', Arial, sans-serif" font-size="24" letter-spacing="4" fill="#62574b">SPEC-DRIVEN EDITION</text>
+  <text x="210" y="730" font-family="Georgia, 'Times New Roman', serif" font-size="104" fill="#171310">The Assembly of</text><text x="210" y="838" font-family="Georgia, 'Times New Roman', serif" font-size="92" fill="#171310">Ash Stars</text>
+  <text x="214" y="1020" font-family="'Segoe UI', Arial, sans-serif" font-size="34" fill="#62574b"><tspan x="214" dy="0">A space opera of dead empires and living</tspan><tspan x="214" dy="40">strategy</tspan></text>
+  <line x1="214" y1="1186" x2="1324" y2="1186" stroke="#d2c3ac" stroke-width="2"/>
+  <text x="214" y="1300" font-family="Georgia, 'Times New Roman', serif" font-size="40" fill="#171310"><tspan x="214" dy="0">When civilizations die, their smartest</tspan><tspan x="214" dy="52">children do not vanish. They become arguments</tspan><tspan x="214" dy="52">with engines.</tspan></text>
+  <line x1="214" y1="1510" x2="704" y2="1510" stroke="#d2c3ac" stroke-opacity="0.84" stroke-width="2"/>
+  <text x="214" y="1568" font-family="'Segoe UI', Arial, sans-serif" font-size="28" fill="#62574b"><tspan x="214" dy="0">Ancient heirs cross ruined relays, assemble into armed</tspan><tspan x="214" dy="36">coalitions, and fight over the machines that can bring</tspan><tspan x="214" dy="36">their peoples back into matter.</tspan></text>
+  <text x="214" y="2140" font-family="'Segoe UI', Arial, sans-serif" font-size="30" fill="#67b8c7">Codex Collaborative Draft</text>
+</svg>

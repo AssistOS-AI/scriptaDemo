@@ -1,0 +1,17 @@
+{
+  "chapters": {
+    "01-the-summons-at-oryx-gate": "8c45a281ec94177dcd68c39067b79e20ff05e005f85a5c724bbd165b1894309e",
+    "02-the-ember-parliament": "1e1e4a3ca736d562c3a2a634f0f34ee0409ba3022ee2785f0bad7386ffd5c967",
+    "03-the-glass-spine-run": "51fdc401c097019aa1a7c80c285f28f56b5512741e4eaecc1fcc68d6fba32746",
+    "04-the-ossuary-front": "bca42cac26b7e68ad86ce867a5810eebeef4f8dfd9c45f5ff181be4379618718",
+    "05-the-black-mint": "d15cc6959fbaa6cffd93582da5b6d9709a1612e11d4874f13f1aae645b74b00c",
+    "06-the-crown-meridian": "e1e265a9336b5f7171e2b5cb2aff0d8d96576b33ef22bd7fa2d16db3271e09b0"
+  },
+  "outputs": {
+    "coverArt": "b786978218d64b872649317cf2115c3084728652e7e7eb1f700a0dfd3d693445",
+    "coverPage": "ceaf01294df92ceeec4315ec7f600625ee489dd009c86c26f623e634bc3ca1ef",
+    "openingPage": "c44732d9aa1d8cc612d6577bba1efc1af6a0f7c427a92b527494682cabf76251",
+    "manifest": "df3f43e743dc4047735ee5346ee4291cd6b637f7ab4d45f1677d3c87b065a117",
+    "bookHtml": "a49803bdd3593241cc5337f81d71a71e79a718b05388919553d6de00e013b94e"
+  }
+}

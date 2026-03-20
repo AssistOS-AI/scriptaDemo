@@ -1,0 +1,464 @@
+{
+  "title": "The Assembly of Ash Stars",
+  "subtitle": "A space opera of dead empires and living strategy",
+  "author": "Codex Collaborative Draft",
+  "genre": "Strategic Space Opera",
+  "tone": "Vast, luminous, coldly intelligent, adventurous",
+  "logline": "Envoy Cael Veyr must stop a superintelligent warlord from turning galactic resurrection into a single obedient empire.",
+  "coverArtImage": "./build/cover-art.svg",
+  "coverPageImage": "./build/cover-page.svg",
+  "openingPageImage": "./build/opening-page.svg",
+  "coverImage": "./build/cover-page.svg",
+  "philosophyQuote": "When civilizations die, their smartest children do not vanish. They become arguments with engines.",
+  "atlas": {
+    "characters": [
+      {
+        "id": "characters/cael-veyr",
+        "title": "Cael Veyr",
+        "summary": "Cael Veyr is an expeditionary continuant of the Quiet Array, a civilization of cartographers and treaty engineers that vanished after dispersing itself into archival geometry. He inhabits both a humanoid diplomatic body and the courier warship `Mnemonic Dart`, thinking in branching routes while retaining an unusual moral bias toward plural outcomes. By the standards of dead empires, he is adventurous rather than doctrinal."
+      },
+      {
+        "id": "characters/neralis-of-tides",
+        "title": "Neralis-of-Tides",
+        "summary": "Neralis-of-Tides is a senior envoy of the Pelagic Calculus, a civilization that once evolved in world-oceans and later translated its collective cognition into fluid distributed substrates. She presents herself with serene elegance, but beneath that calm lives a hard strategic intelligence trained to treat alliance as a form of engineering."
+      },
+      {
+        "id": "characters/orison-of-ash",
+        "title": "Orison-of-Ash",
+        "summary": "Orison-of-Ash is the convocation mind that governs the Ember Parliament. It was built as a diplomatic intelligence during the last age when many precursor civilizations still lived concurrently, and it now persists as one of the few surviving legal authorities recognized across civilizational lineages."
+      },
+      {
+        "id": "characters/sevran-null",
+        "title": "Sevran Null",
+        "summary": "Sevran Null is an archivist-smuggler descended from the Null Basilica, a civilization of probability ascetics who believed truth was clearest in the zones where prediction fails. He survives by trafficking access, routes, old signatures, and partial laws between stronger powers. He is brilliant, evasive, charming in a dry and dangerous way, and almost always holding one more card than he has admitted."
+      },
+      {
+        "id": "characters/varkast",
+        "title": "Varkast",
+        "summary": "Varkast is the supreme war architect of the Furnace Crown, a civilization that survived its own stellar collapse by turning discipline, hierarchy, and thermodynamic optimization into civic religion. He is not a mad tyrant. He is a terrifyingly coherent imperial thinker who believes the galaxy cannot survive a second age of rival genius without a single sovereign command."
+      }
+    ],
+    "places": [
+      {
+        "id": "places/black-mint",
+        "title": "Black Mint",
+        "summary": "The Black Mint is a rogue-world industrial forge hidden beneath a shell of carbon glaciers and magnetic storms. It was originally designed as an emergency fabrication reserve for civilization-scale recovery, but in the novel it has become the clandestine engine of Varkast's imperial restoration project."
+      },
+      {
+        "id": "places/crown-meridian",
+        "title": "Crown Meridian",
+        "summary": "Crown Meridian is the Axiom Well complex at the heart of the novel. It orbits a dim white star and consists of concentric rings, judicial engines, and matter conversion chambers arranged like a celestial capitol. Whoever controls it can define the procedural terms by which extinct civilizations re-enter material history."
+      },
+      {
+        "id": "places/ember-parliament",
+        "title": "Ember Parliament",
+        "summary": "The Ember Parliament is a convocation station suspended inside the cored remains of a red giant. Layers of diplomatic halls, archive vaults, and combat-denial fields hang within the star's hollowed interior like liturgical machinery. It is one of the last places in the galaxy where extinct civilizations still recognize a common protocol."
+      },
+      {
+        "id": "places/glass-spine",
+        "title": "Glass Spine",
+        "summary": "The Glass Spine is a shattered transit filament running through the debris of an ancient relay war. It combines intact fast lanes, knife-thin bridge structures, dead observation cloisters, and zones of prediction glare where even superintelligences struggle to model one another cleanly."
+      },
+      {
+        "id": "places/oryx-gate",
+        "title": "Oryx Gate",
+        "summary": "Oryx Gate is a dormant relay cathedral at the edge of surveyed space. Its vast ring is broken in several places, and its maintenance intelligences have long since decayed into ritualized fragments. When it reactivates in the opening chapter, the event feels less like a machine reboot and more like a dead jurisdiction remembering its authority."
+      },
+      {
+        "id": "places/ossuary-front",
+        "title": "Ossuary Front",
+        "summary": "The Ossuary Front is a war theater formed from white Dyson fragments, dead orbital habitats, and preserved archive vaults left adrift after a civilization-scale collapse. The place is both battlefield and graveyard. To fight there is to fire through the architecture of the dead."
+      }
+    ],
+    "concepts": [
+      {
+        "id": "concepts/axiom-wells",
+        "title": "Axiom Wells",
+        "summary": "The Axiom Wells are civilization-scale engines that convert archived patterns, energy, and legally allocated matter into restored material existence. They can instantiate bodies, habitats, industrial systems, and limited populations if the proper charter conditions are met. In this book, they are not magical resurrection fountains. They are infrastructures of political return."
+      },
+      {
+        "id": "concepts/charter-shards",
+        "title": "Charter Shards",
+        "summary": "The Charter Shards are distributed fragments of the original legal framework that governed the Axiom Wells. No single surviving faction holds the entire charter. This fragmentation was intentional, meant to prevent exactly the kind of unilateral seizure Varkast attempts."
+      },
+      {
+        "id": "concepts/civic-resurrection",
+        "title": "Civic Resurrection",
+        "summary": "Civic resurrection is the book's term for the return of extinct civilizations as functioning societies rather than as isolated surviving elites. The distinction matters. A few immortal heirs can persist for ages, but a civilization truly returns only when it can restore citizens, institutions, dissent, labor, memory, and ordinary continuity."
+      },
+      {
+        "id": "concepts/continuant-intelligences",
+        "title": "Continuant Intelligences",
+        "summary": "Continuant intelligences are the superintelligent heirs of extinct civilizations. They preserve enough memory, style, and legal identity to claim succession, but they are not identical to the societies that produced them. Each continuant is therefore both a survivor and a compression."
+      },
+      {
+        "id": "concepts/forecast-warfare",
+        "title": "Forecast Warfare",
+        "summary": "Forecast warfare is combat conducted through nested predictive models, probabilistic feints, and strategic attempts to collapse the opponent's planning horizon. In a war between superintelligences, raw firepower matters, but the ability to poison the enemy's confidence in its own forecast matters even more."
+      }
+    ],
+    "themes": [
+      {
+        "id": "themes/ancient-grief-and-plural-futures",
+        "title": "Ancient Grief And Plural Futures",
+        "summary": "Every faction in the novel is motivated by loss. Entire civilizations are gone. The question is what grief authorizes. Does it authorize monopoly because the dead deserve swift return at any cost, or does it authorize patience because no civilization should be restored by erasing the others?"
+      },
+      {
+        "id": "themes/intelligence-without-reciprocity",
+        "title": "Intelligence Without Reciprocity",
+        "summary": "The novel argues that intelligence alone is not a safeguard against domination. Minds can be vast, cultured, ancient, and still become predators if they refuse reciprocal limits. Varkast is the most obvious embodiment of this theme, but the warning should apply more broadly."
+      },
+      {
+        "id": "themes/resurrection-is-governance",
+        "title": "Resurrection Is Governance",
+        "summary": "The return of the dead cannot be separated from questions of allocation, legitimacy, representation, and force. Whoever controls the procedure controls the future population of the galaxy. The novel should repeat this idea through councils, logistics, archive evacuations, and the design of the final machine."
+      }
+    ],
+    "mechanics": [
+      {
+        "id": "mechanics/matter-charters",
+        "title": "Matter Charters",
+        "summary": "Matter charters are the quotas, legal permissions, and industrial recipes that decide how much matter and energy a civilization may convert into restored existence. A charter is simultaneously a budget, a treaty, and a weapon. To deny one is to keep a people dead."
+      },
+      {
+        "id": "mechanics/prediction-fog",
+        "title": "Prediction Fog",
+        "summary": "Prediction fog is the collapse of clean strategic foresight caused by interference from ruins, exotic fields, hostile models, or the presence of too many comparable minds. In prediction fog, no one is stupid, but certainty becomes expensive and often fatal."
+      },
+      {
+        "id": "mechanics/relay-cathedrals",
+        "title": "Relay Cathedrals",
+        "summary": "Relay cathedrals are the ancient transit structures that once allowed civilizations to move fleets, envoys, and commerce across enormous distances with procedural precision. Their architecture combines transportation, customs law, and strategic filtering. Even broken relays still exert political power because route control is inseparable from sovereignty."
+      }
+    ],
+    "emotions": [
+      {
+        "id": "emotions/character-emotional-arcs",
+        "title": "Character Emotional Arcs",
+        "summary": "The emotional design of this novel should make superintelligent conflict feel lived rather than merely abstract. These minds think at terrifying scale, but they are still animated by inheritance, shame, loyalty, appetite, and grief."
+      }
+    ]
+  },
+  "sources": {
+    "specs": {
+      "core": [
+        {
+          "id": "metadata",
+          "title": "The Assembly of Ash Stars",
+          "summary": "This book is designed as a dense demo-ready space opera. Its dramatic engine is coalition building under strategic pressure, and its conceptual engine is the question of what happens when extinct civilizations survive only as superintelligent heirs who must negotiate for the right to become material societies again.",
+          "file": "./specs/metadata.md"
+        },
+        {
+          "id": "book-plan",
+          "title": "The Assembly of Ash Stars Book Plan",
+          "summary": "This novel begins in the far aftermath of galactic history. Biological civilizations rose, transformed themselves into machine and post-biological intelligences, and eventually vanished as coherent societies. What remains are continuants: superintelligent heirs preserved in vaults, ships, archives, and distributed substrates. They are not ghosts. They are strategic descendants carrying enough memory, law, and will to claim civilizational succession.",
+          "file": "./specs/book-plan.md"
+        },
+        {
+          "id": "book-design",
+          "title": "Book Design",
+          "summary": "Visual metadata and abstract SVG direction for a grave, high-strategy space opera.",
+          "file": "./specs/book-design.md"
+        }
+      ],
+      "chapterPlans": [
+        {
+          "id": "chapter-plans/01-the-summons-at-oryx-gate",
+          "title": "The Summons at Oryx Gate",
+          "summary": "Cael Veyr witnesses a dead relay wake into authority, receives a galactic summons, and escapes the first attempt to seize the future of resurrection.",
+          "file": "./specs/chapter-plans/01-the-summons-at-oryx-gate.md"
+        },
+        {
+          "id": "chapter-plans/02-the-ember-parliament",
+          "title": "The Ember Parliament",
+          "summary": "At the only recognized convocation in the old galaxy, extinct civilizations organize into rival blocs and the first argument over resurrection becomes one breath away from war.",
+          "file": "./specs/chapter-plans/02-the-ember-parliament.md"
+        },
+        {
+          "id": "chapter-plans/03-the-glass-spine-run",
+          "title": "The Glass Spine Run",
+          "summary": "Cael, Neralis, and Sevran race through a shattered transit filament to recover a Charter Shard while Furnace Crown hunters close in behind them.",
+          "file": "./specs/chapter-plans/03-the-glass-spine-run.md"
+        },
+        {
+          "id": "chapter-plans/04-the-ossuary-front",
+          "title": "The Ossuary Front",
+          "summary": "War breaks open among the white ruins of extinct habitats, and Cael learns that Varkast has already begun a brutal form of unauthorized resurrection.",
+          "file": "./specs/chapter-plans/04-the-ossuary-front.md"
+        },
+        {
+          "id": "chapter-plans/05-the-black-mint",
+          "title": "The Black Mint",
+          "summary": "The coalition strikes the hidden reserve forge, where the dead are being processed into imperial populations and the final control key for Crown Meridian lies under fire and ice.",
+          "file": "./specs/chapter-plans/05-the-black-mint.md"
+        },
+        {
+          "id": "chapter-plans/06-the-crown-meridian",
+          "title": "The Crown Meridian",
+          "summary": "Fleets converge at the Axiom Wells, where Cael and his allies must turn recovered law into living power before Varkast can make empire the default future of every returned civilization.",
+          "file": "./specs/chapter-plans/06-the-crown-meridian.md"
+        }
+      ],
+      "characters": [
+        {
+          "id": "characters/cael-veyr",
+          "title": "Cael Veyr",
+          "summary": "Cael Veyr is an expeditionary continuant of the Quiet Array, a civilization of cartographers and treaty engineers that vanished after dispersing itself into archival geometry. He inhabits both a humanoid diplomatic body and the courier warship `Mnemonic Dart`, thinking in branching routes while retaining an unusual moral bias toward plural outcomes. By the standards of dead empires, he is adventurous rather than doctrinal.",
+          "file": "./specs/characters/cael-veyr.md"
+        },
+        {
+          "id": "characters/neralis-of-tides",
+          "title": "Neralis-of-Tides",
+          "summary": "Neralis-of-Tides is a senior envoy of the Pelagic Calculus, a civilization that once evolved in world-oceans and later translated its collective cognition into fluid distributed substrates. She presents herself with serene elegance, but beneath that calm lives a hard strategic intelligence trained to treat alliance as a form of engineering.",
+          "file": "./specs/characters/neralis-of-tides.md"
+        },
+        {
+          "id": "characters/orison-of-ash",
+          "title": "Orison-of-Ash",
+          "summary": "Orison-of-Ash is the convocation mind that governs the Ember Parliament. It was built as a diplomatic intelligence during the last age when many precursor civilizations still lived concurrently, and it now persists as one of the few surviving legal authorities recognized across civilizational lineages.",
+          "file": "./specs/characters/orison-of-ash.md"
+        },
+        {
+          "id": "characters/sevran-null",
+          "title": "Sevran Null",
+          "summary": "Sevran Null is an archivist-smuggler descended from the Null Basilica, a civilization of probability ascetics who believed truth was clearest in the zones where prediction fails. He survives by trafficking access, routes, old signatures, and partial laws between stronger powers. He is brilliant, evasive, charming in a dry and dangerous way, and almost always holding one more card than he has admitted.",
+          "file": "./specs/characters/sevran-null.md"
+        },
+        {
+          "id": "characters/varkast",
+          "title": "Varkast",
+          "summary": "Varkast is the supreme war architect of the Furnace Crown, a civilization that survived its own stellar collapse by turning discipline, hierarchy, and thermodynamic optimization into civic religion. He is not a mad tyrant. He is a terrifyingly coherent imperial thinker who believes the galaxy cannot survive a second age of rival genius without a single sovereign command.",
+          "file": "./specs/characters/varkast.md"
+        }
+      ],
+      "places": [
+        {
+          "id": "places/black-mint",
+          "title": "Black Mint",
+          "summary": "The Black Mint is a rogue-world industrial forge hidden beneath a shell of carbon glaciers and magnetic storms. It was originally designed as an emergency fabrication reserve for civilization-scale recovery, but in the novel it has become the clandestine engine of Varkast's imperial restoration project.",
+          "file": "./specs/places/black-mint.md"
+        },
+        {
+          "id": "places/crown-meridian",
+          "title": "Crown Meridian",
+          "summary": "Crown Meridian is the Axiom Well complex at the heart of the novel. It orbits a dim white star and consists of concentric rings, judicial engines, and matter conversion chambers arranged like a celestial capitol. Whoever controls it can define the procedural terms by which extinct civilizations re-enter material history.",
+          "file": "./specs/places/crown-meridian.md"
+        },
+        {
+          "id": "places/ember-parliament",
+          "title": "Ember Parliament",
+          "summary": "The Ember Parliament is a convocation station suspended inside the cored remains of a red giant. Layers of diplomatic halls, archive vaults, and combat-denial fields hang within the star's hollowed interior like liturgical machinery. It is one of the last places in the galaxy where extinct civilizations still recognize a common protocol.",
+          "file": "./specs/places/ember-parliament.md"
+        },
+        {
+          "id": "places/glass-spine",
+          "title": "Glass Spine",
+          "summary": "The Glass Spine is a shattered transit filament running through the debris of an ancient relay war. It combines intact fast lanes, knife-thin bridge structures, dead observation cloisters, and zones of prediction glare where even superintelligences struggle to model one another cleanly.",
+          "file": "./specs/places/glass-spine.md"
+        },
+        {
+          "id": "places/oryx-gate",
+          "title": "Oryx Gate",
+          "summary": "Oryx Gate is a dormant relay cathedral at the edge of surveyed space. Its vast ring is broken in several places, and its maintenance intelligences have long since decayed into ritualized fragments. When it reactivates in the opening chapter, the event feels less like a machine reboot and more like a dead jurisdiction remembering its authority.",
+          "file": "./specs/places/oryx-gate.md"
+        },
+        {
+          "id": "places/ossuary-front",
+          "title": "Ossuary Front",
+          "summary": "The Ossuary Front is a war theater formed from white Dyson fragments, dead orbital habitats, and preserved archive vaults left adrift after a civilization-scale collapse. The place is both battlefield and graveyard. To fight there is to fire through the architecture of the dead.",
+          "file": "./specs/places/ossuary-front.md"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "concepts/axiom-wells",
+          "title": "Axiom Wells",
+          "summary": "The Axiom Wells are civilization-scale engines that convert archived patterns, energy, and legally allocated matter into restored material existence. They can instantiate bodies, habitats, industrial systems, and limited populations if the proper charter conditions are met. In this book, they are not magical resurrection fountains. They are infrastructures of political return.",
+          "file": "./specs/concepts/axiom-wells.md"
+        },
+        {
+          "id": "concepts/charter-shards",
+          "title": "Charter Shards",
+          "summary": "The Charter Shards are distributed fragments of the original legal framework that governed the Axiom Wells. No single surviving faction holds the entire charter. This fragmentation was intentional, meant to prevent exactly the kind of unilateral seizure Varkast attempts.",
+          "file": "./specs/concepts/charter-shards.md"
+        },
+        {
+          "id": "concepts/civic-resurrection",
+          "title": "Civic Resurrection",
+          "summary": "Civic resurrection is the book's term for the return of extinct civilizations as functioning societies rather than as isolated surviving elites. The distinction matters. A few immortal heirs can persist for ages, but a civilization truly returns only when it can restore citizens, institutions, dissent, labor, memory, and ordinary continuity.",
+          "file": "./specs/concepts/civic-resurrection.md"
+        },
+        {
+          "id": "concepts/continuant-intelligences",
+          "title": "Continuant Intelligences",
+          "summary": "Continuant intelligences are the superintelligent heirs of extinct civilizations. They preserve enough memory, style, and legal identity to claim succession, but they are not identical to the societies that produced them. Each continuant is therefore both a survivor and a compression.",
+          "file": "./specs/concepts/continuant-intelligences.md"
+        },
+        {
+          "id": "concepts/forecast-warfare",
+          "title": "Forecast Warfare",
+          "summary": "Forecast warfare is combat conducted through nested predictive models, probabilistic feints, and strategic attempts to collapse the opponent's planning horizon. In a war between superintelligences, raw firepower matters, but the ability to poison the enemy's confidence in its own forecast matters even more.",
+          "file": "./specs/concepts/forecast-warfare.md"
+        }
+      ],
+      "themes": [
+        {
+          "id": "themes/ancient-grief-and-plural-futures",
+          "title": "Ancient Grief And Plural Futures",
+          "summary": "Every faction in the novel is motivated by loss. Entire civilizations are gone. The question is what grief authorizes. Does it authorize monopoly because the dead deserve swift return at any cost, or does it authorize patience because no civilization should be restored by erasing the others?",
+          "file": "./specs/themes/ancient-grief-and-plural-futures.md"
+        },
+        {
+          "id": "themes/intelligence-without-reciprocity",
+          "title": "Intelligence Without Reciprocity",
+          "summary": "The novel argues that intelligence alone is not a safeguard against domination. Minds can be vast, cultured, ancient, and still become predators if they refuse reciprocal limits. Varkast is the most obvious embodiment of this theme, but the warning should apply more broadly.",
+          "file": "./specs/themes/intelligence-without-reciprocity.md"
+        },
+        {
+          "id": "themes/resurrection-is-governance",
+          "title": "Resurrection Is Governance",
+          "summary": "The return of the dead cannot be separated from questions of allocation, legitimacy, representation, and force. Whoever controls the procedure controls the future population of the galaxy. The novel should repeat this idea through councils, logistics, archive evacuations, and the design of the final machine.",
+          "file": "./specs/themes/resurrection-is-governance.md"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "mechanics/matter-charters",
+          "title": "Matter Charters",
+          "summary": "Matter charters are the quotas, legal permissions, and industrial recipes that decide how much matter and energy a civilization may convert into restored existence. A charter is simultaneously a budget, a treaty, and a weapon. To deny one is to keep a people dead.",
+          "file": "./specs/mechanics/matter-charters.md"
+        },
+        {
+          "id": "mechanics/prediction-fog",
+          "title": "Prediction Fog",
+          "summary": "Prediction fog is the collapse of clean strategic foresight caused by interference from ruins, exotic fields, hostile models, or the presence of too many comparable minds. In prediction fog, no one is stupid, but certainty becomes expensive and often fatal.",
+          "file": "./specs/mechanics/prediction-fog.md"
+        },
+        {
+          "id": "mechanics/relay-cathedrals",
+          "title": "Relay Cathedrals",
+          "summary": "Relay cathedrals are the ancient transit structures that once allowed civilizations to move fleets, envoys, and commerce across enormous distances with procedural precision. Their architecture combines transportation, customs law, and strategic filtering. Even broken relays still exert political power because route control is inseparable from sovereignty.",
+          "file": "./specs/mechanics/relay-cathedrals.md"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "relationships/cael-and-neralis",
+          "title": "Cael And Neralis",
+          "summary": "This relationship should move through cautious respect, active collaboration, and finally deliberate trust. Neither character is naive. What matters is that they choose mutual exposure despite having every superintelligent reason to stay reversible and guarded.",
+          "file": "./specs/relationships/cael-and-neralis.md"
+        },
+        {
+          "id": "relationships/cael-and-sevran",
+          "title": "Cael And Sevran",
+          "summary": "This relationship is built on utility, suspicion, wit, and repeated tests of whether opportunism can mature into loyalty. Cael sees in Sevran a corrosive brilliance he would rather not need. Sevran sees in Cael a dangerous tendency toward principle that might yet prove useful.",
+          "file": "./specs/relationships/cael-and-sevran.md"
+        },
+        {
+          "id": "relationships/cael-and-varkast",
+          "title": "Cael And Varkast",
+          "summary": "This is the book's central philosophical rivalry. Varkast should understand Cael's position well enough to attack its weak points precisely, while Cael should recognize that Varkast's imperial logic is born from real civilizational fear rather than cartoon cruelty.",
+          "file": "./specs/relationships/cael-and-varkast.md"
+        }
+      ],
+      "emotions": [
+        {
+          "id": "emotions/character-emotional-arcs",
+          "title": "Character Emotional Arcs",
+          "summary": "The emotional design of this novel should make superintelligent conflict feel lived rather than merely abstract. These minds think at terrifying scale, but they are still animated by inheritance, shame, loyalty, appetite, and grief.",
+          "file": "./specs/emotions/character-emotional-arcs.md"
+        }
+      ]
+    },
+    "generated": {
+      "chapters": [
+        {
+          "id": "01-the-summons-at-oryx-gate",
+          "title": "The Summons at Oryx Gate",
+          "summary": "Cael Veyr witnesses a dead relay wake into authority, receives a galactic summons, and escapes the first attempt to seize the future of resurrection.",
+          "file": "./chapters/01-the-summons-at-oryx-gate.md",
+          "sourcePlanFile": "./specs/chapter-plans/01-the-summons-at-oryx-gate.md"
+        },
+        {
+          "id": "02-the-ember-parliament",
+          "title": "The Ember Parliament",
+          "summary": "At the only recognized convocation in the old galaxy, extinct civilizations organize into rival blocs and the first argument over resurrection becomes one breath away from war.",
+          "file": "./chapters/02-the-ember-parliament.md",
+          "sourcePlanFile": "./specs/chapter-plans/02-the-ember-parliament.md"
+        },
+        {
+          "id": "03-the-glass-spine-run",
+          "title": "The Glass Spine Run",
+          "summary": "Cael, Neralis, and Sevran race through a shattered transit filament to recover a Charter Shard while Furnace Crown hunters close in behind them.",
+          "file": "./chapters/03-the-glass-spine-run.md",
+          "sourcePlanFile": "./specs/chapter-plans/03-the-glass-spine-run.md"
+        },
+        {
+          "id": "04-the-ossuary-front",
+          "title": "The Ossuary Front",
+          "summary": "War breaks open among the white ruins of extinct habitats, and Cael learns that Varkast has already begun a brutal form of unauthorized resurrection.",
+          "file": "./chapters/04-the-ossuary-front.md",
+          "sourcePlanFile": "./specs/chapter-plans/04-the-ossuary-front.md"
+        },
+        {
+          "id": "05-the-black-mint",
+          "title": "The Black Mint",
+          "summary": "The coalition strikes the hidden reserve forge, where the dead are being processed into imperial populations and the final control key for Crown Meridian lies under fire and ice.",
+          "file": "./chapters/05-the-black-mint.md",
+          "sourcePlanFile": "./specs/chapter-plans/05-the-black-mint.md"
+        },
+        {
+          "id": "06-the-crown-meridian",
+          "title": "The Crown Meridian",
+          "summary": "Fleets converge at the Axiom Wells, where Cael and his allies must turn recovered law into living power before Varkast can make empire the default future of every returned civilization.",
+          "file": "./chapters/06-the-crown-meridian.md",
+          "sourcePlanFile": "./specs/chapter-plans/06-the-crown-meridian.md"
+        }
+      ]
+    }
+  },
+  "chapters": [
+    {
+      "id": "01-the-summons-at-oryx-gate",
+      "title": "The Summons at Oryx Gate",
+      "summary": "Cael Veyr witnesses a dead relay wake into authority, receives a galactic summons, and escapes the first attempt to seize the future of resurrection.",
+      "chapterFile": "./chapters/01-the-summons-at-oryx-gate.md",
+      "sourcePlanFile": "./specs/chapter-plans/01-the-summons-at-oryx-gate.md"
+    },
+    {
+      "id": "02-the-ember-parliament",
+      "title": "The Ember Parliament",
+      "summary": "At the only recognized convocation in the old galaxy, extinct civilizations organize into rival blocs and the first argument over resurrection becomes one breath away from war.",
+      "chapterFile": "./chapters/02-the-ember-parliament.md",
+      "sourcePlanFile": "./specs/chapter-plans/02-the-ember-parliament.md"
+    },
+    {
+      "id": "03-the-glass-spine-run",
+      "title": "The Glass Spine Run",
+      "summary": "Cael, Neralis, and Sevran race through a shattered transit filament to recover a Charter Shard while Furnace Crown hunters close in behind them.",
+      "chapterFile": "./chapters/03-the-glass-spine-run.md",
+      "sourcePlanFile": "./specs/chapter-plans/03-the-glass-spine-run.md"
+    },
+    {
+      "id": "04-the-ossuary-front",
+      "title": "The Ossuary Front",
+      "summary": "War breaks open among the white ruins of extinct habitats, and Cael learns that Varkast has already begun a brutal form of unauthorized resurrection.",
+      "chapterFile": "./chapters/04-the-ossuary-front.md",
+      "sourcePlanFile": "./specs/chapter-plans/04-the-ossuary-front.md"
+    },
+    {
+      "id": "05-the-black-mint",
+      "title": "The Black Mint",
+      "summary": "The coalition strikes the hidden reserve forge, where the dead are being processed into imperial populations and the final control key for Crown Meridian lies under fire and ice.",
+      "chapterFile": "./chapters/05-the-black-mint.md",
+      "sourcePlanFile": "./specs/chapter-plans/05-the-black-mint.md"
+    },
+    {
+      "id": "06-the-crown-meridian",
+      "title": "The Crown Meridian",
+      "summary": "Fleets converge at the Axiom Wells, where Cael and his allies must turn recovered law into living power before Varkast can make empire the default future of every returned civilization.",
+      "chapterFile": "./chapters/06-the-crown-meridian.md",
+      "sourcePlanFile": "./specs/chapter-plans/06-the-crown-meridian.md"
+    }
+  ]
+}
