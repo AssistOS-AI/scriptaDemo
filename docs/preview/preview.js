@@ -4,10 +4,19 @@ const SOURCE_GROUP_LABELS = {
   core: "Core Specs",
   chapterPlans: "Chapter Plans",
   characters: "Characters",
+  archetypes: "Archetypes",
+  evolution: "Evolution",
   places: "Places",
+  wisdom: "Wisdom",
+  "world-building": "World Building",
   concepts: "Concepts",
   themes: "Themes",
   mechanics: "Mechanics",
+  "plot-elements": "Plot Elements",
+  "special-objects": "Special Objects",
+  events: "Events",
+  "story-patterns": "Story Patterns",
+  "narrative-structures": "Narrative Structures",
   relationships: "Relationships",
   emotions: "Emotions",
   chapters: "Generated Chapters",
@@ -1795,6 +1804,8 @@ function renderAtlasPage(manifest) {
       ${renderAtlasSection("Concepts", manifest.atlas?.concepts)}
       ${renderAtlasSection("Themes", manifest.atlas?.themes)}
       ${renderAtlasSection("Mechanics", manifest.atlas?.mechanics)}
+      ${renderAtlasSection("Relationships", manifest.atlas?.relationships)}
+      ${renderAtlasSection("Events", manifest.atlas?.events)}
       ${renderAtlasSection("Emotions", manifest.atlas?.emotions)}
     </div>
     <p class="atlas-note">The primary artifact stays in the foreground; the specification system stays inspectable without flattening the reading experience into a documentation page.</p>

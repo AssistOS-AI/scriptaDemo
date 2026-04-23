@@ -432,7 +432,7 @@
     <section class="section panel">
       <h2>Skills to use</h2>
       <p class="lede">
-        Two dedicated skills are expected to drive this repository. The names below are the recommended public interface
+        Four dedicated skills are expected to drive this repository. The names below are the recommended public interface
         for those skills so that usage stays predictable across books.
       </p>
       <div class="skill-grid">
@@ -442,22 +442,46 @@
           <p>Create the first full specification structure for a new book from a concept and broad requirements.</p>
           <ul>
             <li>Create <code>docs/BOOKNAME/specs</code> and the initial Markdown files.</li>
-            <li>Write a large-scale book plan and an initial chapter breakdown.</li>
+            <li>Write a seeded <code>story-core.md</code> with archetypes, relations, story pattern, narrative structure, themes, and pacing defaults.</li>
+            <li>Create richer support groups such as characters, evolution, world building, plot elements, special objects, events, and relationships.</li>
             <li>Create <code>specs/book-design.md</code> with display metadata, abstract visual direction, and cover/opening copy.</li>
-            <li>Add support files for narrative or scientific structures as needed.</li>
-            <li>Prepare the repository so later builds can work incrementally.</li>
+            <li>Prepare the repository so later chapter building, generation, and aggregation passes can work incrementally.</li>
           </ul>
         </article>
 
         <article class="skill-card">
-          <div class="tag">Build skill</div>
+          <div class="tag">Planning skill</div>
+          <h3><code>$chapter-builder</code></h3>
+          <p>Turn a chapter plan into a draft-ready blueprint with scenes, chapter roles, block cadence, dialogues, and a stricter checklist.</p>
+          <ul>
+            <li>Expand <code>## Scene Blueprint</code> into concrete scene work.</li>
+            <li>Define what each required character is doing in the chapter.</li>
+            <li>Generate a block set and dialogue set that match the chapter rhythm.</li>
+            <li>Strengthen the chapter consistency checklist before prose is drafted.</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <div class="tag">Generation skill</div>
+          <h3><code>$chapter-generator</code></h3>
+          <p>Generate chapter prose from the chapter plan, validate it, and retry until the chapter is structurally consistent.</p>
+          <ul>
+            <li>Gather the full chapter packet from Story Core, chapter plan, and support specs.</li>
+            <li>Compose all planned elements into <code>## Generated Draft</code>.</li>
+            <li>Validate the draft against required characters, places, concepts, events, and objects.</li>
+            <li>Revise and rerun validation instead of accepting broken drafts.</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <div class="tag">Aggregation skill</div>
           <h3><code>$book-build</code></h3>
-          <p>Transform specs into intermediate chapter outputs and assemble the final book view without rebuilding unrelated work.</p>
+          <p>Aggregate chapter plans into intermediate chapter outputs and assemble the final book view without rebuilding unrelated work.</p>
           <ul>
             <li>Read the dependency graph for the selected book.</li>
             <li>Regenerate only the affected chapter files in <code>docs/BOOKNAME/chapters</code>.</li>
             <li>Generate separate <code>cover-art.svg</code>, <code>cover-page.svg</code>, and <code>opening-page.svg</code> files from <code>specs/book-design.md</code>.</li>
-            <li>Refresh metadata and the final <code>book.html</code> when required.</li>
+            <li>Write a global <code>build/consistency-report.json</code> and refresh the final <code>book.html</code> when required.</li>
             <li>Leave untouched books and unaffected chapters unchanged.</li>
           </ul>
         </article>
@@ -481,32 +505,43 @@ Example:
 Use $book-init to create docs/the-origin-of-patterns.
 The book is a scientific work about how recurring structures
 emerge in biology, mathematics, and language.
-Create a book plan, chapter plans, concept files, and metadata.
+Create a seeded Story Core, a book plan, chapter plans, concept files, and metadata.
 Also create book-design metadata for the cover and opening pages.
 All specifications must be in Markdown.</pre>
       </article>
 
       <article class="panel">
+        <h2>Chapter Workflow</h2>
+        <pre>Use $chapter-builder for docs/the-origin-of-patterns chapter 03.
+Expand scenes, character roles, blocks, and dialogues.
+
+Then use $chapter-generator for the same chapter.
+Generate the draft inside the chapter plan source.
+Validate and retry until the chapter passes.</pre>
+      </article>
+    </section>
+
+    <section class="section grid-two">
+      <article class="panel">
         <h2>Build examples</h2>
-        <pre>Use $book-build for incremental generation.
+        <pre>Use $book-build for incremental aggregation.
 
 Example:
 Use $book-build for docs/the-origin-of-patterns.
 Only rebuild outputs affected by changes in:
 - specs/chapter-plans/03-self-organization.md
 - specs/concepts/feedback-loops.md
-Update the necessary chapter files and refresh book.html.</pre>
+Update the necessary chapter files, refresh book.html,
+and review consistency-report.json if anything fails.</pre>
       </article>
-    </section>
 
-    <section class="section grid-two">
       <article class="panel">
         <h2>Recommended request pattern</h2>
         <ul>
           <li>Name the book path explicitly, for example <code>docs/my-book</code>.</li>
           <li>State whether the book is literary, scientific, or hybrid.</li>
-          <li>Provide scope: initialize, rebuild one chapter, rebuild all changed chapters, or refresh the final assembled view.</li>
-          <li>Mention any special structures that must exist, such as characters, locations, experiments, terminology, or reference concepts.</li>
+          <li>Provide scope: initialize, build chapter plans, generate chapter prose, or refresh the final assembled view.</li>
+          <li>Mention any special structures that must exist, such as characters, locations, experiments, terminology, relations, or reference concepts.</li>
           <li>Ask for incremental work unless you truly need a full regeneration.</li>
         </ul>
       </article>

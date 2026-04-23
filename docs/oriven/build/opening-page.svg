@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2400" role="img" aria-label="Oriven: Origins opening page">
+  <rect width="1600" height="2400" rx="88" fill="#f4efe3"/>
+  <rect x="78" y="78" width="1444" height="2244" rx="56" fill="none" stroke="#c9b896" stroke-width="4"/>
+  <rect x="124" y="124" width="1352" height="2152" rx="34" fill="none" stroke="#c9b896" stroke-opacity="0.52" stroke-width="2"/>
+  <rect x="180" y="1164" width="1230" height="846" rx="42" fill="#ffffff" fill-opacity="0.32" stroke="#c9b896" stroke-opacity="0.42"/>
+  <circle cx="1130" cy="540" r="224" fill="#e8f5a3" fill-opacity="0.18"/>
+  <ellipse cx="1080" cy="566" rx="244" ry="168" fill="none" stroke="#7db85a" stroke-width="7" stroke-opacity="0.52"/>
+  <ellipse cx="1080" cy="566" rx="152" ry="96" fill="none" stroke="#f0e6c8" stroke-width="5" stroke-opacity="0.72"/>
+  <path d="M868 564 C940 430, 1226 438, 1294 568" fill="none" stroke="#f0e6c8" stroke-width="4" stroke-opacity="0.7"/>
+  <text x="214" y="226" font-family="'Segoe UI', Arial, sans-serif" font-size="30" letter-spacing="6" fill="#7db85a">OPENING PAGE</text>
+  <text x="214" y="292" font-family="'Segoe UI', Arial, sans-serif" font-size="24" letter-spacing="4" fill="#5c5236">INVESTIGATION THROUGH RUINS</text>
+  <text x="210" y="730" font-family="Georgia, 'Times New Roman', serif" font-size="104" fill="#1a1508">Oriven: Origins</text>
+  <text x="214" y="1020" font-family="'Segoe UI', Arial, sans-serif" font-size="34" fill="#5c5236"><tspan x="214" dy="0">When Rooted Minds Looked Skyward and Saw</tspan><tspan x="214" dy="40">Horror</tspan></text>
+  <line x1="214" y1="1186" x2="1324" y2="1186" stroke="#c9b896" stroke-width="2"/>
+  <text x="214" y="1300" font-family="Georgia, 'Times New Roman', serif" font-size="40" fill="#1a1508"><tspan x="214" dy="0">On Oriven, the deepest law is not written in</tspan><tspan x="214" dy="52">stone. It is grown in root. One being does not</tspan><tspan x="214" dy="52">end another. This is not virtue. It is</tspan><tspan x="214" dy="52">biology.</tspan></text>
+  <line x1="214" y1="1562" x2="704" y2="1562" stroke="#c9b896" stroke-opacity="0.84" stroke-width="2"/>
+  <text x="214" y="1620" font-family="'Segoe UI', Arial, sans-serif" font-size="28" fill="#5c5236"><tspan x="214" dy="0">When the telescopes resolved Origaya&apos;s predators, the</tspan><tspan x="214" dy="36">root networks trembled — not with fear, but with the</tspan><tspan x="214" dy="36">recognition that their deepest truth might be local,</tspan></text>
+  <text x="214" y="2140" font-family="'Segoe UI', Arial, sans-serif" font-size="30" fill="#7db85a">Codex Collaborative Draft</text>
+</svg>

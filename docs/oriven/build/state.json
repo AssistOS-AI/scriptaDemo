@@ -1,0 +1,20 @@
+{
+  "chapters": {
+    "01-the-deep-canopy": "8c7321cb2d5c78c6acd4e2615238e5f39c5ad397f87da2428028e4a7e1f27da5",
+    "02-light-from-origaya": "331252dbab32a2aa14aaa69e05e026bc7cd1246ad12bfd55a4e58d3bebcaa88d",
+    "03-the-charging": "826e0f1cb88856fb32dd589d565653329915aa98215f0d4108162eda7ac0941e",
+    "04-the-probe-descends": "b8e950b62ea71f161aadd6e861cb0ad33b9c968682a08772f7f329b80a782233",
+    "05-root-horror": "f2dda509edf623eb5b58fd8b0ca30d0456d5b418d14947a39bd4de6078f7f216",
+    "06-the-ethical-quarrel": "124dc50021b6e8e837fd41e82372a9c1e00f652ebd3371a1a62956e4faca47f6",
+    "07-surface-fire": "51943ec703b249fffd03b8b5b9b91648b1667f078431174ee14357f6154bcd18",
+    "08-what-grows-from-witnessing": "2861e6a6163701d6a9238bce40ae7b13e0d118d9c0dc25b8d5069543f3614155"
+  },
+  "outputs": {
+    "coverArt": "2f97155dbc82f4a8485c13f90269b8e9793859d7a5274c9355f7205f9f324b13",
+    "coverPage": "066da431c52459b976537d91745e6c72a5c8312a6e83b549442c825155f57ee2",
+    "openingPage": "c5de5cf8938bff0a1f8e15cb8069689a3418826ff87c80445309f4da14544ad5",
+    "consistencyReport": "c367b46e3e11fcbb65532febae10b281e7d68d6974a8a21b2139b9bf809c105c",
+    "manifest": "f67257810e06ab6dd42c081c53a02537b9eb917a06cd39a77eadd31870d19b79",
+    "bookHtml": "8f7b7e50b62151d317ec8a1620a16dc40e71994dc74f8187624f3d98fda2dd63"
+  }
+}

@@ -34,12 +34,12 @@ The final HTML should stay lightweight. The real book content lives in Markdown 
 ### `book-init`
 
 File:
-`skills/book-init/SKILL.md`
+`.agents/skills/book-init/SKILL.md`
 
 Purpose:
-- Create the first spec tree for a new book.
-- Create metadata, a general book plan, chapter plans, and support spec files.
-- Prefer rich specs and substantial initial chapter drafts for demo-quality books.
+- Create or refresh the full seeded spec tree for a new book.
+- Generate `story-core.md` plus richer support groups for characters, archetypes, evolution, locations, wisdom, world building, plot elements, special objects, events, concepts, relations, story pattern, narrative structure, theme, and emotions.
+- Use deterministic seeded literary-theory catalogs for surprising but reproducible defaults.
 
 Scaffold command:
 
@@ -47,15 +47,56 @@ Scaffold command:
 node tools/book-init.mjs <book-slug> "Book Title"
 ```
 
+### `chapter-builder`
+
+File:
+`.agents/skills/chapter-builder/SKILL.md`
+
+Purpose:
+- Expand a chapter plan into detailed scenes.
+- Define each character role in the chapter.
+- Define a set of blocks and a set of dialogues.
+- Strengthen the chapter-level consistency checklist before prose generation.
+
+Command:
+
+```bash
+node tools/chapter-builder.mjs docs/<book-slug> <chapter-id>
+```
+
+Or for all chapters:
+
+```bash
+node tools/chapter-builder.mjs docs/<book-slug> --all
+```
+
+### `chapter-generator`
+
+File:
+`.agents/skills/chapter-generator/SKILL.md`
+
+Purpose:
+- Read the Story Core, chapter plan, and support specs.
+- Generate all chapter elements into `## Generated Draft`.
+- Validate chapter consistency against the general specs and the generated Markdown.
+- Retry/regenerate until the chapter passes the consistency bar.
+
+Core commands:
+
+```bash
+node tools/chapter-generator.mjs docs/<book-slug> <chapter-id> --json
+node tools/chapter-generator.mjs docs/<book-slug> <chapter-id> --validate
+```
+
 ### `book-build`
 
 File:
-`skills/book-build/SKILL.md`
+`.agents/skills/book-build/SKILL.md`
 
 Purpose:
-- Read the spec layer.
-- Extract generated draft sections into `docs/BOOKNAME/chapters`.
+- Aggregate generated chapters from the specification layer.
 - Generate `build/cover-art.svg`, `build/cover-page.svg`, and `build/opening-page.svg` from `specs/book-design.md`.
+- Check global consistency and emit `docs/BOOKNAME/build/consistency-report.json`.
 - Produce `docs/BOOKNAME/build/manifest.json`.
 - Produce or refresh `docs/BOOKNAME/book.html`.
 
@@ -73,7 +114,7 @@ node tools/book-build.mjs docs/<book-slug>
 node tools/book-init.mjs my-book "My Book"
 ```
 
-2. Fill the spec files under:
+2. Refine the seeded Story Core and support files under:
 
 ```text
 docs/my-book/specs/
@@ -81,25 +122,32 @@ docs/my-book/specs/
 
 At minimum:
 - `metadata.md`
+- `story-core.md`
 - `book-plan.md`
 - `book-design.md`
 - `chapter-plans/*.md`
-- support specs in folders such as `characters/`, `places/`, `concepts/`, `emotions/`
+- support specs in folders such as `characters/`, `places/`, `concepts/`, `relationships/`, `themes/`, `events/`, `special-objects/`, `world-building/`
 
-For stronger demos, also add:
-- `themes/`
-- `mechanics/`
-- `relationships/`
+3. Expand the chapter plans into detailed blueprints:
 
-3. Make sure each chapter plan contains a substantial `## Generated Draft` section.
+```bash
+node tools/chapter-builder.mjs docs/my-book --all
+```
 
-4. Build the book:
+4. Generate or regenerate each chapter draft in the chapter plan source, validating after each pass:
+
+```bash
+node tools/chapter-generator.mjs docs/my-book 01-your-chapter-id --json
+node tools/chapter-generator.mjs docs/my-book 01-your-chapter-id --validate
+```
+
+5. Build the book:
 
 ```bash
 node tools/book-build.mjs docs/my-book
 ```
 
-5. Open the result:
+6. Open the result:
 
 ```text
 docs/my-book/book.html
@@ -109,6 +157,7 @@ docs/my-book/book.html
 
 - The viewer is implemented in `docs/preview/preview.js`.
 - The build writes viewer data to `docs/BOOKNAME/build/manifest.json`.
+- The build writes a global QA report to `docs/BOOKNAME/build/consistency-report.json`.
 - The cover/opening display assets come from `specs/book-design.md` and are emitted as separate SVG files under `docs/BOOKNAME/build/`.
 - The source drawer in the viewer can expose both specs and generated chapter outputs.
 - For a good demo, prefer books with enough prose to fill many pages rather than a few short scenes.

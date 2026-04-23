@@ -2,6 +2,8 @@ import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 
+import { buildChapterContext, validateChapterContext } from "./chapter-generator.mjs";
+
 function hashText(text) {
   return crypto.createHash("sha256").update(text).digest("hex");
 }
@@ -184,13 +186,41 @@ function sectionEntryFromSpec(relativePath, markdown) {
   };
 }
 
+async function listSpecGroups(specsDir) {
+  const entries = await fs.readdir(specsDir, { withFileTypes: true });
+  return entries
+    .filter((entry) => entry.isDirectory() && entry.name !== "chapter-plans")
+    .map((entry) => entry.name)
+    .sort();
+}
+
+async function listRootSpecFiles(specsDir) {
+  const entries = await fs.readdir(specsDir, { withFileTypes: true });
+  return entries
+    .filter((entry) => entry.isFile() && entry.name.endsWith(".md"))
+    .map((entry) => path.join(specsDir, entry.name))
+    .sort();
+}
+
 async function buildAtlas(specsDir) {
-  const groups = ["characters", "places", "concepts", "themes", "mechanics", "emotions"];
+  const preferredGroups = [
+    "characters",
+    "places",
+    "concepts",
+    "themes",
+    "mechanics",
+    "emotions",
+    "relationships",
+    "plot-elements",
+    "special-objects",
+    "events",
+  ];
+  const availableGroups = new Set(await listSpecGroups(specsDir));
   const atlas = {};
 
-  for (const group of groups) {
+  for (const group of preferredGroups) {
     const groupDir = path.join(specsDir, group);
-    if (!(await fileExists(groupDir))) {
+    if (!availableGroups.has(group) || !(await fileExists(groupDir))) {
       atlas[group] = [];
       continue;
     }
@@ -231,8 +261,104 @@ async function buildSourceGroup({ bookDir, specsDir, relativeDir }) {
 
   const files = await listMarkdownFiles(dirPath);
   return Promise.all(
-    files.map((filePath) => buildSourceEntry({ bookDir, rootDir: specsDir, filePath, fallbackTitle: path.basename(filePath, ".md") }))
+      files.map((filePath) => buildSourceEntry({ bookDir, rootDir: specsDir, filePath, fallbackTitle: path.basename(filePath, ".md") }))
   );
+}
+
+async function buildDynamicSpecSourceGroups({ bookDir, specsDir, chapterOrder }) {
+  const rootFiles = await listRootSpecFiles(specsDir);
+  const specGroups = {
+    core: await Promise.all(
+      rootFiles.map((filePath) =>
+        buildSourceEntry({
+          bookDir,
+          rootDir: specsDir,
+          filePath,
+          fallbackTitle: path.basename(filePath, ".md"),
+        })
+      )
+    ),
+    chapterPlans: await Promise.all(
+      chapterOrder.map((chapterId) =>
+        buildSourceEntry({
+          bookDir,
+          rootDir: specsDir,
+          filePath: path.join(specsDir, "chapter-plans", `${chapterId}.md`),
+          fallbackTitle: chapterId,
+        })
+      )
+    ),
+  };
+
+  for (const group of await listSpecGroups(specsDir)) {
+    specGroups[group] = await buildSourceGroup({ bookDir, specsDir, relativeDir: group });
+  }
+
+  return specGroups;
+}
+
+async function buildGlobalConsistencyReport({ bookDir, specsDir, chapterOrder, chapterReports, chapterMetas }) {
+  const errors = [];
+  const warnings = [];
+  const seenIds = new Set();
+  const duplicateChapterIds = [];
+  const referencedSpecs = new Set(["metadata.md", "book-plan.md", "book-design.md", "story-core.md"]);
+
+  for (const chapterId of chapterOrder) {
+    if (seenIds.has(chapterId)) {
+      duplicateChapterIds.push(chapterId);
+    }
+    seenIds.add(chapterId);
+  }
+
+  if (duplicateChapterIds.length) {
+    errors.push(`Duplicate chapter ids in metadata.chapterOrder: ${duplicateChapterIds.join(", ")}`);
+  }
+
+  for (const meta of chapterMetas) {
+    referencedSpecs.add(`chapter-plans/${meta.id}.md`);
+    for (const dependency of meta.dependsOn || []) {
+      referencedSpecs.add(String(dependency));
+    }
+  }
+
+  const orphanedSpecs = [];
+  for (const group of await listSpecGroups(specsDir)) {
+    const files = await listMarkdownFiles(path.join(specsDir, group));
+    for (const filePath of files) {
+      const relativePath = path.relative(specsDir, filePath).replace(/\\/g, "/");
+      if (!referencedSpecs.has(relativePath)) {
+        orphanedSpecs.push(relativePath);
+      }
+    }
+  }
+
+  if (orphanedSpecs.length) {
+    warnings.push(`Spec files not referenced by any chapter dependency: ${orphanedSpecs.join(", ")}`);
+  }
+
+  const failedChapters = chapterReports.filter((report) => report.status === "fail");
+  const warningChapters = chapterReports.filter((report) => report.warnings.length);
+
+  if (failedChapters.length) {
+    errors.push(`Chapters with consistency failures: ${failedChapters.map((report) => report.chapterId).join(", ")}`);
+  }
+
+  return {
+    status: errors.length ? "fail" : warnings.length || warningChapters.length ? "warn" : "pass",
+    summary: {
+      chapters: chapterOrder.length,
+      failedChapters: failedChapters.length,
+      warningChapters: warningChapters.length,
+      orphanedSpecs: orphanedSpecs.length,
+    },
+    errors,
+    warnings,
+    orphanedSpecs,
+    chapterReports,
+    builtAt: new Date().toISOString(),
+    buildRoot: bookDir,
+  };
 }
 
 function wrapWords(text, maxLineLength = 16) {
@@ -503,6 +629,7 @@ async function main() {
   const bookDesignPath = path.join(specsDir, "book-design.md");
   const statePath = path.join(buildDir, "state.json");
   const manifestPath = path.join(buildDir, "manifest.json");
+  const consistencyReportPath = path.join(buildDir, "consistency-report.json");
   const coverArtPath = path.join(buildDir, "cover-art.svg");
   const coverPagePath = path.join(buildDir, "cover-page.svg");
   const openingPagePath = path.join(buildDir, "opening-page.svg");
@@ -522,6 +649,8 @@ async function main() {
   const atlas = await buildAtlas(specsDir);
   const chapterRecords = [];
   const chapterChanges = [];
+  const chapterMetas = [];
+  const chapterReports = [];
 
   for (const chapterId of chapterOrder) {
     const planPath = path.join(chapterPlansDir, `${chapterId}.md`);
@@ -548,6 +677,7 @@ async function main() {
 
     state.chapters[chapterId] = inputHash;
     chapterChanges.push(`${chapterId}: ${outputState}`);
+    chapterMetas.push({ id: chapterId, dependsOn: planMeta.dependsOn || [] });
     chapterRecords.push({
       id: chapterId,
       title: planMeta.title || chapterId,
@@ -555,33 +685,25 @@ async function main() {
       chapterFile: `./chapters/${chapterId}.md`,
       sourcePlanFile: `./specs/chapter-plans/${chapterId}.md`,
     });
+
+    const validationReport = validateChapterContext(await buildChapterContext(bookDir, chapterId));
+    chapterReports.push({
+      chapterId,
+      ...validationReport,
+    });
   }
 
+  const sourceSpecGroups = await buildDynamicSpecSourceGroups({ bookDir, specsDir, chapterOrder });
+  const consistencyReport = await buildGlobalConsistencyReport({
+    bookDir,
+    specsDir,
+    chapterOrder,
+    chapterReports,
+    chapterMetas,
+  });
+
   const sourceMaterials = {
-    specs: {
-      core: [
-        await buildSourceEntry({ bookDir, rootDir: specsDir, filePath: metadataPath, fallbackTitle: "Metadata" }),
-        await buildSourceEntry({ bookDir, rootDir: specsDir, filePath: bookPlanPath, fallbackTitle: "Book Plan" }),
-        await buildSourceEntry({ bookDir, rootDir: specsDir, filePath: bookDesignPath, fallbackTitle: "Book Design" }),
-      ],
-      chapterPlans: await Promise.all(
-        chapterOrder.map((chapterId) =>
-          buildSourceEntry({
-            bookDir,
-            rootDir: specsDir,
-            filePath: path.join(chapterPlansDir, `${chapterId}.md`),
-            fallbackTitle: chapterId,
-          })
-        )
-      ),
-      characters: await buildSourceGroup({ bookDir, specsDir, relativeDir: "characters" }),
-      places: await buildSourceGroup({ bookDir, specsDir, relativeDir: "places" }),
-      concepts: await buildSourceGroup({ bookDir, specsDir, relativeDir: "concepts" }),
-      themes: await buildSourceGroup({ bookDir, specsDir, relativeDir: "themes" }),
-      mechanics: await buildSourceGroup({ bookDir, specsDir, relativeDir: "mechanics" }),
-      relationships: await buildSourceGroup({ bookDir, specsDir, relativeDir: "relationships" }),
-      emotions: await buildSourceGroup({ bookDir, specsDir, relativeDir: "emotions" }),
-    },
+    specs: sourceSpecGroups,
     generated: {
       chapters: chapterRecords.map((chapter) => ({
         id: chapter.id,
@@ -605,6 +727,7 @@ async function main() {
     openingPageImage: "./build/opening-page.svg",
     coverImage: "./build/cover-page.svg",
     philosophyQuote: visualSpec.openingQuote,
+    consistencyReport: "./build/consistency-report.json",
     atlas,
     sources: sourceMaterials,
     chapters: chapterRecords,
@@ -616,6 +739,7 @@ async function main() {
   const coverArtState = await writeIfChanged(coverArtPath, coverArtSvg);
   const coverPageState = await writeIfChanged(coverPagePath, coverPageSvg);
   const openingPageState = await writeIfChanged(openingPagePath, openingPageSvg);
+  const consistencyState = await writeIfChanged(consistencyReportPath, JSON.stringify(consistencyReport, null, 2) + "\n");
   const manifestState = await writeIfChanged(manifestPath, JSON.stringify(manifest, null, 2) + "\n");
   const htmlShell = buildHtmlShell({
     manifestPath: "./build/manifest.json",
@@ -627,6 +751,7 @@ async function main() {
     coverArt: hashText(coverArtSvg),
     coverPage: hashText(coverPageSvg),
     openingPage: hashText(openingPageSvg),
+    consistencyReport: hashText(JSON.stringify(consistencyReport)),
     manifest: hashText(JSON.stringify(manifest)),
     bookHtml: hashText(htmlShell),
   };
@@ -637,6 +762,7 @@ async function main() {
   console.log(`Cover art: ${coverArtState}`);
   console.log(`Cover page: ${coverPageState}`);
   console.log(`Opening page: ${openingPageState}`);
+  console.log(`Consistency report: ${consistencyState} (${consistencyReport.status})`);
   console.log(`Manifest: ${manifestState}`);
   console.log(`book.html: ${htmlState}`);
   for (const change of chapterChanges) {

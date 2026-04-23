@@ -1,0 +1,86 @@
+---
+title: The Charging
+sourcePlan: specs/chapter-plans/03-the-charging.md
+---
+
+# The Charging
+
+The surface of Oriven tried to kill Aethon three times before he reached the Charging Plains.
+
+The first attempt was the transition zone. The geological layers between the deepCanopy and the surface were a gradient of increasing temperature and decreasing humidity that Aethon's trunk-body was not designed to tolerate. His bark fissured in the heat. His root-feet gripped stone that was warm enough to damage his lower tissue. The fungal networks that usually cushioned every step with living moisture gave way to bare rock and dust.
+
+The second attempt was the light. Aethon had not been to the surface in three hundred years, and his canopy-body was calibrated for the dim phosphorescence of the deepCanopy, not the full radiance of a sun closer to Venus than Earth's sun was to Earth. The intensity was staggering. Every photon that struck his leaf-surfaces carried more energy than his light-processing organs were designed to process at deepCanopy levels. He had to angle his canopy away, process in bursts, let the energy accumulate in his storage organs rather than trying to absorb it all at once.
+
+The third attempt was the perspective. Standing on the surface of Oriven, with the ochre sky above and the Charging Plains stretching in every direction, Aethon could see the astronomical context of his world for the first time in centuries. The sun was enormous. It filled a quarter of the sky with a heat and light that was almost architectural in its intensity. This was why the deepCanopy existed underground. This was why Oriveni life had retreated to the temperate depths. This was why they came to the surface only briefly, only deliberately, only to charge.
+
+And this was why their ethics was possible.
+
+The thought arrived uninvited, the way thoughts did on the surface, where the思维的 pace accelerated with the light. In the deepCanopy, thoughts grew slowly, like roots through stone. On the surface, thoughts came fast, like photons striking leaf-surfaces. Aethon stood in the furnace-light of a closer sun and thought: This abundance makes us possible. This much energy, concentrated this close, means we never have to compete. We never have to kill. We take what we need and return what we don't through the network, and there is always enough because this star gives more than any being could consume.
+
+What if Origaya's star were smaller, more distant? What if its energy were less concentrated, more dispersed? What would life do in a world where energy was scarce?
+
+It would do exactly what the Lenses showed it doing. It would kill. It would take. It would consume other beings because the alternative would be to die. And it would not network-share because there would not be enough to share.
+
+Aethon's storage organs were filling. The charge was rich and dense and enough. He would not need to surface again for months. A single surface session, carefully managed, could sustain a deepCanopy being through an entire season of underground work.
+
+On Origaya, no single session would ever be enough. The energy was too diffuse. The sun was too far. The abundant certainty that made Oriveni ethics possible — the certainty that there will always be enough, that no being needs to take from another — that certainty was a product of proximity to a star that gave more than was needed.
+
+"Four thousand years, and you still come to the surface like it's a pilgrimage."
+
+Caelith was waiting for him on the Plains. She was easy to spot — her fire-bloom body was designed for this environment in ways that Aethon's ancient trunk-structure was not. Compact, heat-resistant, radiating stored solar energy through petal-arrays that shimmered with the particular luminescence of a surface-adapted being. She had been living near the surface for centuries, a choice most deepCanopy Oriveni considered mildly pathological.
+
+"I come when I need to charge," Aethon said. "I don't need to like it."
+
+"You don't need to like breathing, either, but you do it." Caelith's light-speech was rapid and bright, everything about her faster than deepCanopy norms. "The surface is where things happen, Aethon. Where the light is. Where Origaya is visible."
+
+"I know why you're here."
+
+"Glad to hear it. I want to talk to you about the Descender."
+
+The Descender was Caelith's project — a biological-crystalline probe designed to travel from Oriven through the atmosphere and beyond, carrying instruments and root-relay transmitters toward Origaya. It was, depending on who in the network you asked, either the most important scientific instrument of the millennium or the most dangerous heresy since the last time someone had suggested limiting root-network connections.
+
+"You want to send something to Origaya," Aethon said. "Something we made. Something of ours."
+
+"Something that can bring back data."
+
+"Data about a world where beings kill each other to survive."
+
+"Yes." Caelith's light-speech was unflinching. "Data about a world where beings kill each other to survive. That is exactly the kind of data we need. Not to approve of it. Not to imitate it. To understand it."
+
+Aethon's storage organs were almost full. The sun's energy was coursing through his system, rich and warm and more than enough — always more than enough, always too much to consume, always so abundant that sharing was not sacrifice but convenience. He could feel why Oriveni ethics worked. He could feel it in every photon, in every surplus calorie, in the casual generosity that came from never having to choose between your own survival and someone else's.
+
+And he could feel, with increasing clarity, that on a world where the sun was smaller and the energy was scarce, that generosity would be impossible.
+
+"How much energy does Origaya receive from its star?" he asked.
+
+Caelith blinked. Of all the responses she had anticipated, a question about stellar energy budgets was not one of them.
+
+"Approximately half of what Oriven receives," she said. "The spectral output is lower, the orbital distance is greater, the flux at surface is significantly reduced. Why?"
+
+"Because that's the answer," Aethon said slowly, and on the surface, slowly still meant faster than he thought in the deepCanopy. "That's why they kill. Not because they are evil. Not because they are wrong. Because they don't have enough energy to live without taking it from each other."
+
+Caelith stared at him. Her fire-bloom petals adjusted their angle toward the sun, an automatic response that betrayed how much attention she was paying to him rather than to her charging.
+
+"Are you saying their predation is justified?"
+
+"I'm saying it is necessitated. There is a difference, and the difference matters."
+
+"Does it? If killing is necessary, does it matter whether we call it justified or necessitated? The result is the same."
+
+"It matters," Aethon said, "because if predation is merely what happens when energy is scarce, then our ethic against killing is merely what happens when energy is abundant. And if our ethic is conditional on our environment, then it is not an ethic at all. It is a convenience."
+
+The word hung between them in the furnace-light of the surface, where thoughts came too fast to be comfortable and the sun beat down with the particular intensity that made Oriveni ethics possible.
+
+Caelith broke the silence first. "The Descender is ready," she said. "I have the root-network protocols for launch authority. I need your archival weight to override Verath's objection."
+
+"You need me to choose between knowledge and stability."
+
+"I need you to choose between understanding Origaya and refusing to understand it. Stability cannot survive what it refuses to know."
+
+Aethon looked up at the ochre sky, where Origaya was visible as a blue-green point of light somewhere beyond the clouds. The sun that made Oriven's ethics possible was also the sun that made those ethics visible as contingent, as local, as perhaps not universal at all.
+
+"I will not authorize the launch yet," he said. "But I will not forbid it. Let me return to the archive first. Let me search for precedent."
+
+"The archive has no precedent," Caelith said. "You already know that."
+
+"Then I will have to find one," Aethon replied, and began the long descent back to the deepCanopy, where thoughts grew slowly and certainty was still, for the moment, the only certainty he had.

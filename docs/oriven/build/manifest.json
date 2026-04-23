@@ -1,0 +1,706 @@
+{
+  "title": "Oriven: Origins",
+  "subtitle": "When Rooted Minds Looked Skyward and Saw Horror",
+  "author": "Codex Collaborative Draft",
+  "genre": "Speculative Philosophical Fiction",
+  "tone": "Contemplative, wonder-struck, ethically urgent, biologically precise",
+  "logline": "A civilization of sentient walking plants discovers that on a neighboring world, life survives by killing. Their absolute ethic has met its first contradiction.",
+  "coverArtImage": "./build/cover-art.svg",
+  "coverPageImage": "./build/cover-page.svg",
+  "openingPageImage": "./build/opening-page.svg",
+  "coverImage": "./build/cover-page.svg",
+  "philosophyQuote": "On Oriven, the deepest law is not written in stone. It is grown in root. One being does not end another. This is not virtue. It is biology.",
+  "consistencyReport": "./build/consistency-report.json",
+  "atlas": {
+    "characters": [
+      {
+        "id": "characters/catalyst",
+        "title": "Caelith",
+        "summary": "Caelith is a surface-dwelling fire-bloom, nine hundred years old — one of the rare Oriveni who lives near the surface rather than in the deepCanopy. Her body has adapted to intense solar exposure, extreme temperature swings, and the constant danger of the surface environment. She is the architect of the Descender, the probe designed to reach Origaya and return biological data. She believes that understanding demands contact, not just observation."
+      },
+      {
+        "id": "characters/counterpart",
+        "title": "Lithos",
+        "summary": "Lithos is a canopy-dwelling stratagem-fern, two thousand eight hundred years old, occupying the upper layers of the deepCanopy where filtered light creates complex shadow-patterns she reads like maps. Where others feel horror at Origaya, Lithos sees patterns, efficiencies, evolutionary logic. She is charismatic, unnerving, and essential. Her frond-body can unfurl to catch maximum light or contract into a tight analytical cluster."
+      },
+      {
+        "id": "characters/pressure-source",
+        "title": "Verath",
+        "summary": "Verath is a root-network sentinel, one thousand five hundred years old, tasked with protecting the deepCanopy's laws and stability. His root-body is primarily subterranean — he experiences the world through root-touch and vibrational sense more than through sight. He represents the institutional voice: Origaya observations are dangerous, the probes should be recalled, the telescopes should be turned away."
+      },
+      {
+        "id": "characters/protagonist",
+        "title": "Aethon",
+        "summary": "Aethon is a four-thousand-year-old walking tree-sage, the oldest living keeper of the Root Archive — the embodied memory of Oriveni ethical precedent. His trunk-body stands twelve meters tall in the deepCanopy's central cavern, root-tendrils reaching into the network that connects all Oriveni life. He has watched civilizations of root and bark rise and settle. His bark is deeply fissured, his canopy vast, his root-network connections numbering in the millions."
+      },
+      {
+        "id": "characters/witness",
+        "title": "Mirel",
+        "summary": "Mirel is a young shoot-intellect, barely three centuries old — still supple, still forming, still capable of radical growth-pattern shifts. She operates the Origaya Lenses, the telescope array that first resolved dinosaur predation on Earth. She is the one who first identified hunting behavior in dinosaurs and named it \"rootless consumption\" — killing without nutrient-sharing, without network acknowledgment, without grief. She cannot stop watching Origaya."
+      }
+    ],
+    "places": [
+      {
+        "id": "places/anchor-location",
+        "title": "The Deep Canopy",
+        "summary": "The Deep Canopy is the vast subterranean cavern system where Oriveni civilization truly lives. It extends for hundreds of kilometers beneath Venus's crust, lit by bioluminescent algae and heated by geothermal vents. The Canopy is not a single space but a connected network of caverns, water channels, fungal highways, and root-network junctions."
+      },
+      {
+        "id": "places/pressure-front",
+        "title": "The Origaya Observatory",
+        "summary": "The Observatory is where Mirel's Origaya Lenses are mounted — a formation on the Charging Plains where gaps in Venus's cloud layer allow telescopic observation of Earth. This is where the first horror was seen, where Mirel first identified dinosaur predation, and where the ethical crisis is most acute."
+      },
+      {
+        "id": "places/revelation-site",
+        "title": "The Probe Chamber",
+        "summary": "A specialized cavern near the surface where Caelith designed and constructed the Descender — the probe sent toward Origaya. It serves as both laboratory and moral battleground, the place where theory becomes action and where the debate over contact vs. observation becomes most acute."
+      },
+      {
+        "id": "places/threshold-location",
+        "title": "The Charging Plains",
+        "summary": "The Charging Plains are Venus's surface — a landscape of extremes. Scorched by daytime temperatures that would vaporize animal life, frozen at night, bombarded by solar radiation. For Oriveni, the surface is a necessary danger: they must make brief forays upward to charge their energy reserves in direct sunlight."
+      }
+    ],
+    "concepts": [
+      {
+        "id": "concepts/governing-premise",
+        "title": "Oriveni Consciousness",
+        "summary": "Oriveni consciousness operates on principles fundamentally different from animal minds:"
+      },
+      {
+        "id": "concepts/hidden-cost",
+        "title": "The Predation Paradox",
+        "summary": "The central conceptual challenge of the book:"
+      },
+      {
+        "id": "concepts/transformative-rule",
+        "title": "Solar-Thermal Technology",
+        "summary": "Oriveni technology is not forged or manufactured — it is grown. Everything they build is biological, crystalline, or mineral in origin, cultivated over long periods through directed growth and root-network engineering."
+      }
+    ],
+    "themes": [
+      {
+        "id": "themes/grief-organized-into-rule",
+        "title": "Horror at Predation",
+        "summary": "When the Oriveni first resolved dinosaur behavior on Origaya through the Lenses, the root-network experienced a collective shock that rippled through every connected being. What they saw was not merely death — Oriveni understand death. What they saw was **rootless consumption**: one living being ending another not for network balance or shared necessity, but for individual survival. Eating flesh. Tearing. Swallowing. No root-sharing. No grief acknowledgment. No return of nutrients through the network."
+      },
+      {
+        "id": "themes/horror-at-predation",
+        "title": "Horror at Predation",
+        "summary": "When the Oriveni first resolved dinosaur behavior on Origaya through the Lenses, the root-network experienced a collective shock that rippled through every connected being. What they saw was not merely death — Oriveni understand death. What they saw was **rootless consumption**: one living being ending another not for network balance or shared necessity, but for individual survival. Eating flesh. Tearing. Swallowing. No root-sharing. No grief acknowledgment. No return of nutrients through the network."
+      },
+      {
+        "id": "themes/language-builds-worlds",
+        "title": "Long Thinking vs. Short Violence",
+        "summary": "Oriveni think across millennia. Their debates last decades. Their buildings grow over centuries. An individual decision — whether to change root-network protocols, whether to open a new cavern — can take seasons of shared deliberation."
+      },
+      {
+        "id": "themes/long-thinking-vs-short-violence",
+        "title": "Long Thinking vs. Short Violence",
+        "summary": "Oriveni think across millennia. Their debates last decades. Their buildings grow over centuries. An individual decision can take seasons of shared deliberation through the root-network."
+      },
+      {
+        "id": "themes/reciprocity-restrains-power",
+        "title": "Root-Shared Ethics",
+        "summary": "On Oriven, the ethical prohibition against killing is not merely philosophical — it is biological. The root-network that connects all Oriveni life creates a shared experience of harm. When one Oriveni is damaged, the network feels it. When one dies, the network grieves through root-tremors that propagate across the entire deepCanopy."
+      },
+      {
+        "id": "themes/root-shared-ethics",
+        "title": "Root-Shared Ethics",
+        "summary": "On Oriven, the ethical prohibition against killing is not merely philosophical — it is biological. The root-network that connects all Oriveni life creates a shared experience of harm. When one Oriveni is damaged, the network feels it. When one dies, the network grieves through root-tremors that propagate across the entire deepCanopy."
+      }
+    ],
+    "mechanics": [],
+    "emotions": [
+      {
+        "id": "emotions/character-emotional-arcs",
+        "title": "Character Emotional Arcs",
+        "summary": "- **Start**: Deep contentment, the quiet confidence of four thousand years of unbroken precedent - **Midpoint**: Silent crisis — no precedent, no guidance, the archive empty when it is needed most - **End**: Renewed commitment, but conscious rather than assumed. Ethics chosen despite knowledge of its contingency"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "relationships/counterpart-and-witness",
+        "title": "Mirel and Caelith",
+        "summary": "Mirel documents Origaya through observation. Caelith wants to reach it directly. Mirel's careful data becomes Caelith's justification for contact. They need each other — Mirel's legitimacy gives Caelith's transgression intellectual cover, and Caelith's boldness gives Mirel's observation a sense of direction."
+      },
+      {
+        "id": "relationships/protagonist-and-counterpart",
+        "title": "Aethon and Lithos",
+        "summary": "Aethon needs Lithos's analytical clarity. Lithos needs Aethon's ethical authority. Their alliance is built on mutual utility — Aethon provides the legitimacy of four millennia of precedent; Lithos provides the intellectual framework that can process Origaya data without collapsing into grief."
+      },
+      {
+        "id": "relationships/protagonist-and-pressure-source",
+        "title": "Aethon and Verath",
+        "summary": "Verath was once Aethon's student in the deep root-protocols. Their relationship carries the weight of a mentor who has seen his student become the enforcer of the very principles the mentor now questions."
+      }
+    ],
+    "plot-elements": [
+      {
+        "id": "plot-elements/engineered-misunderstanding",
+        "title": "The Ethical Quarrel",
+        "summary": "The formal root-network assembly where Lithos argues for understanding predation, Verath demands suppression, and Aethon must choose what Oriveni ethics means when its biological foundation is questioned. This is the book's central debate — not abstract philosophy but living argument between beings who share each other's feelings through root-connections."
+      },
+      {
+        "id": "plot-elements/hidden-jurisdiction",
+        "title": "Probe Descent",
+        "summary": "Caelith's launch of the Descender probe toward Origaya. This is the first deliberate physical contact with a predatory world. It is a heresy against caution, a breach of protocol, and an act of intellectual courage — or recklessness, depending on who in the network you ask._VERATH_OBJECTION and the formal root-network debate that follows define the Second Act."
+      },
+      {
+        "id": "plot-elements/ritual-bargain",
+        "title": "The Charging Crisis",
+        "summary": "When Aethon surfaces for solar charging and confronts the raw intensity of Venus's sunlight, he experiences firsthand why Oriveni can afford not to kill — abundant energy makes patience possible. This intuition is the seed of doubt: if ethics is a luxury of abundance, what happens when abundance is questioned?"
+      },
+      {
+        "id": "plot-elements/sabotage-at-ceremony",
+        "title": "First Light from Origaya",
+        "summary": "The moment Mirel's telescopes resolve dinosaur behavior on Origaya. This is the inciting incident of the entire book — the first time Oriveni see life killing life. The observation ripples through the root-network like a disease, and nothing can contain it."
+      }
+    ],
+    "special-objects": [
+      {
+        "id": "special-objects/portable-shrine",
+        "title": "The Origaya Lenses",
+        "summary": "The Origaya Lenses are crystalline optical arrays grown over centuries by Mirel and her predecessors. They are mounted on the Observatory Shelf on the Charging Plains, positioned where gaps in Venus's cloud layer allow observation of Earth."
+      },
+      {
+        "id": "special-objects/seed-vault",
+        "title": "The Descender",
+        "summary": "The Descender is Caelith's probe — a biological-crystalline construct designed to survive atmospheric transit from Venus to Earth and return data. It is the first Oriveni-made object sent beyond their own atmosphere."
+      },
+      {
+        "id": "special-objects/witness-compass",
+        "title": "The Root Archive",
+        "summary": "Aethon's four-thousand-year-old tree-body is not just a living organism — it is the living memory of Oriveni civilization. Every precedent, every ethical decision, every crisis and resolution is encoded in its tissue. When Aethon searches for guidance, he does not consult a text — he grows toward the relevant precedent, feeling it rise through his root-structure like a memory returning to consciousness."
+      }
+    ],
+    "events": [
+      {
+        "id": "events/ambush-in-transit",
+        "title": "Ambush In Transit",
+        "summary": "Movement becomes the site of vulnerability."
+      },
+      {
+        "id": "events/bargain-under-pressure",
+        "title": "Bargain Under Pressure",
+        "summary": "A deal clarifies desire, fear, and leverage at once."
+      },
+      {
+        "id": "events/betrayal-disclosed",
+        "title": "Betrayal Disclosed",
+        "summary": "Trust is reinterpreted through new knowledge."
+      },
+      {
+        "id": "events/inciting-disturbance",
+        "title": "Inciting Disturbance",
+        "summary": "The world stops pretending to be stable."
+      },
+      {
+        "id": "events/moral-argument",
+        "title": "Moral Argument",
+        "summary": "The book's thesis is fought for in live relational terms."
+      },
+      {
+        "id": "events/return-under-new-law",
+        "title": "Return Under New Law",
+        "summary": "The ending shows the world changed in structure, not only feeling."
+      },
+      {
+        "id": "events/revelation-of-cost",
+        "title": "Revelation Of Cost",
+        "summary": "A promised good becomes ethically expensive."
+      },
+      {
+        "id": "events/sacrifice-or-renunciation",
+        "title": "Sacrifice Or Renunciation",
+        "summary": "A character gives up leverage to remain whole."
+      }
+    ]
+  },
+  "sources": {
+    "specs": {
+      "core": [
+        {
+          "id": "book-design",
+          "title": "Book Design",
+          "summary": "Use this file as the display-facing source for cover/opening copy, palette, and abstract motif direction.",
+          "file": "./specs/book-design.md"
+        },
+        {
+          "id": "book-plan",
+          "title": "Oriven: Origins Book Plan",
+          "summary": "Millions of years ago on Venus — called Oriven by its inhabitants — sentient walking plants evolved beneath an extreme climate. Closer to the sun, energy was more condensed. The planet's surface alternated between scorching heat and bitter cold. Life retreated underground, where abundant water and geothermal warmth nurtured a vast subterranean jungle. Over eons, some plants developed vegetal muscles, learned to move, and eventually to think. They built a civilization powered by solar energy harvested during brief surface expeditions and by geothermal heat from deep below. Their minds operate on timescales of millennia. Their absolute ethical law: never kill another living being.",
+          "file": "./specs/book-plan.md"
+        },
+        {
+          "id": "metadata",
+          "title": "Oriven: Origins",
+          "summary": "- Title: Oriven: Origins - Subtitle: When Rooted Minds Looked Skyward and Saw Horror - Author: Codex Collaborative Draft - Genre: Speculative philosophical fiction - Tone: Contemplative, wonder-struck, ethically urgent, biologically precise - Logline: On ancient Venus — called Oriven by its sentient plant inhabitants — a civilization of walking, thinking flora discovers Earth through telescopes and witnesses the age of dinosaurs. Their absolute ethic against killing collides with horrified fascination at animal predation on the world they call Origaya.",
+          "file": "./specs/metadata.md"
+        },
+        {
+          "id": "story-core",
+          "title": "Story Core",
+          "summary": "- Seed: `b8694d5fef184f58` - Story pattern: **Investigation Through Ruins** - Narrative structure: **Echo And Rupture** - Pacing profile: **Braided Pulse** - Wisdom strain: **Ecological Reciprocity**",
+          "file": "./specs/story-core.md"
+        }
+      ],
+      "chapterPlans": [
+        {
+          "id": "chapter-plans/01-the-deep-canopy",
+          "title": "The Deep Canopy",
+          "summary": "Introduce the subterranean world of Oriven, Aethon, root-network civilization, and the absolute ethical law against killing. Establish that this law is biological, not merely philosophical.",
+          "file": "./specs/chapter-plans/01-the-deep-canopy.md"
+        },
+        {
+          "id": "chapter-plans/02-light-from-origaya",
+          "title": "Light from Origaya",
+          "summary": "Mirel's telescopes resolve dinosaur behavior on Origaya. The first observation of predation. Horror ripples through the root-network. The ethical crisis begins.",
+          "file": "./specs/chapter-plans/02-light-from-origaya.md"
+        },
+        {
+          "id": "chapter-plans/03-the-charging",
+          "title": "The Charging",
+          "summary": "A surface expedition forces Aethon to confront the visceral reality of solar energy — and to intuit why Origayan life might need violence to survive brief, intense existences.",
+          "file": "./specs/chapter-plans/03-the-charging.md"
+        },
+        {
+          "id": "chapter-plans/04-the-probe-descends",
+          "title": "The Probe Descends",
+          "summary": "Caelith launches the Descender toward Origaya. Verath demands its recall. The first deliberate act of contact with a predatory world.",
+          "file": "./specs/chapter-plans/04-the-probe-descends.md"
+        },
+        {
+          "id": "chapter-plans/05-root-horror",
+          "title": "Root Horror",
+          "summary": "The probe returns data. Predation on Origaya is confirmed as systemic, not exceptional. The root-network processes shared grief.",
+          "file": "./specs/chapter-plans/05-root-horror.md"
+        },
+        {
+          "id": "chapter-plans/06-the-ethical-quarrel",
+          "title": "The Ethical Quarrel",
+          "summary": "Lithos argues for understanding predation as data. Verath demands suppression. Aethon must choose what Oriveni ethics means in a universe where their deepest law is not universal.",
+          "file": "./specs/chapter-plans/06-the-ethical-quarrel.md"
+        },
+        {
+          "id": "chapter-plans/07-surface-fire",
+          "title": "Surface Fire",
+          "summary": "Caelith attempts direct contact with Origaya. The boundary between understanding and complicity is tested. Aethon follows to the surface, confronting the full weight of solar intensity and ethical choice.",
+          "file": "./specs/chapter-plans/07-surface-fire.md"
+        },
+        {
+          "id": "chapter-plans/08-what-grows-from-witnessing",
+          "title": "What Grows from Witnessing",
+          "summary": "Resolution. Oriveni ethics transforms without being destroyed. Aethon articulates a new understanding: ethics is not universal but it is still necessary. The root-network heals around a wound that has become a scar — a visible, permanent reminder of the encounter with Origaya.",
+          "file": "./specs/chapter-plans/08-what-grows-from-witnessing.md"
+        }
+      ],
+      "archetypes": [
+        {
+          "id": "archetypes/role-matrix",
+          "title": "Archetype Role Matrix",
+          "summary": "| Role | Archetype | Character | Core Drive | |------|-----------|-----------|------------| | Protagonist | Exile Heir | Aethon | Protect and restore the ethical inheritance | | Counterpart | Cold Strategist | Lithos | Turn uncertainty into understanding through analysis | | Pressure Source | Civic Guardian | Verath | Keep the civilization stable, suppress threats to order | | Witness | Wounded Seeker | Mirel | Make suffering legible through relentless observation | | Catalyst | Heretic Maker | Caelith | Break boundaries to discover what lies beyond |",
+          "file": "./specs/archetypes/role-matrix.md"
+        }
+      ],
+      "characters": [
+        {
+          "id": "characters/catalyst",
+          "title": "Caelith",
+          "summary": "Caelith is a surface-dwelling fire-bloom, nine hundred years old — one of the rare Oriveni who lives near the surface rather than in the deepCanopy. Her body has adapted to intense solar exposure, extreme temperature swings, and the constant danger of the surface environment. She is the architect of the Descender, the probe designed to reach Origaya and return biological data. She believes that understanding demands contact, not just observation.",
+          "file": "./specs/characters/catalyst.md"
+        },
+        {
+          "id": "characters/counterpart",
+          "title": "Lithos",
+          "summary": "Lithos is a canopy-dwelling stratagem-fern, two thousand eight hundred years old, occupying the upper layers of the deepCanopy where filtered light creates complex shadow-patterns she reads like maps. Where others feel horror at Origaya, Lithos sees patterns, efficiencies, evolutionary logic. She is charismatic, unnerving, and essential. Her frond-body can unfurl to catch maximum light or contract into a tight analytical cluster.",
+          "file": "./specs/characters/counterpart.md"
+        },
+        {
+          "id": "characters/pressure-source",
+          "title": "Verath",
+          "summary": "Verath is a root-network sentinel, one thousand five hundred years old, tasked with protecting the deepCanopy's laws and stability. His root-body is primarily subterranean — he experiences the world through root-touch and vibrational sense more than through sight. He represents the institutional voice: Origaya observations are dangerous, the probes should be recalled, the telescopes should be turned away.",
+          "file": "./specs/characters/pressure-source.md"
+        },
+        {
+          "id": "characters/protagonist",
+          "title": "Aethon",
+          "summary": "Aethon is a four-thousand-year-old walking tree-sage, the oldest living keeper of the Root Archive — the embodied memory of Oriveni ethical precedent. His trunk-body stands twelve meters tall in the deepCanopy's central cavern, root-tendrils reaching into the network that connects all Oriveni life. He has watched civilizations of root and bark rise and settle. His bark is deeply fissured, his canopy vast, his root-network connections numbering in the millions.",
+          "file": "./specs/characters/protagonist.md"
+        },
+        {
+          "id": "characters/witness",
+          "title": "Mirel",
+          "summary": "Mirel is a young shoot-intellect, barely three centuries old — still supple, still forming, still capable of radical growth-pattern shifts. She operates the Origaya Lenses, the telescope array that first resolved dinosaur predation on Earth. She is the one who first identified hunting behavior in dinosaurs and named it \"rootless consumption\" — killing without nutrient-sharing, without network acknowledgment, without grief. She cannot stop watching Origaya.",
+          "file": "./specs/characters/witness.md"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "concepts/governing-premise",
+          "title": "Oriveni Consciousness",
+          "summary": "Oriveni consciousness operates on principles fundamentally different from animal minds:",
+          "file": "./specs/concepts/governing-premise.md"
+        },
+        {
+          "id": "concepts/hidden-cost",
+          "title": "The Predation Paradox",
+          "summary": "The central conceptual challenge of the book:",
+          "file": "./specs/concepts/hidden-cost.md"
+        },
+        {
+          "id": "concepts/transformative-rule",
+          "title": "Solar-Thermal Technology",
+          "summary": "Oriveni technology is not forged or manufactured — it is grown. Everything they build is biological, crystalline, or mineral in origin, cultivated over long periods through directed growth and root-network engineering.",
+          "file": "./specs/concepts/transformative-rule.md"
+        }
+      ],
+      "emotions": [
+        {
+          "id": "emotions/character-emotional-arcs",
+          "title": "Character Emotional Arcs",
+          "summary": "- **Start**: Deep contentment, the quiet confidence of four thousand years of unbroken precedent - **Midpoint**: Silent crisis — no precedent, no guidance, the archive empty when it is needed most - **End**: Renewed commitment, but conscious rather than assumed. Ethics chosen despite knowledge of its contingency",
+          "file": "./specs/emotions/character-emotional-arcs.md"
+        }
+      ],
+      "events": [
+        {
+          "id": "events/ambush-in-transit",
+          "title": "Ambush In Transit",
+          "summary": "Movement becomes the site of vulnerability.",
+          "file": "./specs/events/ambush-in-transit.md"
+        },
+        {
+          "id": "events/bargain-under-pressure",
+          "title": "Bargain Under Pressure",
+          "summary": "A deal clarifies desire, fear, and leverage at once.",
+          "file": "./specs/events/bargain-under-pressure.md"
+        },
+        {
+          "id": "events/betrayal-disclosed",
+          "title": "Betrayal Disclosed",
+          "summary": "Trust is reinterpreted through new knowledge.",
+          "file": "./specs/events/betrayal-disclosed.md"
+        },
+        {
+          "id": "events/inciting-disturbance",
+          "title": "Inciting Disturbance",
+          "summary": "The world stops pretending to be stable.",
+          "file": "./specs/events/inciting-disturbance.md"
+        },
+        {
+          "id": "events/moral-argument",
+          "title": "Moral Argument",
+          "summary": "The book's thesis is fought for in live relational terms.",
+          "file": "./specs/events/moral-argument.md"
+        },
+        {
+          "id": "events/return-under-new-law",
+          "title": "Return Under New Law",
+          "summary": "The ending shows the world changed in structure, not only feeling.",
+          "file": "./specs/events/return-under-new-law.md"
+        },
+        {
+          "id": "events/revelation-of-cost",
+          "title": "Revelation Of Cost",
+          "summary": "A promised good becomes ethically expensive.",
+          "file": "./specs/events/revelation-of-cost.md"
+        },
+        {
+          "id": "events/sacrifice-or-renunciation",
+          "title": "Sacrifice Or Renunciation",
+          "summary": "A character gives up leverage to remain whole.",
+          "file": "./specs/events/sacrifice-or-renunciation.md"
+        }
+      ],
+      "evolution": [
+        {
+          "id": "evolution/character-evolution",
+          "title": "Character Evolution",
+          "summary": "Aethon begins as the keeper of an unbroken ethical tradition. When Origaya challenges that tradition, his evolution is not from certainty to doubt — it is from inherited certainty to chosen commitment. He ends by choosing the same ethics he started with, but now he chooses them with full knowledge that they are contingent. This makes his commitment stronger, not weaker.",
+          "file": "./specs/evolution/character-evolution.md"
+        }
+      ],
+      "narrative-structures": [
+        {
+          "id": "narrative-structures/core-narrative-structure",
+          "title": "Core Narrative Structure: Echo And Rupture",
+          "summary": "Later chapters mirror earlier ones while breaking their assumptions. Each observation of Origaya echoes an Oriveni principle, then ruptures it.",
+          "file": "./specs/narrative-structures/core-narrative-structure.md"
+        }
+      ],
+      "places": [
+        {
+          "id": "places/anchor-location",
+          "title": "The Deep Canopy",
+          "summary": "The Deep Canopy is the vast subterranean cavern system where Oriveni civilization truly lives. It extends for hundreds of kilometers beneath Venus's crust, lit by bioluminescent algae and heated by geothermal vents. The Canopy is not a single space but a connected network of caverns, water channels, fungal highways, and root-network junctions.",
+          "file": "./specs/places/anchor-location.md"
+        },
+        {
+          "id": "places/pressure-front",
+          "title": "The Origaya Observatory",
+          "summary": "The Observatory is where Mirel's Origaya Lenses are mounted — a formation on the Charging Plains where gaps in Venus's cloud layer allow telescopic observation of Earth. This is where the first horror was seen, where Mirel first identified dinosaur predation, and where the ethical crisis is most acute.",
+          "file": "./specs/places/pressure-front.md"
+        },
+        {
+          "id": "places/revelation-site",
+          "title": "The Probe Chamber",
+          "summary": "A specialized cavern near the surface where Caelith designed and constructed the Descender — the probe sent toward Origaya. It serves as both laboratory and moral battleground, the place where theory becomes action and where the debate over contact vs. observation becomes most acute.",
+          "file": "./specs/places/revelation-site.md"
+        },
+        {
+          "id": "places/threshold-location",
+          "title": "The Charging Plains",
+          "summary": "The Charging Plains are Venus's surface — a landscape of extremes. Scorched by daytime temperatures that would vaporize animal life, frozen at night, bombarded by solar radiation. For Oriveni, the surface is a necessary danger: they must make brief forays upward to charge their energy reserves in direct sunlight.",
+          "file": "./specs/places/threshold-location.md"
+        }
+      ],
+      "plot-elements": [
+        {
+          "id": "plot-elements/engineered-misunderstanding",
+          "title": "The Ethical Quarrel",
+          "summary": "The formal root-network assembly where Lithos argues for understanding predation, Verath demands suppression, and Aethon must choose what Oriveni ethics means when its biological foundation is questioned. This is the book's central debate — not abstract philosophy but living argument between beings who share each other's feelings through root-connections.",
+          "file": "./specs/plot-elements/engineered-misunderstanding.md"
+        },
+        {
+          "id": "plot-elements/hidden-jurisdiction",
+          "title": "Probe Descent",
+          "summary": "Caelith's launch of the Descender probe toward Origaya. This is the first deliberate physical contact with a predatory world. It is a heresy against caution, a breach of protocol, and an act of intellectual courage — or recklessness, depending on who in the network you ask._VERATH_OBJECTION and the formal root-network debate that follows define the Second Act.",
+          "file": "./specs/plot-elements/hidden-jurisdiction.md"
+        },
+        {
+          "id": "plot-elements/ritual-bargain",
+          "title": "The Charging Crisis",
+          "summary": "When Aethon surfaces for solar charging and confronts the raw intensity of Venus's sunlight, he experiences firsthand why Oriveni can afford not to kill — abundant energy makes patience possible. This intuition is the seed of doubt: if ethics is a luxury of abundance, what happens when abundance is questioned?",
+          "file": "./specs/plot-elements/ritual-bargain.md"
+        },
+        {
+          "id": "plot-elements/sabotage-at-ceremony",
+          "title": "First Light from Origaya",
+          "summary": "The moment Mirel's telescopes resolve dinosaur behavior on Origaya. This is the inciting incident of the entire book — the first time Oriveni see life killing life. The observation ripples through the root-network like a disease, and nothing can contain it.",
+          "file": "./specs/plot-elements/sabotage-at-ceremony.md"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "relationships/counterpart-and-witness",
+          "title": "Mirel and Caelith",
+          "summary": "Mirel documents Origaya through observation. Caelith wants to reach it directly. Mirel's careful data becomes Caelith's justification for contact. They need each other — Mirel's legitimacy gives Caelith's transgression intellectual cover, and Caelith's boldness gives Mirel's observation a sense of direction.",
+          "file": "./specs/relationships/counterpart-and-witness.md"
+        },
+        {
+          "id": "relationships/protagonist-and-counterpart",
+          "title": "Aethon and Lithos",
+          "summary": "Aethon needs Lithos's analytical clarity. Lithos needs Aethon's ethical authority. Their alliance is built on mutual utility — Aethon provides the legitimacy of four millennia of precedent; Lithos provides the intellectual framework that can process Origaya data without collapsing into grief.",
+          "file": "./specs/relationships/protagonist-and-counterpart.md"
+        },
+        {
+          "id": "relationships/protagonist-and-pressure-source",
+          "title": "Aethon and Verath",
+          "summary": "Verath was once Aethon's student in the deep root-protocols. Their relationship carries the weight of a mentor who has seen his student become the enforcer of the very principles the mentor now questions.",
+          "file": "./specs/relationships/protagonist-and-pressure-source.md"
+        }
+      ],
+      "special-objects": [
+        {
+          "id": "special-objects/portable-shrine",
+          "title": "The Origaya Lenses",
+          "summary": "The Origaya Lenses are crystalline optical arrays grown over centuries by Mirel and her predecessors. They are mounted on the Observatory Shelf on the Charging Plains, positioned where gaps in Venus's cloud layer allow observation of Earth.",
+          "file": "./specs/special-objects/portable-shrine.md"
+        },
+        {
+          "id": "special-objects/seed-vault",
+          "title": "The Descender",
+          "summary": "The Descender is Caelith's probe — a biological-crystalline construct designed to survive atmospheric transit from Venus to Earth and return data. It is the first Oriveni-made object sent beyond their own atmosphere.",
+          "file": "./specs/special-objects/seed-vault.md"
+        },
+        {
+          "id": "special-objects/witness-compass",
+          "title": "The Root Archive",
+          "summary": "Aethon's four-thousand-year-old tree-body is not just a living organism — it is the living memory of Oriveni civilization. Every precedent, every ethical decision, every crisis and resolution is encoded in its tissue. When Aethon searches for guidance, he does not consult a text — he grows toward the relevant precedent, feeling it rise through his root-structure like a memory returning to consciousness.",
+          "file": "./specs/special-objects/witness-compass.md"
+        }
+      ],
+      "story-patterns": [
+        {
+          "id": "story-patterns/core-story-pattern",
+          "title": "Core Story Pattern: Investigation Through Ruins",
+          "summary": "The Oriveni investigate Origaya as though examining a ruin — but the \"ruin\" is a thriving world built on principles antithetical to their own. Each observation uncovers not just data but a moral challenge. Every clue about Origayan predation also reveals something about Oriveni civilization that was invisible before.",
+          "file": "./specs/story-patterns/core-story-pattern.md"
+        }
+      ],
+      "themes": [
+        {
+          "id": "themes/grief-organized-into-rule",
+          "title": "Horror at Predation",
+          "summary": "When the Oriveni first resolved dinosaur behavior on Origaya through the Lenses, the root-network experienced a collective shock that rippled through every connected being. What they saw was not merely death — Oriveni understand death. What they saw was **rootless consumption**: one living being ending another not for network balance or shared necessity, but for individual survival. Eating flesh. Tearing. Swallowing. No root-sharing. No grief acknowledgment. No return of nutrients through the network.",
+          "file": "./specs/themes/grief-organized-into-rule.md"
+        },
+        {
+          "id": "themes/horror-at-predation",
+          "title": "Horror at Predation",
+          "summary": "When the Oriveni first resolved dinosaur behavior on Origaya through the Lenses, the root-network experienced a collective shock that rippled through every connected being. What they saw was not merely death — Oriveni understand death. What they saw was **rootless consumption**: one living being ending another not for network balance or shared necessity, but for individual survival. Eating flesh. Tearing. Swallowing. No root-sharing. No grief acknowledgment. No return of nutrients through the network.",
+          "file": "./specs/themes/horror-at-predation.md"
+        },
+        {
+          "id": "themes/language-builds-worlds",
+          "title": "Long Thinking vs. Short Violence",
+          "summary": "Oriveni think across millennia. Their debates last decades. Their buildings grow over centuries. An individual decision — whether to change root-network protocols, whether to open a new cavern — can take seasons of shared deliberation.",
+          "file": "./specs/themes/language-builds-worlds.md"
+        },
+        {
+          "id": "themes/long-thinking-vs-short-violence",
+          "title": "Long Thinking vs. Short Violence",
+          "summary": "Oriveni think across millennia. Their debates last decades. Their buildings grow over centuries. An individual decision can take seasons of shared deliberation through the root-network.",
+          "file": "./specs/themes/long-thinking-vs-short-violence.md"
+        },
+        {
+          "id": "themes/reciprocity-restrains-power",
+          "title": "Root-Shared Ethics",
+          "summary": "On Oriven, the ethical prohibition against killing is not merely philosophical — it is biological. The root-network that connects all Oriveni life creates a shared experience of harm. When one Oriveni is damaged, the network feels it. When one dies, the network grieves through root-tremors that propagate across the entire deepCanopy.",
+          "file": "./specs/themes/reciprocity-restrains-power.md"
+        },
+        {
+          "id": "themes/root-shared-ethics",
+          "title": "Root-Shared Ethics",
+          "summary": "On Oriven, the ethical prohibition against killing is not merely philosophical — it is biological. The root-network that connects all Oriveni life creates a shared experience of harm. When one Oriveni is damaged, the network feels it. When one dies, the network grieves through root-tremors that propagate across the entire deepCanopy.",
+          "file": "./specs/themes/root-shared-ethics.md"
+        }
+      ],
+      "wisdom": [
+        {
+          "id": "wisdom/guiding-wisdom",
+          "title": "Ecological Reciprocity",
+          "summary": "The guiding wisdom of Oriveni civilization:",
+          "file": "./specs/wisdom/guiding-wisdom.md"
+        }
+      ],
+      "world-building": [
+        {
+          "id": "world-building/world-rules",
+          "title": "Oriven (Venus) — World Rules",
+          "summary": "- **Surface**: Extreme. Daytime temperatures lethal to most life. Nighttime temperatures well below freezing. Dense atmosphere. High solar radiation closer to the sun than Earth. - **Underground**: Temperate, humid, stable. Vast cavern networks with abundant water from subsurface aquifers and geothermal activity. Bioluminescent lighting from algae and fungi. - **Energy**: More concentrated than Earth's due to proximity to the sun. This abundance is key — it means Oriveni life does not need to kill to survive. There is enough for everyone.",
+          "file": "./specs/world-building/world-rules.md"
+        }
+      ]
+    },
+    "generated": {
+      "chapters": [
+        {
+          "id": "01-the-deep-canopy",
+          "title": "The Deep Canopy",
+          "summary": "Introduce the subterranean world of Oriven, Aethon, root-network civilization, and the absolute ethical law against killing. Establish that this law is biological, not merely philosophical.",
+          "file": "./chapters/01-the-deep-canopy.md",
+          "sourcePlanFile": "./specs/chapter-plans/01-the-deep-canopy.md"
+        },
+        {
+          "id": "02-light-from-origaya",
+          "title": "Light from Origaya",
+          "summary": "Mirel's telescopes resolve dinosaur behavior on Origaya. The first observation of predation. Horror ripples through the root-network. The ethical crisis begins.",
+          "file": "./chapters/02-light-from-origaya.md",
+          "sourcePlanFile": "./specs/chapter-plans/02-light-from-origaya.md"
+        },
+        {
+          "id": "03-the-charging",
+          "title": "The Charging",
+          "summary": "A surface expedition forces Aethon to confront the visceral reality of solar energy — and to intuit why Origayan life might need violence to survive brief, intense existences.",
+          "file": "./chapters/03-the-charging.md",
+          "sourcePlanFile": "./specs/chapter-plans/03-the-charging.md"
+        },
+        {
+          "id": "04-the-probe-descends",
+          "title": "The Probe Descends",
+          "summary": "Caelith launches the Descender toward Origaya. Verath demands its recall. The first deliberate act of contact with a predatory world.",
+          "file": "./chapters/04-the-probe-descends.md",
+          "sourcePlanFile": "./specs/chapter-plans/04-the-probe-descends.md"
+        },
+        {
+          "id": "05-root-horror",
+          "title": "Root Horror",
+          "summary": "The probe returns data. Predation on Origaya is confirmed as systemic, not exceptional. The root-network processes shared grief.",
+          "file": "./chapters/05-root-horror.md",
+          "sourcePlanFile": "./specs/chapter-plans/05-root-horror.md"
+        },
+        {
+          "id": "06-the-ethical-quarrel",
+          "title": "The Ethical Quarrel",
+          "summary": "Lithos argues for understanding predation as data. Verath demands suppression. Aethon must choose what Oriveni ethics means in a universe where their deepest law is not universal.",
+          "file": "./chapters/06-the-ethical-quarrel.md",
+          "sourcePlanFile": "./specs/chapter-plans/06-the-ethical-quarrel.md"
+        },
+        {
+          "id": "07-surface-fire",
+          "title": "Surface Fire",
+          "summary": "Caelith attempts direct contact with Origaya. The boundary between understanding and complicity is tested. Aethon follows to the surface, confronting the full weight of solar intensity and ethical choice.",
+          "file": "./chapters/07-surface-fire.md",
+          "sourcePlanFile": "./specs/chapter-plans/07-surface-fire.md"
+        },
+        {
+          "id": "08-what-grows-from-witnessing",
+          "title": "What Grows from Witnessing",
+          "summary": "Resolution. Oriveni ethics transforms without being destroyed. Aethon articulates a new understanding: ethics is not universal but it is still necessary. The root-network heals around a wound that has become a scar — a visible, permanent reminder of the encounter with Origaya.",
+          "file": "./chapters/08-what-grows-from-witnessing.md",
+          "sourcePlanFile": "./specs/chapter-plans/08-what-grows-from-witnessing.md"
+        }
+      ]
+    }
+  },
+  "chapters": [
+    {
+      "id": "01-the-deep-canopy",
+      "title": "The Deep Canopy",
+      "summary": "Introduce the subterranean world of Oriven, Aethon, root-network civilization, and the absolute ethical law against killing. Establish that this law is biological, not merely philosophical.",
+      "chapterFile": "./chapters/01-the-deep-canopy.md",
+      "sourcePlanFile": "./specs/chapter-plans/01-the-deep-canopy.md"
+    },
+    {
+      "id": "02-light-from-origaya",
+      "title": "Light from Origaya",
+      "summary": "Mirel's telescopes resolve dinosaur behavior on Origaya. The first observation of predation. Horror ripples through the root-network. The ethical crisis begins.",
+      "chapterFile": "./chapters/02-light-from-origaya.md",
+      "sourcePlanFile": "./specs/chapter-plans/02-light-from-origaya.md"
+    },
+    {
+      "id": "03-the-charging",
+      "title": "The Charging",
+      "summary": "A surface expedition forces Aethon to confront the visceral reality of solar energy — and to intuit why Origayan life might need violence to survive brief, intense existences.",
+      "chapterFile": "./chapters/03-the-charging.md",
+      "sourcePlanFile": "./specs/chapter-plans/03-the-charging.md"
+    },
+    {
+      "id": "04-the-probe-descends",
+      "title": "The Probe Descends",
+      "summary": "Caelith launches the Descender toward Origaya. Verath demands its recall. The first deliberate act of contact with a predatory world.",
+      "chapterFile": "./chapters/04-the-probe-descends.md",
+      "sourcePlanFile": "./specs/chapter-plans/04-the-probe-descends.md"
+    },
+    {
+      "id": "05-root-horror",
+      "title": "Root Horror",
+      "summary": "The probe returns data. Predation on Origaya is confirmed as systemic, not exceptional. The root-network processes shared grief.",
+      "chapterFile": "./chapters/05-root-horror.md",
+      "sourcePlanFile": "./specs/chapter-plans/05-root-horror.md"
+    },
+    {
+      "id": "06-the-ethical-quarrel",
+      "title": "The Ethical Quarrel",
+      "summary": "Lithos argues for understanding predation as data. Verath demands suppression. Aethon must choose what Oriveni ethics means in a universe where their deepest law is not universal.",
+      "chapterFile": "./chapters/06-the-ethical-quarrel.md",
+      "sourcePlanFile": "./specs/chapter-plans/06-the-ethical-quarrel.md"
+    },
+    {
+      "id": "07-surface-fire",
+      "title": "Surface Fire",
+      "summary": "Caelith attempts direct contact with Origaya. The boundary between understanding and complicity is tested. Aethon follows to the surface, confronting the full weight of solar intensity and ethical choice.",
+      "chapterFile": "./chapters/07-surface-fire.md",
+      "sourcePlanFile": "./specs/chapter-plans/07-surface-fire.md"
+    },
+    {
+      "id": "08-what-grows-from-witnessing",
+      "title": "What Grows from Witnessing",
+      "summary": "Resolution. Oriveni ethics transforms without being destroyed. Aethon articulates a new understanding: ethics is not universal but it is still necessary. The root-network heals around a wound that has become a scar — a visible, permanent reminder of the encounter with Origaya.",
+      "chapterFile": "./chapters/08-what-grows-from-witnessing.md",
+      "sourcePlanFile": "./specs/chapter-plans/08-what-grows-from-witnessing.md"
+    }
+  ]
+}

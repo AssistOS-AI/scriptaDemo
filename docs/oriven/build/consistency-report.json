@@ -1,0 +1,151 @@
+{
+  "status": "warn",
+  "summary": {
+    "chapters": 8,
+    "failedChapters": 0,
+    "warningChapters": 0,
+    "orphanedSpecs": 20
+  },
+  "errors": [],
+  "warnings": [
+    "Spec files not referenced by any chapter dependency: archetypes/role-matrix.md, events/ambush-in-transit.md, events/bargain-under-pressure.md, events/betrayal-disclosed.md, events/inciting-disturbance.md, events/moral-argument.md, events/return-under-new-law.md, events/revelation-of-cost.md, events/sacrifice-or-renunciation.md, evolution/character-evolution.md, narrative-structures/core-narrative-structure.md, plot-elements/hidden-jurisdiction.md, relationships/counterpart-and-witness.md, special-objects/portable-shrine.md, special-objects/seed-vault.md, special-objects/witness-compass.md, story-patterns/core-story-pattern.md, themes/language-builds-worlds.md, themes/root-shared-ethics.md, wisdom/guiding-wisdom.md"
+  ],
+  "orphanedSpecs": [
+    "archetypes/role-matrix.md",
+    "events/ambush-in-transit.md",
+    "events/bargain-under-pressure.md",
+    "events/betrayal-disclosed.md",
+    "events/inciting-disturbance.md",
+    "events/moral-argument.md",
+    "events/return-under-new-law.md",
+    "events/revelation-of-cost.md",
+    "events/sacrifice-or-renunciation.md",
+    "evolution/character-evolution.md",
+    "narrative-structures/core-narrative-structure.md",
+    "plot-elements/hidden-jurisdiction.md",
+    "relationships/counterpart-and-witness.md",
+    "special-objects/portable-shrine.md",
+    "special-objects/seed-vault.md",
+    "special-objects/witness-compass.md",
+    "story-patterns/core-story-pattern.md",
+    "themes/language-builds-worlds.md",
+    "themes/root-shared-ethics.md",
+    "wisdom/guiding-wisdom.md"
+  ],
+  "chapterReports": [
+    {
+      "chapterId": "01-the-deep-canopy",
+      "status": "pass",
+      "metrics": {
+        "words": 1579,
+        "targetWords": 1200,
+        "paragraphs": 46,
+        "dialogueSignals": 36,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "chapterId": "02-light-from-origaya",
+      "status": "pass",
+      "metrics": {
+        "words": 1270,
+        "targetWords": 1200,
+        "paragraphs": 35,
+        "dialogueSignals": 44,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "chapterId": "03-the-charging",
+      "status": "pass",
+      "metrics": {
+        "words": 1372,
+        "targetWords": 1200,
+        "paragraphs": 41,
+        "dialogueSignals": 64,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "chapterId": "04-the-probe-descends",
+      "status": "pass",
+      "metrics": {
+        "words": 1269,
+        "targetWords": 1200,
+        "paragraphs": 32,
+        "dialogueSignals": 34,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "chapterId": "05-root-horror",
+      "status": "pass",
+      "metrics": {
+        "words": 1259,
+        "targetWords": 1200,
+        "paragraphs": 32,
+        "dialogueSignals": 28,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "chapterId": "06-the-ethical-quarrel",
+      "status": "pass",
+      "metrics": {
+        "words": 1225,
+        "targetWords": 1200,
+        "paragraphs": 31,
+        "dialogueSignals": 52,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "chapterId": "07-surface-fire",
+      "status": "pass",
+      "metrics": {
+        "words": 1248,
+        "targetWords": 1200,
+        "paragraphs": 37,
+        "dialogueSignals": 48,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "chapterId": "08-what-grows-from-witnessing",
+      "status": "pass",
+      "metrics": {
+        "words": 1950,
+        "targetWords": 1200,
+        "paragraphs": 38,
+        "dialogueSignals": 15,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "builtAt": "2026-04-23T16:00:31.981Z",
+  "buildRoot": "/home/salboaie/work/scriptaDemo/docs/oriven"
+}
