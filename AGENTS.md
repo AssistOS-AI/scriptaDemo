@@ -16,10 +16,11 @@ Think of the project in three layers:
    These Markdown files are extracted from the chapter plans, mainly from each chapter plan's `## Generated Draft` section.
 
 3. Final demo/viewer layer
-   `docs/BOOKNAME/book.html`
-   This is a thin HTML shell that loads the reusable viewer in `docs/preview/preview.js`.
+   - `docs/BOOKNAME/book.html` — thin demo shell loading `docs/preview/preview.js`
+   - `docs/en/BOOKNAME/book.html` — self-contained English reader (no server needed)
+   - `docs/ro/BOOKNAME/book.html` — self-contained Romanian reader (no server needed)
 
-The final HTML should stay lightweight. The real book content lives in Markdown and is assembled by the viewer.
+The demo `book.html` should stay lightweight. The self-contained readers embed all content inline.
 
 ## Main Rules
 
@@ -98,7 +99,10 @@ Purpose:
 - Generate `build/cover-art.svg`, `build/cover-page.svg`, and `build/opening-page.svg` from `specs/book-design.md`.
 - Check global consistency and emit `docs/BOOKNAME/build/consistency-report.json`.
 - Produce `docs/BOOKNAME/build/manifest.json`.
-- Produce or refresh `docs/BOOKNAME/book.html`.
+- Produce or refresh `docs/BOOKNAME/book.html` (demo shell).
+- Produce self-contained reading-optimized HTML books:
+  - `docs/en/BOOKNAME/book.html` (English)
+  - `docs/ro/BOOKNAME/book.html` (Romanian)
 
 Build command:
 
@@ -149,8 +153,15 @@ node tools/book-build.mjs docs/my-book
 
 6. Open the result:
 
+Demo viewer (needs server):
 ```text
 docs/my-book/book.html
+```
+
+Self-contained readers (open directly in browser):
+```text
+docs/en/my-book/book.html
+docs/ro/my-book/book.html
 ```
 
 ## Demo Notes
@@ -161,6 +172,7 @@ docs/my-book/book.html
 - The cover/opening display assets come from `specs/book-design.md` and are emitted as separate SVG files under `docs/BOOKNAME/build/`.
 - The source drawer in the viewer can expose both specs and generated chapter outputs.
 - For a good demo, prefer books with enough prose to fill many pages rather than a few short scenes.
+- The build also produces self-contained HTML readers at `docs/en/BOOKNAME/book.html` and `docs/ro/BOOKNAME/book.html`. These embed all chapter content, SVGs, and styles inline — no web server needed. Open them directly in any browser on desktop or mobile. UI strings are localized (English/Romanian).
 
 ## Current Example
 

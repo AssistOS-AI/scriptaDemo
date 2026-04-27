@@ -1,0 +1,118 @@
+{
+  "status": "fail",
+  "summary": {
+    "chapters": 5,
+    "failedChapters": 5,
+    "warningChapters": 0,
+    "orphanedSpecs": 0
+  },
+  "errors": [
+    "Chapters with consistency failures: 01-the-misplaced-morning, 02-the-annular-library, 03-the-vacant-orchard, 04-the-basin-of-kept-motions, 05-the-folded-shore"
+  ],
+  "warnings": [],
+  "orphanedSpecs": [],
+  "chapterReports": [
+    {
+      "chapterId": "01-the-misplaced-morning",
+      "status": "fail",
+      "metrics": {
+        "words": 1988,
+        "targetWords": 1200,
+        "paragraphs": 77,
+        "dialogueSignals": 108,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [
+        "Missing `## Scene Blueprint` content. Run chapter-builder before drafting.",
+        "Missing `## Character Roles` content. Run chapter-builder before drafting.",
+        "Missing `## Block Set` content. Run chapter-builder before drafting.",
+        "Missing `## Dialogue Set` content. Run chapter-builder before drafting.",
+        "Missing `## Consistency Checklist` content."
+      ],
+      "warnings": []
+    },
+    {
+      "chapterId": "02-the-annular-library",
+      "status": "fail",
+      "metrics": {
+        "words": 2055,
+        "targetWords": 1200,
+        "paragraphs": 100,
+        "dialogueSignals": 144,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [
+        "Missing `## Scene Blueprint` content. Run chapter-builder before drafting.",
+        "Missing `## Character Roles` content. Run chapter-builder before drafting.",
+        "Missing `## Block Set` content. Run chapter-builder before drafting.",
+        "Missing `## Dialogue Set` content. Run chapter-builder before drafting.",
+        "Missing `## Consistency Checklist` content."
+      ],
+      "warnings": []
+    },
+    {
+      "chapterId": "03-the-vacant-orchard",
+      "status": "fail",
+      "metrics": {
+        "words": 1801,
+        "targetWords": 1200,
+        "paragraphs": 87,
+        "dialogueSignals": 120,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [
+        "Missing `## Scene Blueprint` content. Run chapter-builder before drafting.",
+        "Missing `## Character Roles` content. Run chapter-builder before drafting.",
+        "Missing `## Block Set` content. Run chapter-builder before drafting.",
+        "Missing `## Dialogue Set` content. Run chapter-builder before drafting.",
+        "Missing `## Consistency Checklist` content."
+      ],
+      "warnings": []
+    },
+    {
+      "chapterId": "04-the-basin-of-kept-motions",
+      "status": "fail",
+      "metrics": {
+        "words": 1985,
+        "targetWords": 1200,
+        "paragraphs": 93,
+        "dialogueSignals": 130,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [
+        "Missing `## Scene Blueprint` content. Run chapter-builder before drafting.",
+        "Missing `## Character Roles` content. Run chapter-builder before drafting.",
+        "Missing `## Block Set` content. Run chapter-builder before drafting.",
+        "Missing `## Dialogue Set` content. Run chapter-builder before drafting.",
+        "Missing `## Consistency Checklist` content."
+      ],
+      "warnings": []
+    },
+    {
+      "chapterId": "05-the-folded-shore",
+      "status": "fail",
+      "metrics": {
+        "words": 2029,
+        "targetWords": 1200,
+        "paragraphs": 87,
+        "dialogueSignals": 92,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [
+        "Missing `## Scene Blueprint` content. Run chapter-builder before drafting.",
+        "Missing `## Character Roles` content. Run chapter-builder before drafting.",
+        "Missing `## Block Set` content. Run chapter-builder before drafting.",
+        "Missing `## Dialogue Set` content. Run chapter-builder before drafting.",
+        "Missing `## Consistency Checklist` content."
+      ],
+      "warnings": []
+    }
+  ],
+  "builtAt": "2026-04-23T17:34:12.487Z",
+  "buildRoot": "/home/salboaie/work/scriptaDemo/docs/the-hollow-fifth"
+}

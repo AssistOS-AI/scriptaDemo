@@ -1,0 +1,20 @@
+{
+  "chapters": {
+    "01-the-living-ship": "6741e613f76faac6db88e74c13c436a699876dd456c3b227ff67817e3492467b",
+    "02-origaya-unveiled": "e0db132e24ff55781ddb42ef5939b5e2813903fdb316290d8ce3a905fcaec226",
+    "03-the-fungal-infection": "4bb58756a1a9ff36806b7cca9b514377d4eee876275dc21bdbc86ae5251c9358",
+    "04-root-fusion": "5bd5b70569a2b150b8fdd246a017d3777f5c4a83c3058bb30edd7156c4d59876",
+    "05-the-first-death": "ef25fa8b2151f752ea3deab10a8e84009c765db0b923333040c70e8e5987580a",
+    "06-the-ethical-quarrel-resurgent": "1a7cfa63eb767dd6907fab95d530632d2981df0dd182ff8e74308b53d644dabc",
+    "07-hybrid-mind": "938d8fdfe5cdf5c8ccdc7c0017b1ba78a365679daee9feca86b8dda13d07e526",
+    "08-what-remains-chosen": "dc737f79c2289a8ab228522afa790df2e834ec4c5782a188f1cf64fe2ca9ee91"
+  },
+  "outputs": {
+    "coverArt": "692ae77c34643b01225c4ce570c89b413b58c3c9f4eacbf059bc0a3f55dfdd75",
+    "coverPage": "8dc28317ab2c4454cb4041774c62d498c50cb6035363459610a048d1ff1d6631",
+    "openingPage": "f77f32fb8ed59d74b5fe0a700d5cdb91a11422c5d4b655bbe7a26ef5bf1afa3c",
+    "consistencyReport": "85a45275e7604a9d02a8625e8e704dbda51a8752ddebc1b19027ae677c60873a",
+    "manifest": "195162e9afa32b26face4136f345025abca6e5191281c64b6da59b173335937c",
+    "bookHtml": "bc02f0bab362ddda388b687e3201aeca4e3be4cabe12215e480112a4629cc2f2"
+  }
+}

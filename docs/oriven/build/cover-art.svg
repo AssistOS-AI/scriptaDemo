@@ -19,7 +19,7 @@
       <feGaussianBlur stdDeviation="28"/>
     </filter>
   </defs>
-
+ 
   <rect width="1600" height="2400" rx="88" fill="url(#bg)"/>
   <rect x="62" y="62" width="1476" height="2276" rx="64" fill="none" stroke="#f0e6c8" stroke-opacity="0.36" stroke-width="4"/>
   <rect x="106" y="106" width="1388" height="2188" rx="42" fill="none" stroke="#f0e6c8" stroke-opacity="0.14" stroke-width="2"/>

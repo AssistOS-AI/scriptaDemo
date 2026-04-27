@@ -1,0 +1,259 @@
+{
+  "status": "fail",
+  "summary": {
+    "chapters": 8,
+    "failedChapters": 8,
+    "warningChapters": 8,
+    "orphanedSpecs": 38
+  },
+  "errors": [
+    "Chapters with consistency failures: 01-the-living-ship, 02-origaya-unveiled, 03-the-fungal-infection, 04-root-fusion, 05-the-first-death, 06-the-ethical-quarrel-resurgent, 07-hybrid-mind, 08-what-remains-chosen"
+  ],
+  "warnings": [
+    "Spec files not referenced by any chapter dependency: archetypes/role-matrix.md, characters/counterpart.md, characters/sorne.md, characters/thalne.md, concepts/governing-premise.md, concepts/hidden-cost.md, concepts/transformative-rule.md, emotions/character-emotional-arcs.md, events/ambush-in-transit.md, events/bargain-under-pressure.md, events/betrayal-disclosed.md, events/inciting-disturbance.md, events/moral-argument.md, events/return-under-new-law.md, events/ritual-test.md, events/sacrifice-or-renunciation.md, evolution/character-evolution.md, narrative-structures/core-narrative-structure.md, places/pressure-front.md, places/revelation-site.md, places/threshold-location.md, plot-elements/buried-counterhistory.md, plot-elements/hidden-jurisdiction.md, plot-elements/ritual-bargain.md, plot-elements/stolen-ledger.md, relationships/counterpart-and-witness.md, relationships/protagonist-and-counterpart.md, relationships/protagonist-and-pressure-source.md, relationships/witness-and-transgressor.md, special-objects/oath-key.md, special-objects/portable-shrine.md, special-objects/resonance-knife.md, story-patterns/core-story-pattern.md, themes/language-builds-worlds.md, themes/reciprocity-restrains-power.md, themes/witness-as-duty.md, wisdom/guiding-wisdom.md, world-building/world-rules.md"
+  ],
+  "orphanedSpecs": [
+    "archetypes/role-matrix.md",
+    "characters/counterpart.md",
+    "characters/sorne.md",
+    "characters/thalne.md",
+    "concepts/governing-premise.md",
+    "concepts/hidden-cost.md",
+    "concepts/transformative-rule.md",
+    "emotions/character-emotional-arcs.md",
+    "events/ambush-in-transit.md",
+    "events/bargain-under-pressure.md",
+    "events/betrayal-disclosed.md",
+    "events/inciting-disturbance.md",
+    "events/moral-argument.md",
+    "events/return-under-new-law.md",
+    "events/ritual-test.md",
+    "events/sacrifice-or-renunciation.md",
+    "evolution/character-evolution.md",
+    "narrative-structures/core-narrative-structure.md",
+    "places/pressure-front.md",
+    "places/revelation-site.md",
+    "places/threshold-location.md",
+    "plot-elements/buried-counterhistory.md",
+    "plot-elements/hidden-jurisdiction.md",
+    "plot-elements/ritual-bargain.md",
+    "plot-elements/stolen-ledger.md",
+    "relationships/counterpart-and-witness.md",
+    "relationships/protagonist-and-counterpart.md",
+    "relationships/protagonist-and-pressure-source.md",
+    "relationships/witness-and-transgressor.md",
+    "special-objects/oath-key.md",
+    "special-objects/portable-shrine.md",
+    "special-objects/resonance-knife.md",
+    "story-patterns/core-story-pattern.md",
+    "themes/language-builds-worlds.md",
+    "themes/reciprocity-restrains-power.md",
+    "themes/witness-as-duty.md",
+    "wisdom/guiding-wisdom.md",
+    "world-building/world-rules.md"
+  ],
+  "chapterReports": [
+    {
+      "chapterId": "01-the-living-ship",
+      "status": "fail",
+      "metrics": {
+        "words": 2715,
+        "targetWords": 1200,
+        "paragraphs": 66,
+        "dialogueSignals": 88,
+        "sceneTarget": 3,
+        "blockTarget": 4
+      },
+      "errors": [
+        "Required character not clearly present in draft: Protagonist.",
+        "Required character not clearly present in draft: Counterpart.",
+        "Required character not clearly present in draft: Catalyst.",
+        "Required place not clearly present in draft: Anchor Location.",
+        "Required place not clearly present in draft: Threshold Location.",
+        "Required concept not clearly surfaced in draft: Governing Premise.",
+        "Required concept not clearly surfaced in draft: Hidden Cost."
+      ],
+      "warnings": [
+        "Relationship file not clearly echoed in draft language: Protagonist And Counterpart."
+      ]
+    },
+    {
+      "chapterId": "02-origaya-unveiled",
+      "status": "fail",
+      "metrics": {
+        "words": 3287,
+        "targetWords": 1200,
+        "paragraphs": 79,
+        "dialogueSignals": 86,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [
+        "Required character not clearly present in draft: Protagonist.",
+        "Required character not clearly present in draft: Counterpart.",
+        "Required place not clearly present in draft: Threshold Location.",
+        "Required place not clearly present in draft: Pressure Front.",
+        "Required concept not clearly surfaced in draft: Governing Premise.",
+        "Required concept not clearly surfaced in draft: Hidden Cost."
+      ],
+      "warnings": [
+        "Relationship file not clearly echoed in draft language: Protagonist And Counterpart."
+      ]
+    },
+    {
+      "chapterId": "03-the-fungal-infection",
+      "status": "fail",
+      "metrics": {
+        "words": 3077,
+        "targetWords": 1200,
+        "paragraphs": 74,
+        "dialogueSignals": 71,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [
+        "Required character not clearly present in draft: Protagonist.",
+        "Required character not clearly present in draft: Witness.",
+        "Required character not clearly present in draft: Catalyst.",
+        "Required place not clearly present in draft: Revelation Site.",
+        "Required concept not clearly surfaced in draft: Hidden Cost.",
+        "Required concept not clearly surfaced in draft: Transformative Rule."
+      ],
+      "warnings": [
+        "Relationship file not clearly echoed in draft language: Protagonist And Counterpart.",
+        "Relationship file not clearly echoed in draft language: Counterpart And Witness."
+      ]
+    },
+    {
+      "chapterId": "04-root-fusion",
+      "status": "fail",
+      "metrics": {
+        "words": 2795,
+        "targetWords": 1320,
+        "paragraphs": 67,
+        "dialogueSignals": 50,
+        "sceneTarget": 5,
+        "blockTarget": 6
+      },
+      "errors": [
+        "Required character not clearly present in draft: Protagonist.",
+        "Required character not clearly present in draft: Counterpart.",
+        "Required character not clearly present in draft: Pressure Source.",
+        "Required character not clearly present in draft: Catalyst.",
+        "Required place not clearly present in draft: Anchor Location.",
+        "Required place not clearly present in draft: Pressure Front.",
+        "Required concept not clearly surfaced in draft: Hidden Cost.",
+        "Required concept not clearly surfaced in draft: Transformative Rule."
+      ],
+      "warnings": [
+        "Relationship file not clearly echoed in draft language: Protagonist And Counterpart."
+      ]
+    },
+    {
+      "chapterId": "05-the-first-death",
+      "status": "fail",
+      "metrics": {
+        "words": 2662,
+        "targetWords": 1320,
+        "paragraphs": 58,
+        "dialogueSignals": 68,
+        "sceneTarget": 5,
+        "blockTarget": 6
+      },
+      "errors": [
+        "Required character not clearly present in draft: Protagonist.",
+        "Required character not clearly present in draft: Counterpart.",
+        "Required character not clearly present in draft: Pressure Source.",
+        "Required character not clearly present in draft: Catalyst.",
+        "Required place not clearly present in draft: Revelation Site.",
+        "Required place not clearly present in draft: Pressure Front.",
+        "Required concept not clearly surfaced in draft: Hidden Cost.",
+        "Required concept not clearly surfaced in draft: Transformative Rule."
+      ],
+      "warnings": [
+        "Relationship file not clearly echoed in draft language: Protagonist And Counterpart.",
+        "Relationship file not clearly echoed in draft language: Counterpart And Witness."
+      ]
+    },
+    {
+      "chapterId": "06-the-ethical-quarrel-resurgent",
+      "status": "fail",
+      "metrics": {
+        "words": 2626,
+        "targetWords": 1200,
+        "paragraphs": 52,
+        "dialogueSignals": 55,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [
+        "Required character not clearly present in draft: Protagonist.",
+        "Required character not clearly present in draft: Counterpart.",
+        "Required character not clearly present in draft: Pressure Source.",
+        "Required character not clearly present in draft: Witness.",
+        "Required place not clearly present in draft: Anchor Location.",
+        "Required place not clearly present in draft: Pressure Front.",
+        "Required concept not clearly surfaced in draft: Hidden Cost.",
+        "Required concept not clearly surfaced in draft: Transformative Rule."
+      ],
+      "warnings": [
+        "Relationship file not clearly echoed in draft language: Protagonist And Counterpart.",
+        "Relationship file not clearly echoed in draft language: Counterpart And Witness."
+      ]
+    },
+    {
+      "chapterId": "07-hybrid-mind",
+      "status": "fail",
+      "metrics": {
+        "words": 2827,
+        "targetWords": 1200,
+        "paragraphs": 65,
+        "dialogueSignals": 65,
+        "sceneTarget": 4,
+        "blockTarget": 5
+      },
+      "errors": [
+        "Required character not clearly present in draft: Protagonist.",
+        "Required character not clearly present in draft: Counterpart.",
+        "Required character not clearly present in draft: Witness.",
+        "Required character not clearly present in draft: Catalyst.",
+        "Required place not clearly present in draft: Pressure Front.",
+        "Required place not clearly present in draft: Revelation Site.",
+        "Required concept not clearly surfaced in draft: Hidden Cost.",
+        "Required concept not clearly surfaced in draft: Transformative Rule."
+      ],
+      "warnings": [
+        "Relationship file not clearly echoed in draft language: Protagonist And Counterpart.",
+        "Relationship file not clearly echoed in draft language: Counterpart And Witness."
+      ]
+    },
+    {
+      "chapterId": "08-what-remains-chosen",
+      "status": "fail",
+      "metrics": {
+        "words": 3030,
+        "targetWords": 1200,
+        "paragraphs": 60,
+        "dialogueSignals": 28,
+        "sceneTarget": 3,
+        "blockTarget": 4
+      },
+      "errors": [
+        "Required character not clearly present in draft: Protagonist.",
+        "Required character not clearly present in draft: Counterpart.",
+        "Required character not clearly present in draft: Pressure Source.",
+        "Required character not clearly present in draft: Catalyst.",
+        "Required place not clearly present in draft: Pressure Front.",
+        "Required place not clearly present in draft: Revelation Site.",
+        "Required concept not clearly surfaced in draft: Hidden Cost.",
+        "Required concept not clearly surfaced in draft: Transformative Rule."
+      ],
+      "warnings": [
+        "Relationship file not clearly echoed in draft language: Protagonist And Counterpart.",
+        "Relationship file not clearly echoed in draft language: Protagonist And Pressure Source."
+      ]
+    }
+  ],
+  "builtAt": "2026-04-24T10:51:19.248Z",
+  "buildRoot": "/home/salboaie/work/scriptaDemo/docs/oriven-mission"
+}

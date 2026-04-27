@@ -432,7 +432,7 @@ function buildSvgDefs(spec) {
       <feGaussianBlur stdDeviation="28"/>
     </filter>
   </defs>
-`;
+ `;
 }
 
 function buildAbstractMotif(spec) {
@@ -612,6 +612,479 @@ function buildHtmlShell({ manifestPath, title }) {
 `;
 }
 
+// ─── Markdown Renderer ────────────────────────────────────────
+
+function readerEscapeHtml(text) {
+  return String(text ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function readerFormatInline(text) {
+  return readerEscapeHtml(text)
+    .replace(/`([^`]+)`/g, "<code>$1</code>")
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/\*([^*]+)\*/g, "<em>$1</em>");
+}
+
+function readerStripFrontmatter(markdown) {
+  if (!markdown.startsWith("---\n")) return markdown;
+  const endIndex = markdown.indexOf("\n---\n", 4);
+  if (endIndex === -1) return markdown;
+  return markdown.slice(endIndex + 5);
+}
+
+function readerMarkdownToHtml(markdown) {
+  const lines = readerStripFrontmatter(markdown).replace(/\r/g, "").split("\n");
+  const blocks = [];
+  let index = 0;
+
+  while (index < lines.length) {
+    const line = lines[index];
+
+    if (!line.trim()) {
+      index += 1;
+      continue;
+    }
+
+    if (line.startsWith("```")) {
+      const code = [];
+      index += 1;
+      while (index < lines.length && !lines[index].startsWith("```")) {
+        code.push(lines[index]);
+        index += 1;
+      }
+      index += 1;
+      blocks.push(`<pre><code>${readerEscapeHtml(code.join("\n"))}</code></pre>`);
+      continue;
+    }
+
+    const heading = line.match(/^(#{1,3})\s+(.*)$/);
+    if (heading) {
+      const level = heading[1].length;
+      blocks.push(`<h${level}>${readerFormatInline(heading[2].trim())}</h${level}>`);
+      index += 1;
+      continue;
+    }
+
+    if (line.startsWith("> ")) {
+      const quote = [];
+      while (index < lines.length && lines[index].startsWith("> ")) {
+        quote.push(lines[index].slice(2).trim());
+        index += 1;
+      }
+      blocks.push(`<blockquote>${quote.map(readerFormatInline).join("<br>")}</blockquote>`);
+      continue;
+    }
+
+    if (/^\d+\.\s+/.test(line)) {
+      const items = [];
+      while (index < lines.length && /^\d+\.\s+/.test(lines[index])) {
+        items.push(lines[index].replace(/^\d+\.\s+/, "").trim());
+        index += 1;
+      }
+      blocks.push(`<ol>${items.map((item) => `<li>${readerFormatInline(item)}</li>`).join("")}</ol>`);
+      continue;
+    }
+
+    if (/^-\s+/.test(line)) {
+      const items = [];
+      while (index < lines.length && /^-\s+/.test(lines[index])) {
+        items.push(lines[index].replace(/^-\s+/, "").trim());
+        index += 1;
+      }
+      blocks.push(`<ul>${items.map((item) => `<li>${readerFormatInline(item)}</li>`).join("")}</ul>`);
+      continue;
+    }
+
+    const paragraph = [];
+    while (
+      index < lines.length &&
+      lines[index].trim() &&
+      !/^(#{1,3})\s+/.test(lines[index]) &&
+      !lines[index].startsWith("> ") &&
+      !lines[index].startsWith("```") &&
+      !/^-\s+/.test(lines[index]) &&
+      !/^\d+\.\s+/.test(lines[index])
+    ) {
+      paragraph.push(lines[index].trim());
+      index += 1;
+    }
+    blocks.push(`<p>${readerFormatInline(paragraph.join(" "))}</p>`);
+  }
+
+  return blocks.join("\n");
+}
+
+// ─── Language Strings ──────────────────────────────────────────
+
+const LANG_STRINGS = {
+  en: {
+    tableOfContents: "Table of Contents",
+    chapter: "Chapter",
+    page: "Page",
+    of: "of",
+    previous: "Previous",
+    next: "Next",
+    closeToc: "Close",
+    openToc: "Contents",
+    jumpToChapter: "Jump to chapter",
+    bookReader: "Book Reader",
+    closingTitle: "End of the Book",
+    closingNote: "Thank you for reading.",
+    worldOverview: "World Overview",
+    worldOverviewSub: "Characters, places, and concepts from this book.",
+    detailsNote: "The full specification layer remains available through the source materials.",
+    coverAlt: "cover",
+    openingAlt: "opening page",
+  },
+  ro: {
+    tableOfContents: "Cuprins",
+    chapter: "Capitolul",
+    page: "Pagina",
+    of: "din",
+    previous: "Anterior",
+    next: "Urm\u0103tor",
+    closeToc: "\u00CEnchide",
+    openToc: "Cuprins",
+    jumpToChapter: "Sari la capitol",
+    bookReader: "Cititor de carte",
+    closingTitle: "Sf\u00E2r\u0219itul c\u0103r\u021Bii",
+    closingNote: "V\u0103 mul\u021Bumim pentru lectur\u0103.",
+    worldOverview: "Privire de ansamblu",
+    worldOverviewSub: "Personaje, locuri \u0219i concepte din aceast\u0103 carte.",
+    detailsNote: "Specifica\u021Biile complete sunt disponible prin materialele surs\u0103.",
+    coverAlt: "copert\u0103",
+    openingAlt: "pagin\u0103 de deschidere",
+  },
+};
+
+// ─── Self-Contained Reader Builder ────────────────────────────
+
+function buildSelfContainedReader({ manifest, visualSpec, chaptersData, coverPageSvg, openingPageSvg, lang }) {
+  const strings = LANG_STRINGS[lang] || LANG_STRINGS.en;
+  const htmlLang = lang === "ro" ? "ro" : "en";
+
+  const bookData = {
+    title: visualSpec.title,
+    subtitle: visualSpec.subtitle,
+    author: visualSpec.author,
+    genre: visualSpec.genre,
+    logline: visualSpec.logline,
+    openingQuote: visualSpec.openingQuote,
+    openingNote: visualSpec.openingNote,
+    chapters: chaptersData.map((ch) => ({
+      id: ch.id,
+      title: ch.title,
+      summary: ch.summary,
+      html: readerMarkdownToHtml(ch.markdown),
+    })),
+    atlas: manifest.atlas,
+    strings,
+  };
+
+  const bookDataJson = JSON.stringify(bookData);
+
+  const coverSvgB64 = `data:image/svg+xml;base64,${Buffer.from(coverPageSvg).toString("base64")}`;
+  const openingSvgB64 = `data:image/svg+xml;base64,${Buffer.from(openingPageSvg).toString("base64")}`;
+
+  const css = buildReaderCSS(visualSpec);
+  const js = buildReaderJS();
+
+  return `<!DOCTYPE html>
+<html lang="${htmlLang}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${readerEscapeHtml(visualSpec.title)}</title>
+<style>${css}</style>
+</head>
+<body book-lang="${htmlLang}">
+<div id="app"></div>
+<script>var BOOK_DATA=${bookDataJson};var COVER_SRC="${coverSvgB64}";var OPENING_SRC="${openingSvgB64}";</script>
+<script>${js}</script>
+</body>
+</html>`;
+}
+
+function buildReaderCSS(spec) {
+  return `
+*,*::before,*::after{box-sizing:border-box}
+:root{
+--desk:${spec.bgStart};
+--paper:${spec.paperColor};
+--paper-strong:#fdf8ef;
+--paper-edge:${spec.paperEdge};
+--ink:${spec.inkColor};
+--muted:${spec.mutedColor};
+--accent:${spec.accentColor};
+--accent-soft:${spec.accentColor}1a;
+--foil:${spec.foilColor};
+--glow:${spec.glowColor};
+--bg-end:${spec.bgEnd};
+--serif:Georgia,"Palatino Linotype","Book Antiqua",Palatino,serif;
+--sans:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+--mono:"IBM Plex Mono",Consolas,monospace;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--desk);color:var(--ink);font-family:var(--serif);line-height:1.72;letter-spacing:0.002em}
+a{color:var(--accent)}
+.app-shell{min-height:100vh;background:radial-gradient(circle at top left,${spec.accentColor}22,transparent 26%),radial-gradient(circle at 82% 10%,${spec.foilColor}22,transparent 22%),linear-gradient(180deg,#3a2e28 0%,var(--desk) 100%)}
+.book-nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 18px;background:rgba(26,22,20,0.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,248,238,0.08);color:#f9efdf}
+.book-nav__brand{min-width:0}
+.book-nav__eyebrow{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(249,239,223,0.58);font-family:var(--sans)}
+.book-nav__title{margin-top:2px;font-size:1.04rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.book-nav__controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.nav-btn,.nav-select{appearance:none;border:none;background:rgba(255,248,238,0.1);color:#f9efdf;border-radius:6px;padding:7px 13px;font:inherit;font-size:0.86rem;transition:background 150ms ease;cursor:pointer}
+.nav-btn:hover,.nav-select:hover,.nav-btn:focus-visible,.nav-select:focus-visible{background:rgba(255,248,238,0.22);outline:none}
+.nav-btn[disabled]{opacity:0.38;cursor:not-allowed}
+.nav-counter{padding:7px 12px;border-radius:6px;background:var(--accent-soft);color:#dcf3ec;font-size:0.84rem;font-weight:700;letter-spacing:0.02em;font-family:var(--sans)}
+.book-content{max-width:780px;margin:0 auto;padding:0 18px}
+.book-section{margin:0;padding:0}
+.section-cover,.section-opening{display:flex;align-items:center;justify-content:center;min-height:88vh;padding:32px 0}
+.section-cover img,.section-opening img{max-width:100%;max-height:88vh;border-radius:18px;box-shadow:0 28px 64px rgba(0,0,0,0.32)}
+.section-toc{min-height:60vh;padding:48px 0 32px}
+.section-toc h2{font-family:var(--serif);font-size:2rem;line-height:1.08;color:var(--ink);margin:0 0 8px}
+.section-toc__sub{color:var(--muted);font-size:1rem;margin:0 0 28px;line-height:1.62}
+.toc-list{display:grid;gap:6px}
+.toc-item{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:12px 14px;border-radius:8px;background:rgba(255,255,255,0.38);border:none;cursor:pointer;transition:background 130ms ease;text-align:left;width:100%;font:inherit;color:var(--ink)}
+.toc-item:hover{background:rgba(255,255,255,0.62)}
+.toc-item__num{width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--accent-soft);color:var(--accent);font-size:0.86rem;font-weight:800;font-family:var(--sans)}
+.toc-item__text strong{display:block;margin-bottom:2px}
+.toc-item__text span{color:var(--muted);font-size:0.92rem;line-height:1.48}
+.section-atlas{padding:40px 0 32px}
+.section-atlas h2{font-family:var(--serif);font-size:1.8rem;line-height:1.1;color:var(--ink);margin:0 0 6px}
+.section-atlas__sub{color:var(--muted);font-size:1rem;margin:0 0 24px;line-height:1.62}
+.atlas-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.atlas-panel{padding:14px;border-radius:8px;background:rgba(255,255,255,0.38)}
+.atlas-panel h3{margin:0 0 8px;font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);font-family:var(--sans)}
+.atlas-panel ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.atlas-panel li strong{display:block;margin-bottom:1px}
+.atlas-panel li span{color:var(--muted);font-size:0.9rem;line-height:1.5}
+.chapter{padding:0 0 48px;border-top:1px solid var(--paper-edge)}
+.chapter__header{padding-top:48px;padding-bottom:16px}
+.chapter__number{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:800;font-family:var(--sans)}
+.chapter__title{font-family:var(--serif);font-size:clamp(2rem,4vw,2.8rem);line-height:1.12;color:var(--ink);margin:12px 0 0;max-width:16ch}
+.chapter__summary{color:var(--muted);margin:10px 0 0;line-height:1.62;font-size:1rem}
+.chapter__divider{height:1px;margin:24px 0;background:linear-gradient(90deg,var(--paper-edge),transparent)}
+.chapter__body{font-family:var(--serif);font-size:1.06rem;line-height:1.74;color:var(--ink)}
+.chapter__body p,.chapter__body ul,.chapter__body ol,.chapter__body blockquote,.chapter__body pre{margin:0 0 1.1em}
+.chapter__body h1,.chapter__body h2,.chapter__body h3{margin:1.28em 0 0.48em;font-family:var(--serif);line-height:1.12;color:var(--ink)}
+.chapter__body h1{font-size:1.8rem}
+.chapter__body h2{font-size:1.36rem}
+.chapter__body h3{font-size:1.12rem}
+.chapter__body blockquote{padding:12px 16px;border-left:3px solid var(--accent);border-radius:4px;background:var(--accent-soft);color:var(--ink)}
+.chapter__body code,.chapter__body pre{font-family:var(--mono)}
+.chapter__body code{padding:0.1em 0.32em;border-radius:0.4em;background:rgba(23,19,16,0.08);font-size:0.92em}
+.chapter__body pre{padding:14px;border-radius:4px;background:#1a1714;color:#f9f0e1;overflow:auto;font-size:0.86rem;line-height:1.55}
+.chapter__body ul,.chapter__body ol{padding-left:1.15rem}
+.chapter__body li+li{margin-top:0.38em}
+.chapter__footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--paper-edge);display:flex;justify-content:space-between;color:var(--muted);font-size:0.82rem;letter-spacing:0.04em;font-family:var(--sans)}
+.section-closing{padding:56px 0 64px;text-align:center}
+.section-closing h2{font-family:var(--serif);font-size:1.6rem;color:var(--ink);margin:0 0 8px}
+.section-closing p{color:var(--muted);line-height:1.62;font-size:1rem;max-width:36ch;margin:0 auto 16px}
+.closing-quote{margin:20px auto;max-width:48ch;padding:14px 18px;border-left:3px solid var(--accent);border-radius:4px;background:var(--accent-soft);color:var(--ink);line-height:1.72;font-family:var(--serif);font-size:1.04rem;text-align:left}
+.paper-sheet{background:linear-gradient(180deg,var(--paper-strong),var(--paper));max-width:780px;margin:0 auto;padding:40px 32px 32px;border-radius:0 0 12px 12px;box-shadow:0 8px 28px rgba(0,0,0,0.08)}
+.paper-sheet:first-child{border-radius:12px}
+@media(max-width:720px){
+.book-nav{flex-direction:column;align-items:flex-start;padding:10px 14px}
+.book-nav__controls{width:100%;justify-content:flex-start}
+.book-content{padding:0 14px}
+.paper-sheet{padding:24px 18px 18px;border-radius:0}
+.atlas-grid{grid-template-columns:1fr}
+.chapter__title{font-size:1.8rem}
+.section-cover,.section-opening{min-height:70vh;padding:18px 0}
+.section-cover img,.section-opening img{max-height:70vh}
+}
+@media print{
+.book-nav{position:static;background:#fff;color:#000;border:none;backdrop-filter:none}
+.book-nav__eyebrow{color:#666}
+.book-nav__title{color:#000}
+.nav-counter{background:#eee;color:#333}
+.paper-sheet{box-shadow:none;border-radius:0;padding:20px 0}
+.chapter{page-break-before:always}
+}
+`.trim();
+}
+
+function buildReaderJS() {
+  return `
+(function(){
+var data=BOOK_DATA;
+var strings=data.strings||{};
+var app=document.getElementById("app");
+
+function esc(t){return String(t||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+
+var chapters=data.chapters||[];
+var atlas=data.atlas||{};
+var atlasKeys=["characters","places","concepts","themes","relationships","events","special-objects"];
+var hasAtlas=atlasKeys.some(function(k){return atlas[k]&&atlas[k].length});
+
+var chapterEls=[];
+
+function buildNav(){
+return '<nav class="book-nav">'
++'<div class="book-nav__brand">'
++'<div class="book-nav__eyebrow">'+esc(strings.bookReader||"Book Reader")+'</div>'
++'<div class="book-nav__title">'+esc(data.title)+'</div>'
++'</div>'
++'<div class="book-nav__controls">'
++'<button class="nav-btn" data-scroll="top">&#8593;</button>'
++'<button class="nav-btn" data-scroll="toc">'+esc(strings.openToc||"Contents")+'</button>'
++'<select class="nav-select" data-jump>'+('<option value="">'+esc(strings.jumpToChapter||"Jump to chapter")+'</option>')
++chapters.map(function(ch,i){return '<option value="ch-'+i+'">'+(i+1)+'. '+esc(ch.title)+'</option>'}).join("")+'</select>'
++'</div>'
++'</nav>';
+}
+
+function buildCover(){
+return '<section class="section-cover" id="sec-cover">'
++'<img src="'+COVER_SRC+'" alt="'+esc(strings.coverAlt||"cover")+'" loading="eager">'
++'</section>';
+}
+
+function buildOpening(){
+return '<section class="section-opening" id="sec-opening">'
++'<img src="'+OPENING_SRC+'" alt="'+esc(strings.openingAlt||"opening")+'" loading="eager">'
++'</section>';
+}
+
+function buildToc(){
+return '<section class="section-toc" id="sec-toc">'
++'<div class="paper-sheet">'
++'<h2>'+esc(strings.tableOfContents||"Table of Contents")+'</h2>'
++'<p class="section-toc__sub">'+esc(data.author||"")+(data.genre?' &middot; '+esc(data.genre):"")+'</p>'
++'<div class="toc-list">'
++chapters.map(function(ch,i){
+return '<button class="toc-item" data-scroll="ch-'+i+'">'
++'<span class="toc-item__num">'+(i+1)+'</span>'
++'<span class="toc-item__text"><strong>'+esc(ch.title)+'</strong><span>'+(ch.summary?esc(ch.summary.substring(0,140)):"")+'</span></span>'
++'</button>';
+}).join("")
++'</div>'
++'</div>'
++'</section>';
+}
+
+function buildAtlas(){
+if(!hasAtlas)return "";
+var panels=atlasKeys.filter(function(k){return atlas[k]&&atlas[k].length}).map(function(k){
+var items=atlas[k].slice(0,4);
+var label={characters:"Characters",places:"Places",concepts:"Concepts",themes:"Themes",relationships:"Relationships",events:"Events","special-objects":"Special Objects"}[k]||k;
+return '<div class="atlas-panel"><h3>'+esc(label)+'</h3><ul>'
++items.map(function(it){return '<li><strong>'+esc(it.title)+'</strong><span>'+esc((it.summary||"").substring(0,100))+'</span></li>'}).join("")
++'</ul></div>';
+}).join("");
+return '<section class="section-atlas" id="sec-atlas">'
++'<div class="paper-sheet">'
++'<h2>'+esc(strings.worldOverview||"World Overview")+'</h2>'
++'<p class="section-atlas__sub">'+esc(strings.worldOverviewSub||"")+'</p>'
++'<div class="atlas-grid">'+panels+'</div>'
++'</div>'
++'</section>';
+}
+
+function buildChapter(ch,i){
+return '<section class="chapter" id="ch-'+i+'">'
++'<div class="paper-sheet">'
++'<div class="chapter__header">'
++'<span class="chapter__number">'+esc(strings.chapter||"Chapter")+' '+(i+1)+'</span>'
++'<h2 class="chapter__title">'+esc(ch.title)+'</h2>'
++(ch.summary?'<p class="chapter__summary">'+esc(ch.summary)+'</p>':"")
++'<div class="chapter__divider"></div>'
++'</div>'
++'<div class="chapter__body">'+ch.html+'</div>'
++'<div class="chapter__footer">'
++'<span>'+esc(strings.chapter||"Chapter")+' '+(i+1)+': '+esc(ch.title)+'</span>'
++'<span></span>'
++'</div>'
++'</div>'
++'</section>';
+}
+
+function buildClosing(){
+return '<section class="section-closing" id="sec-closing">'
++'<div class="paper-sheet" style="text-align:center">'
++'<h2>'+esc(strings.closingTitle||"End of the Book")+'</h2>'
++'<p>'+esc(strings.closingNote||"Thank you for reading.")+'</p>'
++(data.openingQuote?'<blockquote class="closing-quote">'+esc(data.openingQuote)+'</blockquote>':"")
++'</div>'
++'</section>';
+}
+
+var html=buildNav()
++'<div class="app-shell">'
++'<div class="book-content">'
++buildCover()
++buildOpening()
++buildToc()
++buildAtlas();
+
+for(var i=0;i<chapters.length;i++){
+html+=buildChapter(chapters[i],i);
+}
+
+html+=buildClosing()
++'</div>'
++'</div>';
+
+app.innerHTML=html;
+
+app.querySelector("[data-scroll=top]")&&app.querySelector("[data-scroll=top]").addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
+app.querySelector("[data-scroll=toc]")&&app.querySelector("[data-scroll=toc]").addEventListener("click",function(){var el=document.getElementById("sec-toc");if(el)el.scrollIntoView({behavior:"smooth"})});
+
+app.querySelectorAll("[data-scroll]").forEach(function(btn){
+if(btn.getAttribute("data-scroll")==="top"||btn.getAttribute("data-scroll")==="toc")return;
+btn.addEventListener("click",function(){
+var id=btn.getAttribute("data-scroll");
+var el=document.getElementById(id);
+if(el)el.scrollIntoView({behavior:"smooth"});
+});
+});
+
+var jumpSel=app.querySelector("[data-jump]");
+if(jumpSel){
+jumpSel.addEventListener("change",function(){
+if(!jumpSel.value)return;
+var el=document.getElementById(jumpSel.value);
+if(el)el.scrollIntoView({behavior:"smooth"});
+jumpSel.value="";
+});
+}
+
+var currentChapter=0;
+var chSections=app.querySelectorAll(".chapter");
+
+function onScroll(){
+var scrollY=window.scrollY||window.pageYOffset;
+var best=0;
+for(var i=0;i<chSections.length;i++){
+var top=chSections[i].getBoundingClientRect().top+scrollY;
+if(top-200<=scrollY)best=i;
+}
+currentChapter=best;
+}
+
+window.addEventListener("scroll",onScroll,{passive:true});
+
+document.addEventListener("keydown",function(e){
+if(e.key==="ArrowDown"||e.key==="ArrowRight"){
+var next=currentChapter+1;
+if(next<chSections.length){chSections[next].scrollIntoView({behavior:"smooth"});e.preventDefault();}
+}else if(e.key==="ArrowUp"||e.key==="ArrowLeft"){
+var prev=currentChapter-1;
+if(prev>=0){chSections[prev].scrollIntoView({behavior:"smooth"});e.preventDefault();}
+}
+});
+})();
+`.trim();
+}
+
+// ─── Main Build ──────────────────────────────────────────────
+
 async function main() {
   const targetArg = process.argv[2];
   if (!targetArg) {
@@ -652,6 +1125,8 @@ async function main() {
   const chapterMetas = [];
   const chapterReports = [];
 
+  const chaptersData = [];
+
   for (const chapterId of chapterOrder) {
     const planPath = path.join(chapterPlansDir, `${chapterId}.md`);
     const planRaw = await readFile(planPath);
@@ -684,6 +1159,14 @@ async function main() {
       summary: planMeta.summary || "",
       chapterFile: `./chapters/${chapterId}.md`,
       sourcePlanFile: `./specs/chapter-plans/${chapterId}.md`,
+    });
+
+    const chapterMarkdown = await readFile(outputPath);
+    chaptersData.push({
+      id: chapterId,
+      title: planMeta.title || chapterId,
+      summary: planMeta.summary || "",
+      markdown: chapterMarkdown,
     });
 
     const validationReport = validateChapterContext(await buildChapterContext(bookDir, chapterId));
@@ -746,6 +1229,76 @@ async function main() {
     title: visualSpec.title || "Book Viewer",
   });
   const htmlState = await writeIfChanged(bookHtmlPath, htmlShell);
+
+  // ── Self-contained readers (en + ro) ─────────────────────
+
+  const bookSlug = path.basename(bookDir);
+  const workspaceRoot = path.resolve(process.cwd(), "docs");
+
+  const LANG_TRANSLATIONS = {
+    ro: {
+      title: visualSpec.title,
+      subtitle: visualSpec.subtitle,
+      author: visualSpec.author,
+      genre: visualSpec.genre,
+      logline: visualSpec.logline,
+      openingQuote: "O mie de ani de etică aleasă. Un accident să-i zdruncine. Întrebarea nu e dacă etica a fost reală — ci dacă o practicăm din nou.",
+      openingNote: "Rețeaua-rădăcină a făcut imposibil uciderea. Tehnologia a făcut-o accidental. Hibridul a făcut-o complicată. Și prima moarte într-un milion de ani a făcut-o reală.",
+      coverBadge: "Al Doilea Contact",
+      openingEyebrow: "Volumul II",
+      openingLabel: "Falsa Utopie Dezvelită",
+    },
+  };
+
+  for (const lang of ["en", "ro"]) {
+    const langDir = path.join(workspaceRoot, lang, bookSlug);
+
+    let langChaptersData = chaptersData;
+    if (lang === "ro") {
+      const chaptersRoDir = path.join(bookDir, "chapters-ro");
+      if (await fileExists(chaptersRoDir)) {
+        langChaptersData = [];
+        for (const ch of chaptersData) {
+          const roPath = path.join(chaptersRoDir, ch.id + ".md");
+          if (await fileExists(roPath)) {
+            const roMarkdown = await readFile(roPath);
+            const { data: roData } = parseFrontmatter(roMarkdown);
+            langChaptersData.push({
+              ...ch,
+              title: roData.title || ch.title,
+              markdown: roMarkdown,
+            });
+          } else {
+            langChaptersData.push(ch);
+          }
+        }
+      }
+    }
+
+    let langVisualSpec = visualSpec;
+    if (lang === "ro" && LANG_TRANSLATIONS.ro) {
+      const t = LANG_TRANSLATIONS.ro;
+      langVisualSpec = {
+        ...visualSpec,
+        openingQuote: t.openingQuote,
+        openingNote: t.openingNote,
+        coverBadge: t.coverBadge,
+        openingEyebrow: t.openingEyebrow,
+        openingLabel: t.openingLabel,
+      };
+    }
+
+    const langHtml = buildSelfContainedReader({
+      manifest,
+      visualSpec: langVisualSpec,
+      chaptersData: langChaptersData,
+      coverPageSvg,
+      openingPageSvg,
+      lang,
+    });
+    const state2 = await writeIfChanged(path.join(langDir, "book.html"), langHtml);
+    console.log(`Reader (${lang}): ${state2} -> docs/${lang}/${bookSlug}/book.html`);
+  }
 
   state.outputs = {
     coverArt: hashText(coverArtSvg),

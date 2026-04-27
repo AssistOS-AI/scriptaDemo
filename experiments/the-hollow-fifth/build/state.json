@@ -1,0 +1,17 @@
+{
+  "chapters": {
+    "01-the-misplaced-morning": "c836c73af908098fcb2b58950383530da79c21536e1f7681bce3fa90c593e165",
+    "02-the-annular-library": "4b4a295195787a867ae015760ee66c9b9f2249ddaf0f7275d478b7253d807a5c",
+    "03-the-vacant-orchard": "155edacdd4e91f874ee99435deb9073097822336b2c176972fb0b63ccf4355fc",
+    "04-the-basin-of-kept-motions": "46c5d1ab066413f90073c59e41a977a3535ac85702788d0c4240a03b68436751",
+    "05-the-folded-shore": "042ea82bb88c15cf3c154d16b7c5bd586d1cbff2a8f7c7497e90a6251ebccdf4"
+  },
+  "outputs": {
+    "coverArt": "21b80cdc3ab8b495c627964ebf6005f41168880302c1ae38d1ad7285072bd5bb",
+    "coverPage": "14dd8ea3821ca7f0929520be62ea1687bd5ded9c73e279d27eac1dd8e86a7ece",
+    "openingPage": "d0910035d1668f4aac9a4670280c5f6810baf31283401d21d81b8ec4b394cc49",
+    "consistencyReport": "8661fdf199f240d15578b28a1a09d41f0878afd94baf8c570d55275764b477a8",
+    "manifest": "967dd2e3366bface02f27ce25724502d25796d853b46ea6c9ca57fc34af341d8",
+    "bookHtml": "8669268eaff2cf0894f0d75f30822fdd99db77cbea3c10bed339bb677311bb0d"
+  }
+}

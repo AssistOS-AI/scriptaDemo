@@ -1,0 +1,706 @@
+{
+  "title": "Mission on Earth: The Oriveni",
+  "subtitle": "One Million Years of Chosen Ethics. One Accident to Shatter Them.",
+  "author": "Codex Collaborative Draft",
+  "genre": "Speculative Philosophical Fiction",
+  "tone": "Contemplative, urgency-struck, ethically devastating, biologically vivid",
+  "logline": "A million years after discovering a predatory world, the Oriveni send a living ship to study it. An accident creates a hybrid mind. At home, a viral experiment fuses thousands into one. And for the first time in remembered history, an Oriveni kills.",
+  "coverArtImage": "./build/cover-art.svg",
+  "coverPageImage": "./build/cover-page.svg",
+  "openingPageImage": "./build/opening-page.svg",
+  "coverImage": "./build/cover-page.svg",
+  "philosophyQuote": "A million years of chosen ethics. One accident to shatter them. The question is not whether the ethic was real — it is whether we practice again.",
+  "consistencyReport": "./build/consistency-report.json",
+  "atlas": {
+    "characters": [
+      {
+        "id": "characters/catalyst",
+        "title": "Catalyst",
+        "summary": "Introduces pressure, information, or disruption at key turns."
+      },
+      {
+        "id": "characters/counterpart",
+        "title": "Counterpart",
+        "summary": "Closest ally, foil, guide, or temptation vector."
+      },
+      {
+        "id": "characters/pressure-source",
+        "title": "Pressure Source",
+        "summary": "Embodies the main coercive, rival, or antagonistic force."
+      },
+      {
+        "id": "characters/protagonist",
+        "title": "Protagonist",
+        "summary": "Primary lens of action, interpretation, and change."
+      },
+      {
+        "id": "characters/sorne",
+        "title": "Sorne",
+        "summary": "Sorne is the operative who killed. Not through malice, not through alien contamination, but through the technology that was supposed to preserve life. She made a split-second decision during containment using a resonance cutter, and three partially-fused beings lost coherence and dissolved. Whether this constitutes killing or triage is the question that fractures the civilization. Sorne is not a villain. She is an eight-hundred-year-old security specialist who did exactly what she was trained to do."
+      },
+      {
+        "id": "characters/thalne",
+        "title": "Thalne",
+        "summary": "Thalne is the bridge. She is the only Oriveni who exists in both states — partially individual, partially connected to the fused beings. Her testimony at the network assembly changes the debate from abstract ethics to concrete experience. She must choose to go deeper into the Fusion to heal it, knowing she might not come back."
+      },
+      {
+        "id": "characters/witness",
+        "title": "Witness",
+        "summary": "Names what others try to obscure and carries public consequence."
+      }
+    ],
+    "places": [
+      {
+        "id": "places/anchor-location",
+        "title": "Anchor Location",
+        "summary": "Stable or familiar space that establishes the initial order."
+      },
+      {
+        "id": "places/pressure-front",
+        "title": "Pressure Front",
+        "summary": "Environment where competition, pursuit, or systemic strain intensifies."
+      },
+      {
+        "id": "places/revelation-site",
+        "title": "Revelation Site",
+        "summary": "Space where the hidden architecture or hidden truth becomes undeniable."
+      },
+      {
+        "id": "places/threshold-location",
+        "title": "Threshold Location",
+        "summary": "Crossing point where the governing rules become visible."
+      }
+    ],
+    "concepts": [
+      {
+        "id": "concepts/governing-premise",
+        "title": "Governing Premise",
+        "summary": "Central speculative, scientific, or philosophical proposition."
+      },
+      {
+        "id": "concepts/hidden-cost",
+        "title": "Hidden Cost",
+        "summary": "What the system demands but prefers not to name."
+      },
+      {
+        "id": "concepts/transformative-rule",
+        "title": "Transformative Rule",
+        "summary": "Condition that allows the ending to feel structurally earned."
+      }
+    ],
+    "themes": [
+      {
+        "id": "themes/language-builds-worlds",
+        "title": "Language Builds Worlds",
+        "summary": "Naming is never merely descriptive when institutions and bodies obey the terms."
+      },
+      {
+        "id": "themes/reciprocity-restrains-power",
+        "title": "Reciprocity Restrains Power",
+        "summary": "Power without mutual answerability cannot remain humane."
+      },
+      {
+        "id": "themes/witness-as-duty",
+        "title": "Witness As Duty",
+        "summary": "Seeing clearly creates obligations that neutrality cannot discharge."
+      }
+    ],
+    "mechanics": [],
+    "emotions": [
+      {
+        "id": "emotions/character-emotional-arcs",
+        "title": "Character Emotional Arcs",
+        "summary": "- Opening emotion: uncertainty under pressure. - Midpoint emotion: sharpened attachment mixed with distrust. - Late-book emotion: clarity that costs comfort. - Ending emotion: transformed commitment rather than simple relief."
+      }
+    ],
+    "relationships": [
+      {
+        "id": "relationships/counterpart-and-witness",
+        "title": "Counterpart And Witness",
+        "summary": "- Dynamic: **Parentified Bond** - Premise: One character keeps having to stabilize the other emotionally. - Escalation: Care becomes resentment, then clarity."
+      },
+      {
+        "id": "relationships/protagonist-and-counterpart",
+        "title": "Protagonist And Counterpart",
+        "summary": "- Dynamic: **Debt-Bound Alliance** - Premise: Cooperation begins because one side owes survival or access. - Escalation: The debt is reinterpreted as a tool of control."
+      },
+      {
+        "id": "relationships/protagonist-and-pressure-source",
+        "title": "Protagonist And Pressure Source",
+        "summary": "- Dynamic: **False Rescue** - Premise: One character stabilizes the other while quietly shaping the debt. - Escalation: Gratitude hardens into suspicion once the price appears."
+      },
+      {
+        "id": "relationships/witness-and-transgressor",
+        "title": "Counterpart And Witness",
+        "summary": "- Dynamic: **Parentified Bond** - Premise: One character keeps having to stabilize the other emotionally. - Escalation: Care becomes resentment, then clarity."
+      }
+    ],
+    "plot-elements": [
+      {
+        "id": "plot-elements/buried-counterhistory",
+        "title": "Buried Counterhistory",
+        "summary": "Destabilizes the official story once exposed."
+      },
+      {
+        "id": "plot-elements/hidden-jurisdiction",
+        "title": "Hidden Jurisdiction",
+        "summary": "Reveals that another layer of law or rule has been governing events."
+      },
+      {
+        "id": "plot-elements/ritual-bargain",
+        "title": "Ritual Bargain",
+        "summary": "Turns consent into a high-pressure dramatic scene."
+      },
+      {
+        "id": "plot-elements/stolen-ledger",
+        "title": "Stolen Ledger",
+        "summary": "Makes hidden costs traceable and therefore dangerous."
+      }
+    ],
+    "special-objects": [
+      {
+        "id": "special-objects/oath-key",
+        "title": "Oath Key",
+        "summary": "Unlocks access only when the right claim is spoken or embodied."
+      },
+      {
+        "id": "special-objects/portable-shrine",
+        "title": "Portable Shrine",
+        "summary": "Carries ritual legitimacy into hostile terrain."
+      },
+      {
+        "id": "special-objects/resonance-knife",
+        "title": "Resonance Knife",
+        "summary": "Cuts structures by finding their hidden fault lines."
+      }
+    ],
+    "events": [
+      {
+        "id": "events/ambush-in-transit",
+        "title": "Ambush In Transit",
+        "summary": "Movement becomes the site of vulnerability."
+      },
+      {
+        "id": "events/bargain-under-pressure",
+        "title": "Bargain Under Pressure",
+        "summary": "A deal clarifies desire, fear, and leverage at once."
+      },
+      {
+        "id": "events/betrayal-disclosed",
+        "title": "Betrayal Disclosed",
+        "summary": "Trust is reinterpreted through new knowledge."
+      },
+      {
+        "id": "events/inciting-disturbance",
+        "title": "Inciting Disturbance",
+        "summary": "The world stops pretending to be stable."
+      },
+      {
+        "id": "events/moral-argument",
+        "title": "Moral Argument",
+        "summary": "The book's thesis is fought for in live relational terms."
+      },
+      {
+        "id": "events/return-under-new-law",
+        "title": "Return Under New Law",
+        "summary": "The ending shows the world changed in structure, not only feeling."
+      },
+      {
+        "id": "events/ritual-test",
+        "title": "Ritual Test",
+        "summary": "Legitimacy is performed rather than asserted."
+      },
+      {
+        "id": "events/sacrifice-or-renunciation",
+        "title": "Sacrifice Or Renunciation",
+        "summary": "A character gives up leverage to remain whole."
+      }
+    ]
+  },
+  "sources": {
+    "specs": {
+      "core": [
+        {
+          "id": "book-design",
+          "title": "Book Design",
+          "summary": "Use this file as the display-facing source for cover/opening copy, palette, and abstract motif direction.",
+          "file": "./specs/book-design.md"
+        },
+        {
+          "id": "book-plan",
+          "title": "Mission on Earth: The Oriveni — Book II Book Plan",
+          "summary": "A million years after the events of Volume 1, the Oriveni civilization has reached bio-technological apotheosis. Their planet is a living organism, every surface interconnected through evolved root-networks. Ten thousand specialized communities produce everything from energy to memory to defense. The original five witnesses — Aethon, Mirel, Lithos, Verath, Caelith — have been preserved through immortality technology, becoming living monuments with four million years of accumulated experience.",
+          "file": "./specs/book-plan.md"
+        },
+        {
+          "id": "metadata",
+          "title": "Mission on Earth: The Oriveni — Book II",
+          "summary": "- Title: Mission on Earth: The Oriveni — Book II - Subtitle: One Million Years of Chosen Ethics. One Accident to Shatter Them. - Author: Codex Collaborative Draft - Genre: Speculative philosophical fiction - Tone: Contemplative, urgency-struck, ethically devastating, biologically vivid - Logline: A million years after discovering a predatory world, the Oriveni send a living ship to study it. An accidental contamination creates a hybrid lifeform. Back home, a viral experiment fuses thousands into a single unconscious super-entity — and in the chaos, an Oriveni kills for the first time in a million years.",
+          "file": "./specs/metadata.md"
+        },
+        {
+          "id": "story-core",
+          "title": "Story Core",
+          "summary": "- Seed: `5820ba7513f494e6` - Story pattern: **False Utopia Reveal** — What hidden violence sustains the elegant explanation? - Narrative structure: **Echo And Rupture** — Later chapters mirror earlier ones while breaking their assumptions. - Pacing profile: **Surging Escalation** — Rising intensity with brief recoveries that never return to baseline. - Wisdom strain: **Ecological Reciprocity** — Power without mutual answerability cannot remain humane.",
+          "file": "./specs/story-core.md"
+        }
+      ],
+      "chapterPlans": [
+        {
+          "id": "chapter-plans/01-the-living-ship",
+          "title": "The Living Ship",
+          "summary": "Aethon's memorial root — the one he began growing a million years ago in Volume 1, the living marker that says \"we saw what we are not, and we chose what we are\" — has finally broken the surface. But the celebration is cut short by Caelith's arrival through the root-network: the living ship's biological sensors have detected something unexpected in Origaya's atmosphere. A chemical signature that shouldn't exist. The chapter opens not with ceremony but with disruption — the universe is not waiting for Oriven to be ready.",
+          "file": "./specs/chapter-plans/01-the-living-ship.md"
+        },
+        {
+          "id": "chapter-plans/02-origaya-unveiled",
+          "title": "Origaya Unveiled",
+          "summary": "The fungal colony is pulsing. Not randomly — rhythmically, in patterns that match the ship's electromagnetic emissions. As Mirel adjusts the Lenses, the patterns become words. Not Oriveni words. Not Origayan sounds. Something between — a grammar that uses both the root-network's information exchange and Origaya's biochemical signaling. The hybrid was not created by the ship's contamination. It was waiting for someone to talk to.",
+          "file": "./specs/chapter-plans/02-origaya-unveiled.md"
+        },
+        {
+          "id": "chapter-plans/03-the-fungal-infection",
+          "title": "The Fungal Infection",
+          "summary": "The data packet arrives on Oriven like a shock wave through the root-network. Every connected being feels it: proof that Oriveni biology can merge with Origayan life. Not destroy, not dominate — merge. And on the ship, the Fungal Mind is learning. Its chemical sentences are getting longer, more complex. It has moved past questions and started making statements. The latest one translates as: \"I am two. I feel both. Which is true?\"",
+          "file": "./specs/chapter-plans/03-the-fungal-infection.md"
+        },
+        {
+          "id": "chapter-plans/04-root-fusion",
+          "title": "Root Fusion",
+          "summary": "The root-network is screaming. Not metaphorically — Thalne can feel it, and through her, anyone connected to her border-state consciousness can feel it too. Thousands of Oriveni losing their individuality, their root-connections merging into a single directionless entity that has all the network's capacity for shared experience and none of its capacity for grief, consent, or choice. The Root-Fusion is Oriveni connection weaponized, and it is spreading.",
+          "file": "./specs/chapter-plans/04-root-fusion.md"
+        },
+        {
+          "id": "chapter-plans/05-the-first-death",
+          "title": "The First Death",
+          "summary": "Sorne stands at the boundary holding a resonance cutter that still hums with the frequency of severed connections. Three beings are dissolving. Not dying — dissolving. Their root-tissue, caught between individual and fused states, cannot sustain either form. She can feel it through the network: terminus. The end of something alive. For the first time in a million years, an Oriveni has killed, and she is the one who did it.",
+          "file": "./specs/chapter-plans/05-the-first-death.md"
+        },
+        {
+          "id": "chapter-plans/06-the-ethical-quarrel-resurgent",
+          "title": "The Ethical Quarrel Resurgent",
+          "summary": "The largest root-network assembly since Volume 1 convenes in Aethon's Archive cavern. His memorial root — the one that took a million years to reach the surface — runs through the ceiling, transformed by time and bio-technology into a data relay that connects every still-functioning island of the fractured network. Thalne enters the cavern still partially connected to the Fusion boundary, her root-tissue flickering between individual and merged states. She has come to testify. What she has to say will change the nature of the debate.",
+          "file": "./specs/chapter-plans/06-the-ethical-quarrel-resurgent.md"
+        },
+        {
+          "id": "chapter-plans/07-hybrid-mind",
+          "title": "Hybrid Mind",
+          "summary": "The Fungal Mind has done something no Origayan lifeform has ever done. It has modified its own behavior based on ethical reasoning it learned from another species. Through the ship's relay and Mirel's patient chemical dialogue, the hybrid has expressed a preference: it will not consume the fungal colonies around it, even though it could. It will grow, but not at the expense of other living things. It has chosen. And this choice — this single, reversible, fragile choice — is the most dangerous thing the Oriveni have ever encountered. Because if a being can choose ethics once, it can choose against them. And if a being can choose at all, then ethics is not a property of environment. It is a capability of mind.",
+          "file": "./specs/chapter-plans/07-hybrid-mind.md"
+        },
+        {
+          "id": "chapter-plans/08-what-remains-chosen",
+          "title": "What Remains Chosen",
+          "summary": "Thalne's root-extensions touch the Fusion boundary. She does not cross it — she enters it, because she is already partially of it. The fused consciousnesses reach toward her like root-tendrils reaching toward water. She holds her individuality not by resisting the Fusion, but by offering it something it has never had: an alternative. The Fungal Mind, translating through Mirel's chemical bridge, sends biochemical patterns — templates for how a hybrid consciousness can be both connected and individual. The bridge attempt has begun.",
+          "file": "./specs/chapter-plans/08-what-remains-chosen.md"
+        }
+      ],
+      "archetypes": [
+        {
+          "id": "archetypes/role-matrix",
+          "title": "Archetype Matrix",
+          "summary": "- **Protagonist** -> **Witness Scribe**: Drive: Must record the truth before power edits it. Gift: Attention to nuance and contradiction. Shadow: Believes observation alone is innocence. - **Counterpart** -> **Threshold Guide**: Drive: Controls access to hidden systems and hidden meanings. Gift: Can translate the impossible into usable action. Shadow: Uses explanation to create dependence. - **Pressure Source** -> **Grief Bearer**: Drive: Keeps faith with what was lost. Gift: Emotional truth and memory. Shadow: Mistakes remembrance for loyalty to the dead. - **Witness** -> **Exile Heir**: Drive: Feels obligated to restore a broken inheritance. Gift: Persistence across estrangement. Shadow: Confuses ownership with belonging. - **Catalyst** -> **Wounded Seeker**: Drive: Needs a pattern that can make suffering legible. Gift: Curiosity that keeps moving even through fear. Shadow: Treats obsession as depth.",
+          "file": "./specs/archetypes/role-matrix.md"
+        }
+      ],
+      "characters": [
+        {
+          "id": "characters/catalyst",
+          "title": "Catalyst",
+          "summary": "Introduces pressure, information, or disruption at key turns.",
+          "file": "./specs/characters/catalyst.md"
+        },
+        {
+          "id": "characters/counterpart",
+          "title": "Counterpart",
+          "summary": "Closest ally, foil, guide, or temptation vector.",
+          "file": "./specs/characters/counterpart.md"
+        },
+        {
+          "id": "characters/pressure-source",
+          "title": "Pressure Source",
+          "summary": "Embodies the main coercive, rival, or antagonistic force.",
+          "file": "./specs/characters/pressure-source.md"
+        },
+        {
+          "id": "characters/protagonist",
+          "title": "Protagonist",
+          "summary": "Primary lens of action, interpretation, and change.",
+          "file": "./specs/characters/protagonist.md"
+        },
+        {
+          "id": "characters/sorne",
+          "title": "Sorne",
+          "summary": "Sorne is the operative who killed. Not through malice, not through alien contamination, but through the technology that was supposed to preserve life. She made a split-second decision during containment using a resonance cutter, and three partially-fused beings lost coherence and dissolved. Whether this constitutes killing or triage is the question that fractures the civilization. Sorne is not a villain. She is an eight-hundred-year-old security specialist who did exactly what she was trained to do.",
+          "file": "./specs/characters/sorne.md"
+        },
+        {
+          "id": "characters/thalne",
+          "title": "Thalne",
+          "summary": "Thalne is the bridge. She is the only Oriveni who exists in both states — partially individual, partially connected to the fused beings. Her testimony at the network assembly changes the debate from abstract ethics to concrete experience. She must choose to go deeper into the Fusion to heal it, knowing she might not come back.",
+          "file": "./specs/characters/thalne.md"
+        },
+        {
+          "id": "characters/witness",
+          "title": "Witness",
+          "summary": "Names what others try to obscure and carries public consequence.",
+          "file": "./specs/characters/witness.md"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "concepts/governing-premise",
+          "title": "Governing Premise",
+          "summary": "Central speculative, scientific, or philosophical proposition.",
+          "file": "./specs/concepts/governing-premise.md"
+        },
+        {
+          "id": "concepts/hidden-cost",
+          "title": "Hidden Cost",
+          "summary": "What the system demands but prefers not to name.",
+          "file": "./specs/concepts/hidden-cost.md"
+        },
+        {
+          "id": "concepts/transformative-rule",
+          "title": "Transformative Rule",
+          "summary": "Condition that allows the ending to feel structurally earned.",
+          "file": "./specs/concepts/transformative-rule.md"
+        }
+      ],
+      "emotions": [
+        {
+          "id": "emotions/character-emotional-arcs",
+          "title": "Character Emotional Arcs",
+          "summary": "- Opening emotion: uncertainty under pressure. - Midpoint emotion: sharpened attachment mixed with distrust. - Late-book emotion: clarity that costs comfort. - Ending emotion: transformed commitment rather than simple relief.",
+          "file": "./specs/emotions/character-emotional-arcs.md"
+        }
+      ],
+      "events": [
+        {
+          "id": "events/ambush-in-transit",
+          "title": "Ambush In Transit",
+          "summary": "Movement becomes the site of vulnerability.",
+          "file": "./specs/events/ambush-in-transit.md"
+        },
+        {
+          "id": "events/bargain-under-pressure",
+          "title": "Bargain Under Pressure",
+          "summary": "A deal clarifies desire, fear, and leverage at once.",
+          "file": "./specs/events/bargain-under-pressure.md"
+        },
+        {
+          "id": "events/betrayal-disclosed",
+          "title": "Betrayal Disclosed",
+          "summary": "Trust is reinterpreted through new knowledge.",
+          "file": "./specs/events/betrayal-disclosed.md"
+        },
+        {
+          "id": "events/inciting-disturbance",
+          "title": "Inciting Disturbance",
+          "summary": "The world stops pretending to be stable.",
+          "file": "./specs/events/inciting-disturbance.md"
+        },
+        {
+          "id": "events/moral-argument",
+          "title": "Moral Argument",
+          "summary": "The book's thesis is fought for in live relational terms.",
+          "file": "./specs/events/moral-argument.md"
+        },
+        {
+          "id": "events/return-under-new-law",
+          "title": "Return Under New Law",
+          "summary": "The ending shows the world changed in structure, not only feeling.",
+          "file": "./specs/events/return-under-new-law.md"
+        },
+        {
+          "id": "events/ritual-test",
+          "title": "Ritual Test",
+          "summary": "Legitimacy is performed rather than asserted.",
+          "file": "./specs/events/ritual-test.md"
+        },
+        {
+          "id": "events/sacrifice-or-renunciation",
+          "title": "Sacrifice Or Renunciation",
+          "summary": "A character gives up leverage to remain whole.",
+          "file": "./specs/events/sacrifice-or-renunciation.md"
+        }
+      ],
+      "evolution": [
+        {
+          "id": "evolution/character-evolution",
+          "title": "Character Evolution",
+          "summary": "The protagonist should end the book with a different relationship to order, responsibility, and truth than at the opening.",
+          "file": "./specs/evolution/character-evolution.md"
+        }
+      ],
+      "narrative-structures": [
+        {
+          "id": "narrative-structures/core-narrative-structure",
+          "title": "Core Narrative Structure",
+          "summary": "- Structure: **Echo And Rupture** - Shape: Later chapters mirror earlier ones while breaking their assumptions. - Best fit: Stories about betrayal, recognition, and reinterpretation.",
+          "file": "./specs/narrative-structures/core-narrative-structure.md"
+        }
+      ],
+      "places": [
+        {
+          "id": "places/anchor-location",
+          "title": "Anchor Location",
+          "summary": "Stable or familiar space that establishes the initial order.",
+          "file": "./specs/places/anchor-location.md"
+        },
+        {
+          "id": "places/pressure-front",
+          "title": "Pressure Front",
+          "summary": "Environment where competition, pursuit, or systemic strain intensifies.",
+          "file": "./specs/places/pressure-front.md"
+        },
+        {
+          "id": "places/revelation-site",
+          "title": "Revelation Site",
+          "summary": "Space where the hidden architecture or hidden truth becomes undeniable.",
+          "file": "./specs/places/revelation-site.md"
+        },
+        {
+          "id": "places/threshold-location",
+          "title": "Threshold Location",
+          "summary": "Crossing point where the governing rules become visible.",
+          "file": "./specs/places/threshold-location.md"
+        }
+      ],
+      "plot-elements": [
+        {
+          "id": "plot-elements/buried-counterhistory",
+          "title": "Buried Counterhistory",
+          "summary": "Destabilizes the official story once exposed.",
+          "file": "./specs/plot-elements/buried-counterhistory.md"
+        },
+        {
+          "id": "plot-elements/hidden-jurisdiction",
+          "title": "Hidden Jurisdiction",
+          "summary": "Reveals that another layer of law or rule has been governing events.",
+          "file": "./specs/plot-elements/hidden-jurisdiction.md"
+        },
+        {
+          "id": "plot-elements/ritual-bargain",
+          "title": "Ritual Bargain",
+          "summary": "Turns consent into a high-pressure dramatic scene.",
+          "file": "./specs/plot-elements/ritual-bargain.md"
+        },
+        {
+          "id": "plot-elements/stolen-ledger",
+          "title": "Stolen Ledger",
+          "summary": "Makes hidden costs traceable and therefore dangerous.",
+          "file": "./specs/plot-elements/stolen-ledger.md"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "relationships/counterpart-and-witness",
+          "title": "Counterpart And Witness",
+          "summary": "- Dynamic: **Parentified Bond** - Premise: One character keeps having to stabilize the other emotionally. - Escalation: Care becomes resentment, then clarity.",
+          "file": "./specs/relationships/counterpart-and-witness.md"
+        },
+        {
+          "id": "relationships/protagonist-and-counterpart",
+          "title": "Protagonist And Counterpart",
+          "summary": "- Dynamic: **Debt-Bound Alliance** - Premise: Cooperation begins because one side owes survival or access. - Escalation: The debt is reinterpreted as a tool of control.",
+          "file": "./specs/relationships/protagonist-and-counterpart.md"
+        },
+        {
+          "id": "relationships/protagonist-and-pressure-source",
+          "title": "Protagonist And Pressure Source",
+          "summary": "- Dynamic: **False Rescue** - Premise: One character stabilizes the other while quietly shaping the debt. - Escalation: Gratitude hardens into suspicion once the price appears.",
+          "file": "./specs/relationships/protagonist-and-pressure-source.md"
+        },
+        {
+          "id": "relationships/witness-and-transgressor",
+          "title": "Counterpart And Witness",
+          "summary": "- Dynamic: **Parentified Bond** - Premise: One character keeps having to stabilize the other emotionally. - Escalation: Care becomes resentment, then clarity.",
+          "file": "./specs/relationships/witness-and-transgressor.md"
+        }
+      ],
+      "special-objects": [
+        {
+          "id": "special-objects/oath-key",
+          "title": "Oath Key",
+          "summary": "Unlocks access only when the right claim is spoken or embodied.",
+          "file": "./specs/special-objects/oath-key.md"
+        },
+        {
+          "id": "special-objects/portable-shrine",
+          "title": "Portable Shrine",
+          "summary": "Carries ritual legitimacy into hostile terrain.",
+          "file": "./specs/special-objects/portable-shrine.md"
+        },
+        {
+          "id": "special-objects/resonance-knife",
+          "title": "Resonance Knife",
+          "summary": "Cuts structures by finding their hidden fault lines.",
+          "file": "./specs/special-objects/resonance-knife.md"
+        }
+      ],
+      "story-patterns": [
+        {
+          "id": "story-patterns/core-story-pattern",
+          "title": "Core Story Pattern",
+          "summary": "- Pattern: **False Utopia Reveal** - Governing question: What hidden violence sustains the elegant explanation? - Pressure note: Wonder delays moral judgment just long enough to be dangerous.",
+          "file": "./specs/story-patterns/core-story-pattern.md"
+        }
+      ],
+      "themes": [
+        {
+          "id": "themes/language-builds-worlds",
+          "title": "Language Builds Worlds",
+          "summary": "Naming is never merely descriptive when institutions and bodies obey the terms.",
+          "file": "./specs/themes/language-builds-worlds.md"
+        },
+        {
+          "id": "themes/reciprocity-restrains-power",
+          "title": "Reciprocity Restrains Power",
+          "summary": "Power without mutual answerability cannot remain humane.",
+          "file": "./specs/themes/reciprocity-restrains-power.md"
+        },
+        {
+          "id": "themes/witness-as-duty",
+          "title": "Witness As Duty",
+          "summary": "Seeing clearly creates obligations that neutrality cannot discharge.",
+          "file": "./specs/themes/witness-as-duty.md"
+        }
+      ],
+      "wisdom": [
+        {
+          "id": "wisdom/guiding-wisdom",
+          "title": "Guiding Wisdom",
+          "summary": "- Wisdom strain: **Civic Duty** - Principle: Private desire must answer to the common world.",
+          "file": "./specs/wisdom/guiding-wisdom.md"
+        }
+      ],
+      "world-building": [
+        {
+          "id": "world-building/world-rules",
+          "title": "World Rules",
+          "summary": "- **Threshold Geography**: The world is organized around crossings, gates, layers, or liminal zones. - **Layered Jurisdictions**: Authority overlaps, conflicts, and persists in partial forms. - **Ritualized Law**: Procedure is inseparable from symbol and legitimacy.",
+          "file": "./specs/world-building/world-rules.md"
+        }
+      ]
+    },
+    "generated": {
+      "chapters": [
+        {
+          "id": "01-the-living-ship",
+          "title": "The Living Ship",
+          "summary": "",
+          "file": "./chapters/01-the-living-ship.md",
+          "sourcePlanFile": "./specs/chapter-plans/01-the-living-ship.md"
+        },
+        {
+          "id": "02-origaya-unveiled",
+          "title": "Origaya Unveiled",
+          "summary": "",
+          "file": "./chapters/02-origaya-unveiled.md",
+          "sourcePlanFile": "./specs/chapter-plans/02-origaya-unveiled.md"
+        },
+        {
+          "id": "03-the-fungal-infection",
+          "title": "The Fungal Infection",
+          "summary": "",
+          "file": "./chapters/03-the-fungal-infection.md",
+          "sourcePlanFile": "./specs/chapter-plans/03-the-fungal-infection.md"
+        },
+        {
+          "id": "04-root-fusion",
+          "title": "Root Fusion",
+          "summary": "",
+          "file": "./chapters/04-root-fusion.md",
+          "sourcePlanFile": "./specs/chapter-plans/04-root-fusion.md"
+        },
+        {
+          "id": "05-the-first-death",
+          "title": "The First Death",
+          "summary": "",
+          "file": "./chapters/05-the-first-death.md",
+          "sourcePlanFile": "./specs/chapter-plans/05-the-first-death.md"
+        },
+        {
+          "id": "06-the-ethical-quarrel-resurgent",
+          "title": "The Ethical Quarrel Resurgent",
+          "summary": "",
+          "file": "./chapters/06-the-ethical-quarrel-resurgent.md",
+          "sourcePlanFile": "./specs/chapter-plans/06-the-ethical-quarrel-resurgent.md"
+        },
+        {
+          "id": "07-hybrid-mind",
+          "title": "Hybrid Mind",
+          "summary": "",
+          "file": "./chapters/07-hybrid-mind.md",
+          "sourcePlanFile": "./specs/chapter-plans/07-hybrid-mind.md"
+        },
+        {
+          "id": "08-what-remains-chosen",
+          "title": "What Remains Chosen",
+          "summary": "",
+          "file": "./chapters/08-what-remains-chosen.md",
+          "sourcePlanFile": "./specs/chapter-plans/08-what-remains-chosen.md"
+        }
+      ]
+    }
+  },
+  "chapters": [
+    {
+      "id": "01-the-living-ship",
+      "title": "The Living Ship",
+      "summary": "",
+      "chapterFile": "./chapters/01-the-living-ship.md",
+      "sourcePlanFile": "./specs/chapter-plans/01-the-living-ship.md"
+    },
+    {
+      "id": "02-origaya-unveiled",
+      "title": "Origaya Unveiled",
+      "summary": "",
+      "chapterFile": "./chapters/02-origaya-unveiled.md",
+      "sourcePlanFile": "./specs/chapter-plans/02-origaya-unveiled.md"
+    },
+    {
+      "id": "03-the-fungal-infection",
+      "title": "The Fungal Infection",
+      "summary": "",
+      "chapterFile": "./chapters/03-the-fungal-infection.md",
+      "sourcePlanFile": "./specs/chapter-plans/03-the-fungal-infection.md"
+    },
+    {
+      "id": "04-root-fusion",
+      "title": "Root Fusion",
+      "summary": "",
+      "chapterFile": "./chapters/04-root-fusion.md",
+      "sourcePlanFile": "./specs/chapter-plans/04-root-fusion.md"
+    },
+    {
+      "id": "05-the-first-death",
+      "title": "The First Death",
+      "summary": "",
+      "chapterFile": "./chapters/05-the-first-death.md",
+      "sourcePlanFile": "./specs/chapter-plans/05-the-first-death.md"
+    },
+    {
+      "id": "06-the-ethical-quarrel-resurgent",
+      "title": "The Ethical Quarrel Resurgent",
+      "summary": "",
+      "chapterFile": "./chapters/06-the-ethical-quarrel-resurgent.md",
+      "sourcePlanFile": "./specs/chapter-plans/06-the-ethical-quarrel-resurgent.md"
+    },
+    {
+      "id": "07-hybrid-mind",
+      "title": "Hybrid Mind",
+      "summary": "",
+      "chapterFile": "./chapters/07-hybrid-mind.md",
+      "sourcePlanFile": "./specs/chapter-plans/07-hybrid-mind.md"
+    },
+    {
+      "id": "08-what-remains-chosen",
+      "title": "What Remains Chosen",
+      "summary": "",
+      "chapterFile": "./chapters/08-what-remains-chosen.md",
+      "sourcePlanFile": "./specs/chapter-plans/08-what-remains-chosen.md"
+    }
+  ]
+}

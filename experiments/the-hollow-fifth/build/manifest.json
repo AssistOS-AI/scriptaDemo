@@ -10,6 +10,7 @@
   "openingPageImage": "./build/opening-page.svg",
   "coverImage": "./build/cover-page.svg",
   "philosophyQuote": "In machine learning, the emptiness of high-dimensional spheres confuses our algorithms. In physics, that same emptiness helps stabilize conservation laws and helps explain why life needs a universe close to three spatial dimensions.",
+  "consistencyReport": "./build/consistency-report.json",
   "atlas": {
     "characters": [
       {
@@ -117,16 +118,31 @@
         "title": "Character Emotional Arcs",
         "summary": "The emotional design of the novella should make the philosophical movement feel lived rather than appended. Each character carries a distinct emotional curve that interacts with the geometry of the places."
       }
-    ]
+    ],
+    "relationships": [
+      {
+        "id": "relationships/adrian-and-mira",
+        "title": "Adrian And Mira",
+        "summary": "Mira stabilizes Adrian not because she symbolizes home in a vague way, but because her relationship with him was built through repeated ordinary acts. Shared meals, arguments, jokes, and grief rituals become the emotional analogue of conservation law."
+      },
+      {
+        "id": "relationships/adrian-and-syl",
+        "title": "Adrian And Syl",
+        "summary": "This relationship is the core engine of the book. It must move through awe, dependence, intellectual companionship, suspicion, betrayal, and a final form of pity that does not become surrender."
+      }
+    ],
+    "plot-elements": [],
+    "special-objects": [],
+    "events": []
   },
   "sources": {
     "specs": {
       "core": [
         {
-          "id": "metadata",
-          "title": "The Hollow Fifth",
-          "summary": "This book is designed as a compact philosophical novella. Its dramatic engine is trust under altered perception, and its intellectual engine is the analogy between sparse high-dimensional geometry in machine learning and the stability constraints of physical law.",
-          "file": "./specs/metadata.md"
+          "id": "book-design",
+          "title": "Book Design",
+          "summary": "Visual metadata and abstract SVG directions for the book cover, cover page, and opening page.",
+          "file": "./specs/book-design.md"
         },
         {
           "id": "book-plan",
@@ -135,10 +151,10 @@
           "file": "./specs/book-plan.md"
         },
         {
-          "id": "book-design",
-          "title": "Book Design",
-          "summary": "Visual metadata and abstract SVG directions for the book cover, cover page, and opening page.",
-          "file": "./specs/book-design.md"
+          "id": "metadata",
+          "title": "The Hollow Fifth",
+          "summary": "This book is designed as a compact philosophical novella. Its dramatic engine is trust under altered perception, and its intellectual engine is the analogy between sparse high-dimensional geometry in machine learning and the stability constraints of physical law.",
+          "file": "./specs/metadata.md"
         }
       ],
       "chapterPlans": [
@@ -199,6 +215,54 @@
           "file": "./specs/characters/syl.md"
         }
       ],
+      "concepts": [
+        {
+          "id": "concepts/five-dimensional-perception",
+          "title": "Five-Dimensional Perception",
+          "summary": "Five-dimensional perception in this book is not presented as omniscience. It is a condition of overwhelming adjacency. Things are not merely farther away or closer than expected; they are connected through hidden directions that make ordinary intuition unreliable.",
+          "file": "./specs/concepts/five-dimensional-perception.md"
+        },
+        {
+          "id": "concepts/sparse-spheres-and-ml",
+          "title": "Sparse Spheres And Machine Learning",
+          "summary": "In high-dimensional geometry, most of the volume of a sphere concentrates in unintuitive regions and neighborhoods become effectively empty for many algorithms. In machine learning this sparsity undermines distance-based intuition, weakens local similarity, and makes generalization more difficult. The book treats this as the cognitive template Adrian already knows before entering the fifth-dimensional realm.",
+          "file": "./specs/concepts/sparse-spheres-and-ml.md"
+        },
+        {
+          "id": "concepts/stable-matter-in-three-dimensions",
+          "title": "Stable Matter In Three Dimensions",
+          "summary": "The novella proposes that a life-bearing universe needs more than abundance; it needs disciplined dimensionality. In too many spatial dimensions, inverse-square style stability breaks down, orbits fail to stay gracefully bounded, and matter loses the reliable patterns from which chemistry and memory emerge.",
+          "file": "./specs/concepts/stable-matter-in-three-dimensions.md"
+        },
+        {
+          "id": "concepts/witness-constant",
+          "title": "Witness Constant",
+          "summary": "The witness constant is the book's fictional term for the continuity carried by a consciousness shaped inside a stable low-dimensional universe. It is not raw intelligence. It is the capacity to keep identity through recurrence, to recognize the same law after time has passed, and to remain oneself across changing conditions.",
+          "file": "./specs/concepts/witness-constant.md"
+        }
+      ],
+      "emotions": [
+        {
+          "id": "emotions/character-emotional-arcs",
+          "title": "Character Emotional Arcs",
+          "summary": "The emotional design of the novella should make the philosophical movement feel lived rather than appended. Each character carries a distinct emotional curve that interacts with the geometry of the places.",
+          "file": "./specs/emotions/character-emotional-arcs.md"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "mechanics/conservation-basins",
+          "title": "Conservation Basins",
+          "summary": "Conservation basins are pockets where law, recurrence, and bounded trajectories can hold long enough to support lasting structure. They are rare and politically charged in the higher-dimensional domain because they determine where memory-like persistence can exist at all.",
+          "file": "./specs/mechanics/conservation-basins.md"
+        },
+        {
+          "id": "mechanics/five-dimensional-regimes",
+          "title": "Five-Dimensional Regimes",
+          "summary": "The five-dimensional environment should feel rule-governed even when it is impossible. Paths are chosen by persistence rather than by simple distance, adjacency can exist without reachability, and stable navigation depends on identifying structures that remain themselves while surrounding possibilities shear past.",
+          "file": "./specs/mechanics/five-dimensional-regimes.md"
+        }
+      ],
       "places": [
         {
           "id": "places/annular-library",
@@ -231,30 +295,18 @@
           "file": "./specs/places/vacant-orchard.md"
         }
       ],
-      "concepts": [
+      "relationships": [
         {
-          "id": "concepts/five-dimensional-perception",
-          "title": "Five-Dimensional Perception",
-          "summary": "Five-dimensional perception in this book is not presented as omniscience. It is a condition of overwhelming adjacency. Things are not merely farther away or closer than expected; they are connected through hidden directions that make ordinary intuition unreliable.",
-          "file": "./specs/concepts/five-dimensional-perception.md"
+          "id": "relationships/adrian-and-mira",
+          "title": "Adrian And Mira",
+          "summary": "Mira stabilizes Adrian not because she symbolizes home in a vague way, but because her relationship with him was built through repeated ordinary acts. Shared meals, arguments, jokes, and grief rituals become the emotional analogue of conservation law.",
+          "file": "./specs/relationships/adrian-and-mira.md"
         },
         {
-          "id": "concepts/sparse-spheres-and-ml",
-          "title": "Sparse Spheres And Machine Learning",
-          "summary": "In high-dimensional geometry, most of the volume of a sphere concentrates in unintuitive regions and neighborhoods become effectively empty for many algorithms. In machine learning this sparsity undermines distance-based intuition, weakens local similarity, and makes generalization more difficult. The book treats this as the cognitive template Adrian already knows before entering the fifth-dimensional realm.",
-          "file": "./specs/concepts/sparse-spheres-and-ml.md"
-        },
-        {
-          "id": "concepts/stable-matter-in-three-dimensions",
-          "title": "Stable Matter In Three Dimensions",
-          "summary": "The novella proposes that a life-bearing universe needs more than abundance; it needs disciplined dimensionality. In too many spatial dimensions, inverse-square style stability breaks down, orbits fail to stay gracefully bounded, and matter loses the reliable patterns from which chemistry and memory emerge.",
-          "file": "./specs/concepts/stable-matter-in-three-dimensions.md"
-        },
-        {
-          "id": "concepts/witness-constant",
-          "title": "Witness Constant",
-          "summary": "The witness constant is the book's fictional term for the continuity carried by a consciousness shaped inside a stable low-dimensional universe. It is not raw intelligence. It is the capacity to keep identity through recurrence, to recognize the same law after time has passed, and to remain oneself across changing conditions.",
-          "file": "./specs/concepts/witness-constant.md"
+          "id": "relationships/adrian-and-syl",
+          "title": "Adrian And Syl",
+          "summary": "This relationship is the core engine of the book. It must move through awe, dependence, intellectual companionship, suspicion, betrayal, and a final form of pity that does not become surrender.",
+          "file": "./specs/relationships/adrian-and-syl.md"
         }
       ],
       "themes": [
@@ -275,42 +327,6 @@
           "title": "Recurrence And Identity",
           "summary": "The witness constant is not a supernatural gem hidden in the hero. It is the identity forged by repeated life inside a stable world. Recurrence is how a person becomes legible to themselves across time, and the book should treat that as both scientifically suggestive and emotionally sacred.",
           "file": "./specs/themes/recurrence-and-identity.md"
-        }
-      ],
-      "mechanics": [
-        {
-          "id": "mechanics/conservation-basins",
-          "title": "Conservation Basins",
-          "summary": "Conservation basins are pockets where law, recurrence, and bounded trajectories can hold long enough to support lasting structure. They are rare and politically charged in the higher-dimensional domain because they determine where memory-like persistence can exist at all.",
-          "file": "./specs/mechanics/conservation-basins.md"
-        },
-        {
-          "id": "mechanics/five-dimensional-regimes",
-          "title": "Five-Dimensional Regimes",
-          "summary": "The five-dimensional environment should feel rule-governed even when it is impossible. Paths are chosen by persistence rather than by simple distance, adjacency can exist without reachability, and stable navigation depends on identifying structures that remain themselves while surrounding possibilities shear past.",
-          "file": "./specs/mechanics/five-dimensional-regimes.md"
-        }
-      ],
-      "relationships": [
-        {
-          "id": "relationships/adrian-and-mira",
-          "title": "Adrian And Mira",
-          "summary": "Mira stabilizes Adrian not because she symbolizes home in a vague way, but because her relationship with him was built through repeated ordinary acts. Shared meals, arguments, jokes, and grief rituals become the emotional analogue of conservation law.",
-          "file": "./specs/relationships/adrian-and-mira.md"
-        },
-        {
-          "id": "relationships/adrian-and-syl",
-          "title": "Adrian And Syl",
-          "summary": "This relationship is the core engine of the book. It must move through awe, dependence, intellectual companionship, suspicion, betrayal, and a final form of pity that does not become surrender.",
-          "file": "./specs/relationships/adrian-and-syl.md"
-        }
-      ],
-      "emotions": [
-        {
-          "id": "emotions/character-emotional-arcs",
-          "title": "Character Emotional Arcs",
-          "summary": "The emotional design of the novella should make the philosophical movement feel lived rather than appended. Each character carries a distinct emotional curve that interacts with the geometry of the places.",
-          "file": "./specs/emotions/character-emotional-arcs.md"
         }
       ]
     },
